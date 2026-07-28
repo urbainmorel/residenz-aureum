@@ -1,0 +1,32 @@
+name: governance
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: governance-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  governance:
+    name: governance
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Récupérer le dépôt
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+
+      - name: Vérifier la gouvernance
+        run: python .github/scripts/check_governance.py

@@ -1,0 +1,88 @@
+name: Validation d’un contenu client
+description: Suivre la preuve, l’autorisation et le remplacement d’un contenu provisoire.
+title: "[Validation client] "
+labels:
+  - "area:content"
+  - "status:needs-client-validation"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Cette issue sert de piste d’audit. N’y publiez aucune donnée personnelle de résident,
+        information médicale, pièce confidentielle ou secret. Utilisez un lien d’accès restreint
+        vers la preuve si celle-ci ne peut pas être rendue publique.
+
+  - type: dropdown
+    id: content_type
+    attributes:
+      label: Type de contenu
+      options:
+        - Coordonnées, identité légale ou horaires
+        - Offre, prix ou conditions
+        - Chiffre ou statistique
+        - Témoignage
+        - Certification, label ou marque
+        - Équipe ou biographie
+        - Image, droit à l’image ou droit d’utilisation
+        - Autre information factuelle
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: locales
+    attributes:
+      label: Langues concernées
+      options:
+        - label: Français
+        - label: Allemand
+    validations:
+      required: true
+
+  - type: textarea
+    id: locations
+    attributes:
+      label: Emplacements concernés
+      description: Listez les routes, sections, fichiers et éventuelles métadonnées.
+      placeholder: |
+        - /fr/…
+        - /de/…
+    validations:
+      required: true
+
+  - type: textarea
+    id: provisional
+    attributes:
+      label: Contenu provisoire actuel
+      description: Recopiez ou décrivez le mock à remplacer et son statut visible.
+    validations:
+      required: true
+
+  - type: textarea
+    id: approved
+    attributes:
+      label: Contenu proposé pour validation
+      description: Fournissez le texte ou l’asset final proposé, dans chaque langue concernée.
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Preuve et autorisation
+      description: Indiquez la source, le propriétaire, la date d’accord et un lien traçable. Ne joignez rien de confidentiel.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: publication
+    attributes:
+      label: Contrôles avant publication
+      options:
+        - label: Le client a confirmé l’exactitude et l’autorisation de publication.
+          required: true
+        - label: Les traductions ont été validées pour toutes les langues concernées.
+          required: true
+        - label: Le mock et ses mentions visibles seront supprimés ensemble.
+          required: true
+        - label: Les données structurées ne seront ajoutées que si elles correspondent exactement au contenu public validé.
+          required: true

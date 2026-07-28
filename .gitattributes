@@ -1,0 +1,20 @@
+* text=auto
+
+*.md text eol=lf
+*.toml text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.json text eol=lf
+*.html text eol=lf
+*.css text eol=lf
+*.js text eol=lf
+*.mjs text eol=lf
+*.cjs text eol=lf
+*.py text eol=lf
+*.svg text eol=lf
+
+*.webp binary
+*.png binary
+*.woff2 binary
+
+package-lock.json text eol=lf

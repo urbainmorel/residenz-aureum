@@ -1,0 +1,40 @@
+# Dependencies and package-manager caches
+node_modules/
+.npm/
+.yarn/
+.pnpm-store/
+__pycache__/
+*.py[cod]
+
+# Build, tests, reports, and generated artifacts
+dist/
+coverage/
+.cache/
+.vite/
+playwright-report/
+test-results/
+lighthouse-reports/
+*.log
+
+# Local environment files
+.env
+.env.*
+!.env.example
+
+# Local Codex/session output
+.codex-log/
+.codex/sessions/
+
+# Editors and operating systems
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+*~

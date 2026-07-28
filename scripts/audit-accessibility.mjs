@@ -7,6 +7,10 @@ function countMatches(content, expression) {
   return [...content.matchAll(expression)].length;
 }
 
+export function collectHtmlIds(content) {
+  return [...content.matchAll(/(?:^|\s)id="([^"]+)"/g)].map(([, id]) => id);
+}
+
 export async function auditAccessibility({ projectRoot = process.cwd() } = {}) {
   const clientDirectory = resolve(projectRoot, "dist/client");
   const htmlFiles = (await walkFiles(clientDirectory)).filter(
@@ -40,7 +44,7 @@ export async function auditAccessibility({ projectRoot = process.cwd() } = {}) {
     ) {
       errors.push(`${label}: bouton sans nom accessible`);
     }
-    const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map(([, id]) => id);
+    const ids = collectHtmlIds(html);
     const duplicateIds = ids.filter((id, index) => ids.indexOf(id) !== index);
     if (duplicateIds.length > 0) {
       errors.push(

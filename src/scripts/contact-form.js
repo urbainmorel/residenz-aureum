@@ -33,8 +33,8 @@ const copy = {
 
 const allowedIntents = new Set(["general", "visit"]);
 const allowedPreferredContacts = new Set(["email", "phone", "none"]);
-const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/u;
-const phonePattern = /^[+()\d\s./-]{5,30}$/u;
+const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/u;
+const phonePattern = /^[+0-9() ./-]{6,30}$/u;
 const isoDatePattern = /^\d{4}-\d{2}-\d{2}$/u;
 
 function stringValue(value) {
@@ -72,16 +72,25 @@ export function validateContactPayload(payload, locale = "de") {
     errors.phone = messages.phone;
   }
 
-  if (!allowedPreferredContacts.has(stringValue(payload.preferredContact))) {
+  const preferredContact = stringValue(payload.preferredContact);
+  if (!allowedPreferredContacts.has(preferredContact)) {
     errors.preferredContact = messages.required;
+  } else if (preferredContact === "phone" && !values.phone) {
+    errors.phone = messages.phone;
   }
 
   if (!allowedIntents.has(stringValue(payload.intent))) {
     errors.intent = messages.required;
   }
 
-  if (values.preferredDate && !isoDatePattern.test(values.preferredDate)) {
-    errors.preferredDate = messages.invalid;
+  if (values.preferredDate) {
+    const today = localIsoDate(new Date());
+    if (
+      !isoDatePattern.test(values.preferredDate) ||
+      values.preferredDate <= today
+    ) {
+      errors.preferredDate = messages.invalid;
+    }
   }
 
   if (values.message.length < 20 || values.message.length > 3000) {
@@ -100,7 +109,7 @@ export function validateContactPayload(payload, locale = "de") {
       ...values,
       intent: stringValue(payload.intent),
       locale,
-      preferredContact: stringValue(payload.preferredContact),
+      preferredContact,
       privacyAccepted,
     },
   };
@@ -122,12 +131,22 @@ function clearErrors(form) {
   form.querySelectorAll('[aria-invalid="true"]').forEach((element) => {
     element.removeAttribute("aria-invalid");
   });
+  const phoneFallback = form.querySelector("[data-form-phone-fallback]");
+  if (phoneFallback) {
+    phoneFallback.hidden = true;
+  }
 }
 
-function showErrors(form, errors, fallbackMessage = "") {
+function showErrors(
+  form,
+  errors,
+  fallbackMessage = "",
+  { showPhoneFallback = false } = {},
+) {
   clearErrors(form);
   const summary = form.querySelector("[data-form-errors]");
   const list = summary?.querySelector("ul");
+  const phoneFallback = form.querySelector("[data-form-phone-fallback]");
 
   if (!summary || !list) {
     return;
@@ -163,6 +182,9 @@ function showErrors(form, errors, fallbackMessage = "") {
     list.append(item);
   }
 
+  if (phoneFallback) {
+    phoneFallback.hidden = !showPhoneFallback;
+  }
   summary.hidden = false;
   summary.focus();
 }
@@ -187,6 +209,33 @@ function serverErrorMessage(code, locale) {
     return messages.rateLimited;
   }
   return messages.generic;
+}
+
+export function localizeServerFieldErrors(fields, locale = "de") {
+  const messages = copy[locale] ?? copy.de;
+  const messageByField = {
+    email: messages.email,
+    firstName: messages.invalid,
+    intent: messages.invalid,
+    lastName: messages.invalid,
+    message: messages.message,
+    phone: messages.phone,
+    preferredContact: messages.invalid,
+    preferredDate: messages.invalid,
+    privacyAccepted: messages.privacy,
+  };
+  return Object.fromEntries(
+    Object.keys(fields ?? {})
+      .filter((field) => messageByField[field])
+      .map((field) => [field, messageByField[field]]),
+  );
+}
+
+function localIsoDate(date) {
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const day = String(date.getDate()).padStart(2, "0");
+  return `${year}-${month}-${day}`;
 }
 
 async function submitContactForm(form, payload) {
@@ -220,7 +269,9 @@ export function initContactForms() {
     form.noValidate = true;
     ensureSubmissionMetadata(form);
     if (preferredDate instanceof HTMLInputElement) {
-      preferredDate.min = new Date().toISOString().slice(0, 10);
+      const tomorrow = new Date();
+      tomorrow.setDate(tomorrow.getDate() + 1);
+      preferredDate.min = localIsoDate(tomorrow);
     }
 
     form.addEventListener("input", (event) => {
@@ -229,6 +280,10 @@ export function initContactForms() {
         return;
       }
       event.target.removeAttribute("aria-invalid");
+      const phoneFallback = form.querySelector("[data-form-phone-fallback]");
+      if (phoneFallback) {
+        phoneFallback.hidden = true;
+      }
       const error = form.querySelector(`[data-field-error="${name}"]`);
       if (error) {
         error.textContent = "";
@@ -270,11 +325,26 @@ export function initContactForms() {
       try {
         const result = await submitContactForm(form, values);
         if (!result.ok || result.body?.ok !== true) {
-          showErrors(form, {}, serverErrorMessage(result.body?.code, locale));
+          const serverErrors =
+            result.body?.code === "VALIDATION_ERROR"
+              ? localizeServerFieldErrors(result.body?.fields, locale)
+              : {};
+          showErrors(
+            form,
+            serverErrors,
+            serverErrorMessage(result.body?.code, locale),
+            { showPhoneFallback: Object.keys(serverErrors).length === 0 },
+          );
           return;
         }
 
         if (success) {
+          const reference = success.querySelector(
+            "[data-submission-reference]",
+          );
+          if (reference) {
+            reference.textContent = values.submissionId;
+          }
           success.hidden = false;
           success.focus?.();
         }
@@ -283,6 +353,7 @@ export function initContactForms() {
           form,
           {},
           navigator.onLine === false ? messages.offline : messages.generic,
+          { showPhoneFallback: true },
         );
       } finally {
         if (submit) {

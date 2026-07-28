@@ -18,6 +18,9 @@ const labels = {
     mock: "Vorläufiger Demo-Inhalt",
     navigation: "Hauptnavigation",
     openingHours: "Erreichbarkeit",
+    phoneFallback: "Alternativ erreichen Sie uns telefonisch unter",
+    phonePending:
+      "Die telefonische Alternative ist in dieser Vorschau noch nicht freigegeben.",
     privacy: "Datenschutz",
     privacyDetails: "Datenschutzerklärung lesen",
     required: "Pflichtfeld",
@@ -47,6 +50,9 @@ const labels = {
     mock: "Contenu provisoire de démonstration",
     navigation: "Navigation principale",
     openingHours: "Disponibilité",
+    phoneFallback: "Vous pouvez aussi nous joindre par téléphone au",
+    phonePending:
+      "L’alternative téléphonique n’est pas encore validée dans cet aperçu.",
     privacy: "Confidentialité",
     privacyDetails: "Lire la politique de confidentialité",
     required: "Champ obligatoire",
@@ -663,6 +669,17 @@ function renderFormField(field, sectionId, locale) {
 function renderContactForm(section, context) {
   const { locale, siteData } = context;
   const privacyRoute = siteData.routes.find(({ id }) => id === "privacy");
+  const contact = siteData.organization.contact;
+  const validatedPhone =
+    contact.status === "validated"
+      ? `<a href="tel:${escapeHtml(contact.phoneHref)}">${escapeHtml(contact.phoneDisplay)}</a>`
+      : "";
+  const phoneFallback = validatedPhone
+    ? `<p class="form-phone-fallback" hidden data-form-phone-fallback>${escapeHtml(labels[locale].phoneFallback)} ${validatedPhone}.</p>`
+    : "";
+  const noScriptMessage = validatedPhone
+    ? `${escapeHtml(labels[locale].phoneFallback)} ${validatedPhone}.`
+    : escapeHtml(labels[locale].phonePending);
 
   return `<section id="${escapeHtml(section.id)}" class="content-section section-contact-form" aria-labelledby="${escapeHtml(section.id)}-title">
       <div class="shell form-layout">
@@ -678,6 +695,7 @@ function renderContactForm(section, context) {
           <div class="form-error-summary" role="alert" tabindex="-1" hidden data-form-errors>
             <h3>${escapeHtml(labels[locale].errors)}</h3>
             <ul></ul>
+            ${phoneFallback}
           </div>
           <input type="hidden" name="locale" value="${escapeHtml(locale)}">
           <input type="hidden" name="submissionId" value="" data-submission-id>
@@ -706,7 +724,8 @@ function renderContactForm(section, context) {
             <a href="${escapeHtml(privacyRoute.paths[locale])}">${escapeHtml(labels[locale].privacyDetails)}</a>
           </p>
           <button class="button form-submit" type="submit" data-submit-label="${escapeHtml(section.submitLabel)}">${escapeHtml(section.submitLabel)}</button>
-          <p class="form-success" role="status" aria-live="polite" hidden data-form-success>${escapeHtml(section.successMessage)}</p>
+          <p class="form-success" role="status" aria-live="polite" tabindex="-1" hidden data-form-success>${escapeHtml(section.successMessage)} <strong data-submission-reference></strong></p>
+          <noscript><p class="form-noscript">${noScriptMessage}</p></noscript>
         </form>
       </div>
     </section>`;

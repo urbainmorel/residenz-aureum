@@ -9,20 +9,22 @@
   },
   "scripts": {
     "dev": "node --env-file-if-exists=.env.local ./node_modules/vite/bin/vite.js --host 0.0.0.0",
-    "build": "node --env-file-if-exists=.env.local scripts/build.mjs --mode production",
+    "build": "node --env-file-if-exists=.env.local scripts/validate-runtime.mjs && node --env-file-if-exists=.env.local scripts/build.mjs --mode production",
     "build:preview": "node --env-file-if-exists=.env.local scripts/build.mjs --mode preview",
-    "build:production": "node --env-file-if-exists=.env.local scripts/build.mjs --mode production",
+    "build:production": "npm run validate:runtime && node --env-file-if-exists=.env.local scripts/build.mjs --mode production",
     "preview": "node --env-file-if-exists=.env.local ./node_modules/vite/bin/vite.js preview --host 0.0.0.0 --outDir dist/client",
     "preview:worker": "node --env-file-if-exists=.env.local ./node_modules/wrangler/bin/wrangler.js dev --config wrangler.jsonc",
     "media:prepare:preview": "node scripts/prepare-media.mjs --mode preview",
     "media:prepare:production": "node scripts/prepare-media.mjs --mode production",
     "validate": "node scripts/validate-media.mjs --mode preview && node --env-file-if-exists=.env.local scripts/validate-content.mjs --mode preview && node --env-file-if-exists=.env.local scripts/validate-foundation.mjs --source",
     "validate:media": "node scripts/validate-media.mjs --mode preview",
-    "validate:production": "node scripts/validate-media.mjs --mode production && node --env-file-if-exists=.env.local scripts/validate-content.mjs --mode production",
+    "validate:production": "npm run validate:runtime && node scripts/validate-media.mjs --mode production && node --env-file-if-exists=.env.local scripts/validate-content.mjs --mode production",
+    "validate:runtime": "node --env-file-if-exists=.env.local scripts/validate-runtime.mjs",
     "lint": "eslint .",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "test": "node --env-file-if-exists=.env.local --test tests/unit/*.test.mjs",
+    "test": "node --env-file-if-exists=.env.local --test tests/unit/*.test.mjs tests/integration/*.test.mjs",
+    "test:contact": "node --env-file-if-exists=.env.local --test tests/unit/contact-*.test.mjs tests/integration/contact-*.test.mjs",
     "audit:a11y": "node scripts/audit-accessibility.mjs",
     "audit:seo": "node scripts/audit-seo.mjs",
     "audit:performance": "node scripts/audit-budgets.mjs",
@@ -41,5 +43,8 @@
     "prettier": "3.9.6",
     "vite": "8.1.5",
     "wrangler": "4.114.0"
+  },
+  "dependencies": {
+    "resend": "6.18.1"
   }
 }

@@ -400,7 +400,12 @@ test("le formulaire expose les champs STI et les aides accessibles", () => {
 
   assert.match(html, /action="\/api\/contact"/);
   assert.match(html, /role="alert" tabindex="-1" hidden data-form-errors/);
-  assert.match(html, /role="status" aria-live="polite" hidden/);
+  assert.match(
+    html,
+    /role="status" aria-live="polite" tabindex="-1" hidden data-form-success/,
+  );
+  assert.match(html, /data-submission-reference/);
+  assert.match(html, /<noscript>/);
   assert.match(html, /Aucune donnée médicale|aucune donnée médicale/i);
 });
 

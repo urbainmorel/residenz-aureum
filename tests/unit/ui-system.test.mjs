@@ -2,7 +2,10 @@ import assert from "node:assert/strict";
 import { readdir, readFile } from "node:fs/promises";
 import test from "node:test";
 import { loadSiteData } from "../../scripts/lib/site-data.mjs";
-import { validateContactPayload } from "../../src/scripts/contact-form.js";
+import {
+  localizeServerFieldErrors,
+  validateContactPayload,
+} from "../../src/scripts/contact-form.js";
 import { renderLocalizedPage } from "../../src/templates/layout.mjs";
 
 const assets = {
@@ -44,6 +47,27 @@ test("la page d’accueil porte les signatures Quiet Luxury progressives", async
     siteData,
   });
   assert.match(contactHtml, /class="honeypot" aria-hidden="true" inert hidden/);
+  assert.match(contactHtml, /data-submission-reference/);
+  assert.match(contactHtml, /<noscript>/);
+  assert.doesNotMatch(contactHtml, /data-form-phone-fallback/);
+
+  const validatedSiteData = structuredClone(siteData);
+  validatedSiteData.organization.contact = {
+    ...validatedSiteData.organization.contact,
+    approvalRef: "https://github.com/urbainmorel/residenz-aureum/issues/124",
+    phoneDisplay: "+49 208 123456",
+    phoneHref: "+49208123456",
+    status: "validated",
+  };
+  const validatedContactHtml = renderLocalizedPage({
+    assets,
+    locale: "fr",
+    page: validatedSiteData.localizedContent.fr.pages.contact,
+    route: contactRoute,
+    siteData: validatedSiteData,
+  });
+  assert.match(validatedContactHtml, /data-form-phone-fallback/);
+  assert.match(validatedContactHtml, /href="tel:\+49208123456"/);
 });
 
 test("exactement deux WOFF2 critiques sont auto-hébergées", async () => {
@@ -100,6 +124,58 @@ test("la validation du formulaire conserve les valeurs et signale les champs", (
   assert.deepEqual(valid.errors, {});
   assert.equal(valid.values.firstName, "Anna");
   assert.equal(valid.values.privacyAccepted, true);
+
+  const today = new Date();
+  const todayIso = [
+    today.getFullYear(),
+    String(today.getMonth() + 1).padStart(2, "0"),
+    String(today.getDate()).padStart(2, "0"),
+  ].join("-");
+  const serverRejected = validateContactPayload(
+    {
+      ...valid.values,
+      email: "a@b.c",
+      phone: "12345",
+      preferredDate: todayIso,
+    },
+    "fr",
+  );
+  assert.ok(serverRejected.errors.email);
+  assert.ok(serverRejected.errors.phone);
+  assert.ok(serverRejected.errors.preferredDate);
+
+  const missingPreferredPhone = validateContactPayload(
+    {
+      ...valid.values,
+      phone: "",
+      preferredContact: "phone",
+    },
+    "fr",
+  );
+  assert.equal(
+    missingPreferredPhone.errors.phone,
+    "Saisissez un numéro de téléphone valide.",
+  );
+});
+
+test("les erreurs serveur sont localisées sans exposer leurs détails", () => {
+  assert.deepEqual(
+    localizeServerFieldErrors(
+      {
+        email: "invalid",
+        formStartedAt: "invalid",
+        phone: "invalid",
+        privacyAccepted: "required",
+      },
+      "fr",
+    ),
+    {
+      email: "Saisissez une adresse e-mail valide.",
+      phone: "Saisissez un numéro de téléphone valide.",
+      privacyAccepted:
+        "Confirmez la lecture des informations de confidentialité.",
+    },
+  );
 });
 
 test("les styles couvrent le reflow, le focus et le mouvement réduit", async () => {

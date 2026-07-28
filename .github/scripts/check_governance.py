@@ -206,10 +206,18 @@ def validate_ai_asset_register(
         ):
             errors.append(f"{label}: `approvalReference` requis pour un asset approuvé")
 
-        is_public = bool(path.parts) and path.parts[0].lower() == "public"
-        if is_public and approval_status != "approved":
+        lowered_parts = tuple(part.lower() for part in path.parts)
+        is_public = bool(lowered_parts) and lowered_parts[0] == "public"
+        is_preview_media = lowered_parts[:3] == ("public", "media", "preview")
+        preview_pending_allowed = (
+            is_preview_media
+            and approval_status == "pending"
+            and represents_residence is False
+        )
+        if is_public and approval_status != "approved" and not preview_pending_allowed:
             errors.append(
-                f"{label}: tout asset IA dans `public/` doit être approuvé"
+                f"{label}: tout asset IA dans `public/` doit être approuvé, "
+                "sauf un asset pending générique dans `public/media/preview/`"
             )
 
     missing = webp_paths - registered

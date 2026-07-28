@@ -1,9 +1,12 @@
-@layer reset, tokens, base, layout, components, utilities, overrides;
+@layer reset, tokens, fonts, base, layout, components, sections, forms, utilities, overrides;
 
 @import "./tokens.css" layer(tokens);
+@import "./fonts.css" layer(fonts);
 @import "./reset.css" layer(reset);
 @import "./base.css" layer(base);
 @import "./layout.css" layer(layout);
 @import "./components.css" layer(components);
+@import "./sections.css" layer(sections);
+@import "./forms.css" layer(forms);
 @import "./utilities.css" layer(utilities);
 @import "./motion.css" layer(overrides);

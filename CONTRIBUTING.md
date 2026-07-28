@@ -70,6 +70,8 @@ Les nouveaux visuels raster générés par IA sont exclusivement en WebP. Les de
 
 Chaque asset publié doit comporter une traçabilité, des dimensions, un point focal, des textes alternatifs DE/FR et une approbation client explicite s’il représente la résidence ou ses personnes.
 
+La preview privée peut contenir des WebP génériques `pending` uniquement sous `public/media/preview/`, avec un avertissement visible. Ces fichiers sont exclus et refusés par le build production.
+
 ## Vérifications
 
 Tant qu’aucun `package.json` n’existe, le workflow GitHub `governance` constitue le contrôle automatisé disponible. Après le bootstrap applicatif, utilisez uniquement les scripts déclarés dans `package.json`.

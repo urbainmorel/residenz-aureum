@@ -8,6 +8,11 @@ const CONTENT_FILES = {
   fr: "src/content/fr/pages.json",
 };
 
+const MEDIA_FILES = {
+  register: "assets/media/ai-assets.json",
+  schema: "schemas/media.schema.json",
+};
+
 const EXPECTED_CONTACT_FIELDS = [
   "email",
   "firstName",
@@ -45,6 +50,101 @@ function assertUnique(values, label) {
       `${label}: doublons détectés (${[...new Set(duplicates)]})`,
     );
   }
+}
+
+function collectMediaReferences(value) {
+  if (Array.isArray(value)) {
+    return value.flatMap(collectMediaReferences);
+  }
+
+  if (!value || typeof value !== "object") {
+    return [];
+  }
+
+  return Object.entries(value).flatMap(([key, child]) =>
+    ["heroMediaId", "mediaId"].includes(key)
+      ? [child]
+      : collectMediaReferences(child),
+  );
+}
+
+function publicPathFor(path) {
+  return `/${path.replace(/^public\//, "")}`;
+}
+
+function buildMediaIndex({ assets, localizedContent, mode }) {
+  const bases = assets.filter(
+    ({ selected, variantOf }) => selected && variantOf === null,
+  );
+  const baseById = new Map(bases.map((asset) => [asset.id, asset]));
+  const references = [
+    ...new Set(Object.values(localizedContent).flatMap(collectMediaReferences)),
+  ];
+  const missing = references.filter((id) => !baseById.has(id));
+  if (missing.length > 0) {
+    throw new Error(
+      `Références médias absentes du registre: ${missing.join(", ")}.`,
+    );
+  }
+
+  if (mode === "production") {
+    const unapproved = references.filter((id) => {
+      const asset = baseById.get(id);
+      return asset.approvalStatus !== "approved" || !asset.approvalReference;
+    });
+    if (unapproved.length > 0) {
+      throw new Error(
+        `Build production bloqué: médias non approuvés (${unapproved.join(", ")}).`,
+      );
+    }
+  }
+
+  const deliveryPrefix =
+    mode === "preview" ? "public/media/preview/" : "public/media/";
+  return Object.fromEntries(
+    bases.map((base) => {
+      const delivered = assets.filter(
+        ({ path, variantOf }) =>
+          variantOf === base.id && path.startsWith(deliveryPrefix),
+      );
+      const asVariant = (asset) => ({
+        height: asset.height,
+        publicPath: publicPathFor(asset.path),
+        src: publicPathFor(asset.path),
+        width: asset.width,
+      });
+      const variants = delivered
+        .filter(({ format }) => format === "landscape")
+        .sort((left, right) => left.width - right.width)
+        .map(asVariant);
+      const portraitVariants = delivered
+        .filter(({ format }) => format === "portrait")
+        .sort((left, right) => left.width - right.width)
+        .map(asVariant);
+
+      if (variants.length === 0) {
+        throw new Error(
+          `${base.id}: aucune variante ${mode} livrable dans le registre.`,
+        );
+      }
+
+      return [
+        base.id,
+        {
+          alt: base.alt,
+          approvalReference: base.approvalReference,
+          approvalStatus: base.approvalStatus,
+          focalPoint: base.focalPoint,
+          id: base.id,
+          portraitVariants,
+          previewOnly: mode === "preview",
+          representsResidence: base.representsResidence,
+          scene: base.scene,
+          variants,
+        },
+      ];
+    }),
+  );
 }
 
 function assertPageCoverage(routes, localizedContent) {
@@ -233,6 +333,10 @@ export async function loadSiteData({
   const organizationSchema = await readJson(
     resolve(projectRoot, "schemas/organization.schema.json"),
   );
+  const mediaSchema = await readJson(resolve(projectRoot, MEDIA_FILES.schema));
+  const mediaRegister = await readJson(
+    resolve(projectRoot, MEDIA_FILES.register),
+  );
   const routes = await readJson(resolve(projectRoot, "src/data/routes.json"));
   const organization = await readJson(
     resolve(projectRoot, "src/data/organization.json"),
@@ -277,6 +381,21 @@ export async function loadSiteData({
     );
   }
 
+  const validateMedia = ajv.compile(mediaSchema);
+  if (!validateMedia(mediaRegister)) {
+    throw new Error(
+      `Registre médias invalide: ${formatAjvErrors(validateMedia.errors)}`,
+    );
+  }
+  assertUnique(
+    mediaRegister.assets.map(({ id }) => id),
+    "Identifiants médias",
+  );
+  assertUnique(
+    mediaRegister.assets.map(({ path }) => path),
+    "Chemins médias",
+  );
+
   assertUnique(
     routes.routes.map(({ id }) => id),
     "Identifiants de routes",
@@ -305,6 +424,16 @@ export async function loadSiteData({
   }
 
   if (mode === "production") {
+    const previewAssets = mediaRegister.assets.filter(
+      ({ path, previewOnly }) =>
+        previewOnly || path.startsWith("public/media/preview/"),
+    );
+    if (previewAssets.length > 0) {
+      throw new Error(
+        "Build production bloqué: des médias de preview sont encore publics.",
+      );
+    }
+
     const drafts = Object.entries(localizedContent).flatMap(
       ([locale, content]) =>
         Object.entries(content.pages)
@@ -361,7 +490,11 @@ export async function loadSiteData({
     defaultLocale: routes.defaultLocale,
     locales: routes.locales,
     localizedContent,
-    mediaById: {},
+    mediaById: buildMediaIndex({
+      assets: mediaRegister.assets,
+      localizedContent,
+      mode,
+    }),
     mode,
     organization,
     routes: routes.routes,

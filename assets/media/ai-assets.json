@@ -1,0 +1,2319 @@
+{
+  "$schema": "../../schemas/media.schema.json",
+  "assets": [
+    {
+      "id": "activity-flowers-a",
+      "path": "assets/media/candidates/activity-flowers-a.webp",
+      "provenance": "OpenAI image generation tool; source output converted locally to WebP with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic editorial scene of older adults arranging flowers together at a light oak table, warm natural daylight, quiet luxury interior, dignified candid interaction, fictional people, no logos, no text, no clinical equipment.",
+      "generatedAt": "2026-07-28",
+      "width": 1536,
+      "height": 1024,
+      "ratio": "3:2",
+      "focalPoint": {
+        "x": 0.51,
+        "y": 0.46
+      },
+      "alt": {
+        "de": "KI-Konzeptbild älterer Menschen beim gemeinsamen Arrangieren von Blumen.",
+        "fr": "Image conceptuelle générée par IA de personnes âgées composant des bouquets ensemble."
+      },
+      "scene": "activity",
+      "variantOf": null,
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": false,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "activity-lunch-b",
+      "path": "assets/media/candidates/activity-lunch-b.webp",
+      "provenance": "OpenAI image generation tool; source output converted locally to WebP with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic editorial lunch scene with a small diverse group of older adults sharing a seasonal meal, refined calm dining room, natural window light, quiet luxury palette, fictional people, no logos, no text, no hotel staging.",
+      "generatedAt": "2026-07-28",
+      "width": 1536,
+      "height": 1024,
+      "ratio": "3:2",
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.45
+      },
+      "alt": {
+        "de": "KI-Konzeptbild einer kleinen Tischgemeinschaft älterer Menschen beim Mittagessen.",
+        "fr": "Image conceptuelle générée par IA d’un petit groupe de personnes âgées partageant un déjeuner."
+      },
+      "scene": "activity",
+      "variantOf": null,
+      "format": "landscape",
+      "selected": false,
+      "previewOnly": false,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "admission-a",
+      "path": "assets/media/candidates/admission-a.webp",
+      "provenance": "OpenAI image generation tool; source output converted locally to WebP with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic editorial consultation between an older woman, an adult relative and a welcoming advisor around a table, papers without readable text, calm private room, natural daylight, dignified fictional people, no logos, no medical imagery.",
+      "generatedAt": "2026-07-28",
+      "width": 1536,
+      "height": 1024,
+      "ratio": "3:2",
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.46
+      },
+      "alt": {
+        "de": "KI-Konzeptbild eines ruhigen Aufnahmegesprächs mit einer älteren Frau und einer Angehörigen.",
+        "fr": "Image conceptuelle générée par IA d’un entretien d’admission avec une femme âgée et une proche."
+      },
+      "scene": "admission",
+      "variantOf": null,
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": false,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "admission-b",
+      "path": "assets/media/candidates/admission-b.webp",
+      "provenance": "OpenAI image generation tool; source output converted locally to WebP with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic candid welcome conversation between an older man, his daughter and a senior living advisor, elegant understated meeting room, soft daylight, empathetic body language, fictional people, no readable documents, no logos, no clinical setting.",
+      "generatedAt": "2026-07-28",
+      "width": 1536,
+      "height": 1024,
+      "ratio": "3:2",
+      "focalPoint": {
+        "x": 0.49,
+        "y": 0.44
+      },
+      "alt": {
+        "de": "KI-Konzeptbild eines persönlichen Beratungsgesprächs mit einem älteren Mann und seiner Tochter.",
+        "fr": "Image conceptuelle générée par IA d’un échange d’accueil avec un homme âgé et sa fille."
+      },
+      "scene": "admission",
+      "variantOf": null,
+      "format": "landscape",
+      "selected": false,
+      "previewOnly": false,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "care-conversation-a",
+      "path": "assets/media/candidates/care-conversation-a.webp",
+      "provenance": "OpenAI image generation tool; source output converted locally to WebP with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic editorial scene of a warm conversation between an older resident and a support professional in a bright lounge, respectful eye-level body language, ordinary clothing, quiet luxury interior, fictional people, no uniforms, no medical equipment, no logos.",
+      "generatedAt": "2026-07-28",
+      "width": 1536,
+      "height": 1024,
+      "ratio": "3:2",
+      "focalPoint": {
+        "x": 0.49,
+        "y": 0.45
+      },
+      "alt": {
+        "de": "KI-Konzeptbild eines aufmerksamen Gesprächs zwischen einer älteren Person und einer Begleitperson.",
+        "fr": "Image conceptuelle générée par IA d’un échange attentif entre une personne âgée et une accompagnante."
+      },
+      "scene": "care-conversation",
+      "variantOf": null,
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": false,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "care-conversation-b",
+      "path": "assets/media/candidates/care-conversation-b.webp",
+      "provenance": "OpenAI image generation tool; source output converted locally to WebP with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic candid conversation between an older woman and a considerate companion beside a window, calm reassuring posture, warm muted greens and ivory, natural light, fictional people, no clinical cues, no uniforms, no logos, no text.",
+      "generatedAt": "2026-07-28",
+      "width": 1536,
+      "height": 1024,
+      "ratio": "3:2",
+      "focalPoint": {
+        "x": 0.52,
+        "y": 0.44
+      },
+      "alt": {
+        "de": "KI-Konzeptbild einer älteren Frau in einem zugewandten Gespräch am Fenster.",
+        "fr": "Image conceptuelle générée par IA d’une femme âgée lors d’une conversation bienveillante près d’une fenêtre."
+      },
+      "scene": "care-conversation",
+      "variantOf": null,
+      "format": "landscape",
+      "selected": false,
+      "previewOnly": false,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "common-lounge-a",
+      "path": "assets/media/candidates/common-lounge-a.webp",
+      "provenance": "OpenAI image generation tool; source output converted locally to WebP with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic architectural editorial view of an intimate senior living lounge, deep green accents, ivory walls, light oak, comfortable varied seating, books and plants, generous daylight, quiet luxury, no people, no logos, no signage, not a hotel.",
+      "generatedAt": "2026-07-28",
+      "width": 1536,
+      "height": 1024,
+      "ratio": "3:2",
+      "focalPoint": {
+        "x": 0.56,
+        "y": 0.46
+      },
+      "alt": {
+        "de": "KI-Konzeptbild eines hellen, ruhig gestalteten gemeinschaftlichen Salons.",
+        "fr": "Image conceptuelle générée par IA d’un salon commun lumineux aux matières naturelles."
+      },
+      "scene": "common-lounge",
+      "variantOf": null,
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": false,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "common-lounge-b",
+      "path": "assets/media/candidates/common-lounge-b.webp",
+      "provenance": "OpenAI image generation tool; source output converted locally to WebP with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic architectural view of a smaller communal sitting room for older adults, sage textiles, warm timber, framed abstract art without text, daylight and garden view, understated quiet luxury, no people, no logos, no hotel styling.",
+      "generatedAt": "2026-07-28",
+      "width": 1536,
+      "height": 1024,
+      "ratio": "3:2",
+      "focalPoint": {
+        "x": 0.52,
+        "y": 0.45
+      },
+      "alt": {
+        "de": "KI-Konzeptbild eines kleinen gemeinschaftlichen Wohnzimmers in Salbei- und Holztönen.",
+        "fr": "Image conceptuelle générée par IA d’un petit séjour commun dans des tons sauge et bois."
+      },
+      "scene": "common-lounge",
+      "variantOf": null,
+      "format": "landscape",
+      "selected": false,
+      "previewOnly": false,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "garden-a",
+      "path": "assets/media/candidates/garden-a.webp",
+      "provenance": "OpenAI image generation tool; source output converted locally to WebP with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic editorial garden for senior living, legible gently curving paths, lush restrained planting, shaded benches and mature trees, warm afternoon light, safe welcoming atmosphere, generic fictional location, no logos, no signage, no people.",
+      "generatedAt": "2026-07-28",
+      "width": 1536,
+      "height": 1024,
+      "ratio": "3:2",
+      "focalPoint": {
+        "x": 0.55,
+        "y": 0.43
+      },
+      "alt": {
+        "de": "KI-Konzeptbild eines geschützten Gartens mit gut erkennbaren Wegen und Sitzplätzen.",
+        "fr": "Image conceptuelle générée par IA d’un jardin protégé avec des cheminements lisibles et des bancs."
+      },
+      "scene": "garden",
+      "variantOf": null,
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": false,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "garden-b",
+      "path": "assets/media/candidates/garden-b.webp",
+      "provenance": "OpenAI image generation tool; source output converted locally to WebP with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic calm courtyard garden concept with accessible paths, raised planting beds, quiet seating niches and a restrained palette of greens, soft morning light, fictional location, no people, no text, no logos, no identifiable building.",
+      "generatedAt": "2026-07-28",
+      "width": 1536,
+      "height": 1024,
+      "ratio": "3:2",
+      "focalPoint": {
+        "x": 0.48,
+        "y": 0.44
+      },
+      "alt": {
+        "de": "KI-Konzeptbild eines ruhigen Hofgartens mit Hochbeeten und barrierearmen Wegen.",
+        "fr": "Image conceptuelle générée par IA d’un jardin intérieur calme avec bacs plantés et allées accessibles."
+      },
+      "scene": "garden",
+      "variantOf": null,
+      "format": "landscape",
+      "selected": false,
+      "previewOnly": false,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "hero-garden-a",
+      "path": "assets/media/candidates/hero-garden-a.webp",
+      "provenance": "OpenAI image generation tool; source output converted locally to WebP with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic editorial hero scene of an older woman enjoying a serene landscaped garden beside a contemporary understated residence, warm late-afternoon daylight, dignified natural expression, quiet luxury palette, fictional person and location, no logo, no text, no clinical cues.",
+      "generatedAt": "2026-07-28",
+      "width": 1536,
+      "height": 1024,
+      "ratio": "3:2",
+      "focalPoint": {
+        "x": 0.58,
+        "y": 0.42
+      },
+      "alt": {
+        "de": "KI-Konzeptbild einer älteren Frau in einem ruhigen, begrünten Außenbereich.",
+        "fr": "Image conceptuelle générée par IA d’une femme âgée dans un jardin paisible et arboré."
+      },
+      "scene": "hero-garden",
+      "variantOf": null,
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": false,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "hero-garden-b",
+      "path": "assets/media/candidates/hero-garden-b.webp",
+      "provenance": "OpenAI image generation tool; source output converted locally to WebP with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic quiet luxury hero image of an older couple walking slowly through a verdant accessible garden near refined contemporary architecture, candid dignified moment, soft morning light, fictional people and place, no logos, no words, no medical elements.",
+      "generatedAt": "2026-07-28",
+      "width": 1536,
+      "height": 1024,
+      "ratio": "3:2",
+      "focalPoint": {
+        "x": 0.53,
+        "y": 0.42
+      },
+      "alt": {
+        "de": "KI-Konzeptbild eines älteren Paares auf einem begrünten, gut zugänglichen Gartenweg.",
+        "fr": "Image conceptuelle générée par IA d’un couple âgé sur un chemin de jardin accessible."
+      },
+      "scene": "hero-garden",
+      "variantOf": null,
+      "format": "landscape",
+      "selected": false,
+      "previewOnly": false,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "room-a",
+      "path": "assets/media/candidates/room-a.webp",
+      "provenance": "OpenAI image generation tool; source output converted locally to WebP with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic private senior room concept, comfortable bed and reading chair, personal books and framed abstract art without text, accessible circulation, warm timber, ivory and sage palette, generous daylight, quiet luxury, no people, no logos, no medical equipment.",
+      "generatedAt": "2026-07-28",
+      "width": 1536,
+      "height": 1024,
+      "ratio": "3:2",
+      "focalPoint": {
+        "x": 0.53,
+        "y": 0.47
+      },
+      "alt": {
+        "de": "KI-Konzeptbild eines persönlichen Zimmers mit hellem Holz, Sessel und ruhigen Farben.",
+        "fr": "Image conceptuelle générée par IA d’une chambre personnelle avec bois clair, fauteuil et couleurs apaisées."
+      },
+      "scene": "room",
+      "variantOf": null,
+      "format": "landscape",
+      "selected": false,
+      "previewOnly": false,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "room-b",
+      "path": "assets/media/candidates/room-b.webp",
+      "provenance": "OpenAI image generation tool; source output converted locally to WebP with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic elegant private room for an older adult, homelike rather than hotel-like, bed, beloved objects, reading lamp and armchair, wide clear circulation, soft window light, deep green and warm neutral accents, no people, no text, no logos, no clinical equipment.",
+      "generatedAt": "2026-07-28",
+      "width": 1536,
+      "height": 1024,
+      "ratio": "3:2",
+      "focalPoint": {
+        "x": 0.57,
+        "y": 0.48
+      },
+      "alt": {
+        "de": "KI-Konzeptbild eines wohnlichen Zimmers mit Bett, Lesesessel und persönlichen Gegenständen.",
+        "fr": "Image conceptuelle générée par IA d’une chambre chaleureuse avec lit, fauteuil de lecture et objets personnels."
+      },
+      "scene": "room",
+      "variantOf": null,
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": false,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "activity-flowers-a-landscape-480w",
+      "path": "assets/media/variants/activity-flowers-a/activity-flowers-a-480w.webp",
+      "provenance": "Responsive WebP derivative generated locally from the registered OpenAI source with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic editorial scene of older adults arranging flowers together at a light oak table, warm natural daylight, quiet luxury interior, dignified candid interaction, fictional people, no logos, no text, no clinical equipment.",
+      "generatedAt": "2026-07-28",
+      "width": 480,
+      "height": 320,
+      "ratio": "3:2",
+      "focalPoint": {
+        "x": 0.51,
+        "y": 0.46
+      },
+      "alt": {
+        "de": "KI-Konzeptbild älterer Menschen beim gemeinsamen Arrangieren von Blumen.",
+        "fr": "Image conceptuelle générée par IA de personnes âgées composant des bouquets ensemble."
+      },
+      "scene": "activity",
+      "variantOf": "activity-flowers-a",
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": false,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "activity-flowers-a-landscape-768w",
+      "path": "assets/media/variants/activity-flowers-a/activity-flowers-a-768w.webp",
+      "provenance": "Responsive WebP derivative generated locally from the registered OpenAI source with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic editorial scene of older adults arranging flowers together at a light oak table, warm natural daylight, quiet luxury interior, dignified candid interaction, fictional people, no logos, no text, no clinical equipment.",
+      "generatedAt": "2026-07-28",
+      "width": 768,
+      "height": 512,
+      "ratio": "3:2",
+      "focalPoint": {
+        "x": 0.51,
+        "y": 0.46
+      },
+      "alt": {
+        "de": "KI-Konzeptbild älterer Menschen beim gemeinsamen Arrangieren von Blumen.",
+        "fr": "Image conceptuelle générée par IA de personnes âgées composant des bouquets ensemble."
+      },
+      "scene": "activity",
+      "variantOf": "activity-flowers-a",
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": false,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "activity-flowers-a-landscape-1024w",
+      "path": "assets/media/variants/activity-flowers-a/activity-flowers-a-1024w.webp",
+      "provenance": "Responsive WebP derivative generated locally from the registered OpenAI source with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic editorial scene of older adults arranging flowers together at a light oak table, warm natural daylight, quiet luxury interior, dignified candid interaction, fictional people, no logos, no text, no clinical equipment.",
+      "generatedAt": "2026-07-28",
+      "width": 1024,
+      "height": 682,
+      "ratio": "512:341",
+      "focalPoint": {
+        "x": 0.51,
+        "y": 0.46
+      },
+      "alt": {
+        "de": "KI-Konzeptbild älterer Menschen beim gemeinsamen Arrangieren von Blumen.",
+        "fr": "Image conceptuelle générée par IA de personnes âgées composant des bouquets ensemble."
+      },
+      "scene": "activity",
+      "variantOf": "activity-flowers-a",
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": false,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "activity-flowers-a-landscape-1440w",
+      "path": "assets/media/variants/activity-flowers-a/activity-flowers-a-1440w.webp",
+      "provenance": "Responsive WebP derivative generated locally from the registered OpenAI source with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic editorial scene of older adults arranging flowers together at a light oak table, warm natural daylight, quiet luxury interior, dignified candid interaction, fictional people, no logos, no text, no clinical equipment.",
+      "generatedAt": "2026-07-28",
+      "width": 1440,
+      "height": 960,
+      "ratio": "3:2",
+      "focalPoint": {
+        "x": 0.51,
+        "y": 0.46
+      },
+      "alt": {
+        "de": "KI-Konzeptbild älterer Menschen beim gemeinsamen Arrangieren von Blumen.",
+        "fr": "Image conceptuelle générée par IA de personnes âgées composant des bouquets ensemble."
+      },
+      "scene": "activity",
+      "variantOf": "activity-flowers-a",
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": false,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "activity-flowers-a-landscape-1536w",
+      "path": "assets/media/variants/activity-flowers-a/activity-flowers-a-1536w.webp",
+      "provenance": "Responsive WebP derivative generated locally from the registered OpenAI source with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic editorial scene of older adults arranging flowers together at a light oak table, warm natural daylight, quiet luxury interior, dignified candid interaction, fictional people, no logos, no text, no clinical equipment.",
+      "generatedAt": "2026-07-28",
+      "width": 1536,
+      "height": 1024,
+      "ratio": "3:2",
+      "focalPoint": {
+        "x": 0.51,
+        "y": 0.46
+      },
+      "alt": {
+        "de": "KI-Konzeptbild älterer Menschen beim gemeinsamen Arrangieren von Blumen.",
+        "fr": "Image conceptuelle générée par IA de personnes âgées composant des bouquets ensemble."
+      },
+      "scene": "activity",
+      "variantOf": "activity-flowers-a",
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": false,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "admission-a-landscape-480w",
+      "path": "assets/media/variants/admission-a/admission-a-480w.webp",
+      "provenance": "Responsive WebP derivative generated locally from the registered OpenAI source with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic editorial consultation between an older woman, an adult relative and a welcoming advisor around a table, papers without readable text, calm private room, natural daylight, dignified fictional people, no logos, no medical imagery.",
+      "generatedAt": "2026-07-28",
+      "width": 480,
+      "height": 320,
+      "ratio": "3:2",
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.46
+      },
+      "alt": {
+        "de": "KI-Konzeptbild eines ruhigen Aufnahmegesprächs mit einer älteren Frau und einer Angehörigen.",
+        "fr": "Image conceptuelle générée par IA d’un entretien d’admission avec une femme âgée et une proche."
+      },
+      "scene": "admission",
+      "variantOf": "admission-a",
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": false,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "admission-a-landscape-768w",
+      "path": "assets/media/variants/admission-a/admission-a-768w.webp",
+      "provenance": "Responsive WebP derivative generated locally from the registered OpenAI source with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic editorial consultation between an older woman, an adult relative and a welcoming advisor around a table, papers without readable text, calm private room, natural daylight, dignified fictional people, no logos, no medical imagery.",
+      "generatedAt": "2026-07-28",
+      "width": 768,
+      "height": 512,
+      "ratio": "3:2",
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.46
+      },
+      "alt": {
+        "de": "KI-Konzeptbild eines ruhigen Aufnahmegesprächs mit einer älteren Frau und einer Angehörigen.",
+        "fr": "Image conceptuelle générée par IA d’un entretien d’admission avec une femme âgée et une proche."
+      },
+      "scene": "admission",
+      "variantOf": "admission-a",
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": false,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "admission-a-landscape-1024w",
+      "path": "assets/media/variants/admission-a/admission-a-1024w.webp",
+      "provenance": "Responsive WebP derivative generated locally from the registered OpenAI source with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic editorial consultation between an older woman, an adult relative and a welcoming advisor around a table, papers without readable text, calm private room, natural daylight, dignified fictional people, no logos, no medical imagery.",
+      "generatedAt": "2026-07-28",
+      "width": 1024,
+      "height": 682,
+      "ratio": "512:341",
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.46
+      },
+      "alt": {
+        "de": "KI-Konzeptbild eines ruhigen Aufnahmegesprächs mit einer älteren Frau und einer Angehörigen.",
+        "fr": "Image conceptuelle générée par IA d’un entretien d’admission avec une femme âgée et une proche."
+      },
+      "scene": "admission",
+      "variantOf": "admission-a",
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": false,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "admission-a-landscape-1440w",
+      "path": "assets/media/variants/admission-a/admission-a-1440w.webp",
+      "provenance": "Responsive WebP derivative generated locally from the registered OpenAI source with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic editorial consultation between an older woman, an adult relative and a welcoming advisor around a table, papers without readable text, calm private room, natural daylight, dignified fictional people, no logos, no medical imagery.",
+      "generatedAt": "2026-07-28",
+      "width": 1440,
+      "height": 960,
+      "ratio": "3:2",
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.46
+      },
+      "alt": {
+        "de": "KI-Konzeptbild eines ruhigen Aufnahmegesprächs mit einer älteren Frau und einer Angehörigen.",
+        "fr": "Image conceptuelle générée par IA d’un entretien d’admission avec une femme âgée et une proche."
+      },
+      "scene": "admission",
+      "variantOf": "admission-a",
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": false,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "admission-a-landscape-1536w",
+      "path": "assets/media/variants/admission-a/admission-a-1536w.webp",
+      "provenance": "Responsive WebP derivative generated locally from the registered OpenAI source with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic editorial consultation between an older woman, an adult relative and a welcoming advisor around a table, papers without readable text, calm private room, natural daylight, dignified fictional people, no logos, no medical imagery.",
+      "generatedAt": "2026-07-28",
+      "width": 1536,
+      "height": 1024,
+      "ratio": "3:2",
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.46
+      },
+      "alt": {
+        "de": "KI-Konzeptbild eines ruhigen Aufnahmegesprächs mit einer älteren Frau und einer Angehörigen.",
+        "fr": "Image conceptuelle générée par IA d’un entretien d’admission avec une femme âgée et une proche."
+      },
+      "scene": "admission",
+      "variantOf": "admission-a",
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": false,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "care-conversation-a-landscape-480w",
+      "path": "assets/media/variants/care-conversation-a/care-conversation-a-480w.webp",
+      "provenance": "Responsive WebP derivative generated locally from the registered OpenAI source with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic editorial scene of a warm conversation between an older resident and a support professional in a bright lounge, respectful eye-level body language, ordinary clothing, quiet luxury interior, fictional people, no uniforms, no medical equipment, no logos.",
+      "generatedAt": "2026-07-28",
+      "width": 480,
+      "height": 320,
+      "ratio": "3:2",
+      "focalPoint": {
+        "x": 0.49,
+        "y": 0.45
+      },
+      "alt": {
+        "de": "KI-Konzeptbild eines aufmerksamen Gesprächs zwischen einer älteren Person und einer Begleitperson.",
+        "fr": "Image conceptuelle générée par IA d’un échange attentif entre une personne âgée et une accompagnante."
+      },
+      "scene": "care-conversation",
+      "variantOf": "care-conversation-a",
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": false,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "care-conversation-a-landscape-768w",
+      "path": "assets/media/variants/care-conversation-a/care-conversation-a-768w.webp",
+      "provenance": "Responsive WebP derivative generated locally from the registered OpenAI source with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic editorial scene of a warm conversation between an older resident and a support professional in a bright lounge, respectful eye-level body language, ordinary clothing, quiet luxury interior, fictional people, no uniforms, no medical equipment, no logos.",
+      "generatedAt": "2026-07-28",
+      "width": 768,
+      "height": 512,
+      "ratio": "3:2",
+      "focalPoint": {
+        "x": 0.49,
+        "y": 0.45
+      },
+      "alt": {
+        "de": "KI-Konzeptbild eines aufmerksamen Gesprächs zwischen einer älteren Person und einer Begleitperson.",
+        "fr": "Image conceptuelle générée par IA d’un échange attentif entre une personne âgée et une accompagnante."
+      },
+      "scene": "care-conversation",
+      "variantOf": "care-conversation-a",
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": false,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "care-conversation-a-landscape-1024w",
+      "path": "assets/media/variants/care-conversation-a/care-conversation-a-1024w.webp",
+      "provenance": "Responsive WebP derivative generated locally from the registered OpenAI source with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic editorial scene of a warm conversation between an older resident and a support professional in a bright lounge, respectful eye-level body language, ordinary clothing, quiet luxury interior, fictional people, no uniforms, no medical equipment, no logos.",
+      "generatedAt": "2026-07-28",
+      "width": 1024,
+      "height": 682,
+      "ratio": "512:341",
+      "focalPoint": {
+        "x": 0.49,
+        "y": 0.45
+      },
+      "alt": {
+        "de": "KI-Konzeptbild eines aufmerksamen Gesprächs zwischen einer älteren Person und einer Begleitperson.",
+        "fr": "Image conceptuelle générée par IA d’un échange attentif entre une personne âgée et une accompagnante."
+      },
+      "scene": "care-conversation",
+      "variantOf": "care-conversation-a",
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": false,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "care-conversation-a-landscape-1440w",
+      "path": "assets/media/variants/care-conversation-a/care-conversation-a-1440w.webp",
+      "provenance": "Responsive WebP derivative generated locally from the registered OpenAI source with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic editorial scene of a warm conversation between an older resident and a support professional in a bright lounge, respectful eye-level body language, ordinary clothing, quiet luxury interior, fictional people, no uniforms, no medical equipment, no logos.",
+      "generatedAt": "2026-07-28",
+      "width": 1440,
+      "height": 960,
+      "ratio": "3:2",
+      "focalPoint": {
+        "x": 0.49,
+        "y": 0.45
+      },
+      "alt": {
+        "de": "KI-Konzeptbild eines aufmerksamen Gesprächs zwischen einer älteren Person und einer Begleitperson.",
+        "fr": "Image conceptuelle générée par IA d’un échange attentif entre une personne âgée et une accompagnante."
+      },
+      "scene": "care-conversation",
+      "variantOf": "care-conversation-a",
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": false,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "care-conversation-a-landscape-1536w",
+      "path": "assets/media/variants/care-conversation-a/care-conversation-a-1536w.webp",
+      "provenance": "Responsive WebP derivative generated locally from the registered OpenAI source with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic editorial scene of a warm conversation between an older resident and a support professional in a bright lounge, respectful eye-level body language, ordinary clothing, quiet luxury interior, fictional people, no uniforms, no medical equipment, no logos.",
+      "generatedAt": "2026-07-28",
+      "width": 1536,
+      "height": 1024,
+      "ratio": "3:2",
+      "focalPoint": {
+        "x": 0.49,
+        "y": 0.45
+      },
+      "alt": {
+        "de": "KI-Konzeptbild eines aufmerksamen Gesprächs zwischen einer älteren Person und einer Begleitperson.",
+        "fr": "Image conceptuelle générée par IA d’un échange attentif entre une personne âgée et une accompagnante."
+      },
+      "scene": "care-conversation",
+      "variantOf": "care-conversation-a",
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": false,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "common-lounge-a-landscape-480w",
+      "path": "assets/media/variants/common-lounge-a/common-lounge-a-480w.webp",
+      "provenance": "Responsive WebP derivative generated locally from the registered OpenAI source with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic architectural editorial view of an intimate senior living lounge, deep green accents, ivory walls, light oak, comfortable varied seating, books and plants, generous daylight, quiet luxury, no people, no logos, no signage, not a hotel.",
+      "generatedAt": "2026-07-28",
+      "width": 480,
+      "height": 320,
+      "ratio": "3:2",
+      "focalPoint": {
+        "x": 0.56,
+        "y": 0.46
+      },
+      "alt": {
+        "de": "KI-Konzeptbild eines hellen, ruhig gestalteten gemeinschaftlichen Salons.",
+        "fr": "Image conceptuelle générée par IA d’un salon commun lumineux aux matières naturelles."
+      },
+      "scene": "common-lounge",
+      "variantOf": "common-lounge-a",
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": false,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "common-lounge-a-landscape-768w",
+      "path": "assets/media/variants/common-lounge-a/common-lounge-a-768w.webp",
+      "provenance": "Responsive WebP derivative generated locally from the registered OpenAI source with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic architectural editorial view of an intimate senior living lounge, deep green accents, ivory walls, light oak, comfortable varied seating, books and plants, generous daylight, quiet luxury, no people, no logos, no signage, not a hotel.",
+      "generatedAt": "2026-07-28",
+      "width": 768,
+      "height": 512,
+      "ratio": "3:2",
+      "focalPoint": {
+        "x": 0.56,
+        "y": 0.46
+      },
+      "alt": {
+        "de": "KI-Konzeptbild eines hellen, ruhig gestalteten gemeinschaftlichen Salons.",
+        "fr": "Image conceptuelle générée par IA d’un salon commun lumineux aux matières naturelles."
+      },
+      "scene": "common-lounge",
+      "variantOf": "common-lounge-a",
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": false,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "common-lounge-a-landscape-1024w",
+      "path": "assets/media/variants/common-lounge-a/common-lounge-a-1024w.webp",
+      "provenance": "Responsive WebP derivative generated locally from the registered OpenAI source with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic architectural editorial view of an intimate senior living lounge, deep green accents, ivory walls, light oak, comfortable varied seating, books and plants, generous daylight, quiet luxury, no people, no logos, no signage, not a hotel.",
+      "generatedAt": "2026-07-28",
+      "width": 1024,
+      "height": 682,
+      "ratio": "512:341",
+      "focalPoint": {
+        "x": 0.56,
+        "y": 0.46
+      },
+      "alt": {
+        "de": "KI-Konzeptbild eines hellen, ruhig gestalteten gemeinschaftlichen Salons.",
+        "fr": "Image conceptuelle générée par IA d’un salon commun lumineux aux matières naturelles."
+      },
+      "scene": "common-lounge",
+      "variantOf": "common-lounge-a",
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": false,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "common-lounge-a-landscape-1440w",
+      "path": "assets/media/variants/common-lounge-a/common-lounge-a-1440w.webp",
+      "provenance": "Responsive WebP derivative generated locally from the registered OpenAI source with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic architectural editorial view of an intimate senior living lounge, deep green accents, ivory walls, light oak, comfortable varied seating, books and plants, generous daylight, quiet luxury, no people, no logos, no signage, not a hotel.",
+      "generatedAt": "2026-07-28",
+      "width": 1440,
+      "height": 960,
+      "ratio": "3:2",
+      "focalPoint": {
+        "x": 0.56,
+        "y": 0.46
+      },
+      "alt": {
+        "de": "KI-Konzeptbild eines hellen, ruhig gestalteten gemeinschaftlichen Salons.",
+        "fr": "Image conceptuelle générée par IA d’un salon commun lumineux aux matières naturelles."
+      },
+      "scene": "common-lounge",
+      "variantOf": "common-lounge-a",
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": false,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "common-lounge-a-landscape-1536w",
+      "path": "assets/media/variants/common-lounge-a/common-lounge-a-1536w.webp",
+      "provenance": "Responsive WebP derivative generated locally from the registered OpenAI source with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic architectural editorial view of an intimate senior living lounge, deep green accents, ivory walls, light oak, comfortable varied seating, books and plants, generous daylight, quiet luxury, no people, no logos, no signage, not a hotel.",
+      "generatedAt": "2026-07-28",
+      "width": 1536,
+      "height": 1024,
+      "ratio": "3:2",
+      "focalPoint": {
+        "x": 0.56,
+        "y": 0.46
+      },
+      "alt": {
+        "de": "KI-Konzeptbild eines hellen, ruhig gestalteten gemeinschaftlichen Salons.",
+        "fr": "Image conceptuelle générée par IA d’un salon commun lumineux aux matières naturelles."
+      },
+      "scene": "common-lounge",
+      "variantOf": "common-lounge-a",
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": false,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "garden-a-landscape-480w",
+      "path": "assets/media/variants/garden-a/garden-a-480w.webp",
+      "provenance": "Responsive WebP derivative generated locally from the registered OpenAI source with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic editorial garden for senior living, legible gently curving paths, lush restrained planting, shaded benches and mature trees, warm afternoon light, safe welcoming atmosphere, generic fictional location, no logos, no signage, no people.",
+      "generatedAt": "2026-07-28",
+      "width": 480,
+      "height": 320,
+      "ratio": "3:2",
+      "focalPoint": {
+        "x": 0.55,
+        "y": 0.43
+      },
+      "alt": {
+        "de": "KI-Konzeptbild eines geschützten Gartens mit gut erkennbaren Wegen und Sitzplätzen.",
+        "fr": "Image conceptuelle générée par IA d’un jardin protégé avec des cheminements lisibles et des bancs."
+      },
+      "scene": "garden",
+      "variantOf": "garden-a",
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": false,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "garden-a-landscape-768w",
+      "path": "assets/media/variants/garden-a/garden-a-768w.webp",
+      "provenance": "Responsive WebP derivative generated locally from the registered OpenAI source with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic editorial garden for senior living, legible gently curving paths, lush restrained planting, shaded benches and mature trees, warm afternoon light, safe welcoming atmosphere, generic fictional location, no logos, no signage, no people.",
+      "generatedAt": "2026-07-28",
+      "width": 768,
+      "height": 512,
+      "ratio": "3:2",
+      "focalPoint": {
+        "x": 0.55,
+        "y": 0.43
+      },
+      "alt": {
+        "de": "KI-Konzeptbild eines geschützten Gartens mit gut erkennbaren Wegen und Sitzplätzen.",
+        "fr": "Image conceptuelle générée par IA d’un jardin protégé avec des cheminements lisibles et des bancs."
+      },
+      "scene": "garden",
+      "variantOf": "garden-a",
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": false,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "garden-a-landscape-1024w",
+      "path": "assets/media/variants/garden-a/garden-a-1024w.webp",
+      "provenance": "Responsive WebP derivative generated locally from the registered OpenAI source with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic editorial garden for senior living, legible gently curving paths, lush restrained planting, shaded benches and mature trees, warm afternoon light, safe welcoming atmosphere, generic fictional location, no logos, no signage, no people.",
+      "generatedAt": "2026-07-28",
+      "width": 1024,
+      "height": 682,
+      "ratio": "512:341",
+      "focalPoint": {
+        "x": 0.55,
+        "y": 0.43
+      },
+      "alt": {
+        "de": "KI-Konzeptbild eines geschützten Gartens mit gut erkennbaren Wegen und Sitzplätzen.",
+        "fr": "Image conceptuelle générée par IA d’un jardin protégé avec des cheminements lisibles et des bancs."
+      },
+      "scene": "garden",
+      "variantOf": "garden-a",
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": false,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "garden-a-landscape-1440w",
+      "path": "assets/media/variants/garden-a/garden-a-1440w.webp",
+      "provenance": "Responsive WebP derivative generated locally from the registered OpenAI source with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic editorial garden for senior living, legible gently curving paths, lush restrained planting, shaded benches and mature trees, warm afternoon light, safe welcoming atmosphere, generic fictional location, no logos, no signage, no people.",
+      "generatedAt": "2026-07-28",
+      "width": 1440,
+      "height": 960,
+      "ratio": "3:2",
+      "focalPoint": {
+        "x": 0.55,
+        "y": 0.43
+      },
+      "alt": {
+        "de": "KI-Konzeptbild eines geschützten Gartens mit gut erkennbaren Wegen und Sitzplätzen.",
+        "fr": "Image conceptuelle générée par IA d’un jardin protégé avec des cheminements lisibles et des bancs."
+      },
+      "scene": "garden",
+      "variantOf": "garden-a",
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": false,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "garden-a-landscape-1536w",
+      "path": "assets/media/variants/garden-a/garden-a-1536w.webp",
+      "provenance": "Responsive WebP derivative generated locally from the registered OpenAI source with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic editorial garden for senior living, legible gently curving paths, lush restrained planting, shaded benches and mature trees, warm afternoon light, safe welcoming atmosphere, generic fictional location, no logos, no signage, no people.",
+      "generatedAt": "2026-07-28",
+      "width": 1536,
+      "height": 1024,
+      "ratio": "3:2",
+      "focalPoint": {
+        "x": 0.55,
+        "y": 0.43
+      },
+      "alt": {
+        "de": "KI-Konzeptbild eines geschützten Gartens mit gut erkennbaren Wegen und Sitzplätzen.",
+        "fr": "Image conceptuelle générée par IA d’un jardin protégé avec des cheminements lisibles et des bancs."
+      },
+      "scene": "garden",
+      "variantOf": "garden-a",
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": false,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "hero-garden-a-landscape-480w",
+      "path": "assets/media/variants/hero-garden-a/hero-garden-a-480w.webp",
+      "provenance": "Responsive WebP derivative generated locally from the registered OpenAI source with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic editorial hero scene of an older woman enjoying a serene landscaped garden beside a contemporary understated residence, warm late-afternoon daylight, dignified natural expression, quiet luxury palette, fictional person and location, no logo, no text, no clinical cues.",
+      "generatedAt": "2026-07-28",
+      "width": 480,
+      "height": 320,
+      "ratio": "3:2",
+      "focalPoint": {
+        "x": 0.58,
+        "y": 0.42
+      },
+      "alt": {
+        "de": "KI-Konzeptbild einer älteren Frau in einem ruhigen, begrünten Außenbereich.",
+        "fr": "Image conceptuelle générée par IA d’une femme âgée dans un jardin paisible et arboré."
+      },
+      "scene": "hero-garden",
+      "variantOf": "hero-garden-a",
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": false,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "hero-garden-a-landscape-768w",
+      "path": "assets/media/variants/hero-garden-a/hero-garden-a-768w.webp",
+      "provenance": "Responsive WebP derivative generated locally from the registered OpenAI source with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic editorial hero scene of an older woman enjoying a serene landscaped garden beside a contemporary understated residence, warm late-afternoon daylight, dignified natural expression, quiet luxury palette, fictional person and location, no logo, no text, no clinical cues.",
+      "generatedAt": "2026-07-28",
+      "width": 768,
+      "height": 512,
+      "ratio": "3:2",
+      "focalPoint": {
+        "x": 0.58,
+        "y": 0.42
+      },
+      "alt": {
+        "de": "KI-Konzeptbild einer älteren Frau in einem ruhigen, begrünten Außenbereich.",
+        "fr": "Image conceptuelle générée par IA d’une femme âgée dans un jardin paisible et arboré."
+      },
+      "scene": "hero-garden",
+      "variantOf": "hero-garden-a",
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": false,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "hero-garden-a-landscape-1024w",
+      "path": "assets/media/variants/hero-garden-a/hero-garden-a-1024w.webp",
+      "provenance": "Responsive WebP derivative generated locally from the registered OpenAI source with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic editorial hero scene of an older woman enjoying a serene landscaped garden beside a contemporary understated residence, warm late-afternoon daylight, dignified natural expression, quiet luxury palette, fictional person and location, no logo, no text, no clinical cues.",
+      "generatedAt": "2026-07-28",
+      "width": 1024,
+      "height": 682,
+      "ratio": "512:341",
+      "focalPoint": {
+        "x": 0.58,
+        "y": 0.42
+      },
+      "alt": {
+        "de": "KI-Konzeptbild einer älteren Frau in einem ruhigen, begrünten Außenbereich.",
+        "fr": "Image conceptuelle générée par IA d’une femme âgée dans un jardin paisible et arboré."
+      },
+      "scene": "hero-garden",
+      "variantOf": "hero-garden-a",
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": false,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "hero-garden-a-landscape-1440w",
+      "path": "assets/media/variants/hero-garden-a/hero-garden-a-1440w.webp",
+      "provenance": "Responsive WebP derivative generated locally from the registered OpenAI source with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic editorial hero scene of an older woman enjoying a serene landscaped garden beside a contemporary understated residence, warm late-afternoon daylight, dignified natural expression, quiet luxury palette, fictional person and location, no logo, no text, no clinical cues.",
+      "generatedAt": "2026-07-28",
+      "width": 1440,
+      "height": 960,
+      "ratio": "3:2",
+      "focalPoint": {
+        "x": 0.58,
+        "y": 0.42
+      },
+      "alt": {
+        "de": "KI-Konzeptbild einer älteren Frau in einem ruhigen, begrünten Außenbereich.",
+        "fr": "Image conceptuelle générée par IA d’une femme âgée dans un jardin paisible et arboré."
+      },
+      "scene": "hero-garden",
+      "variantOf": "hero-garden-a",
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": false,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "hero-garden-a-landscape-1536w",
+      "path": "assets/media/variants/hero-garden-a/hero-garden-a-1536w.webp",
+      "provenance": "Responsive WebP derivative generated locally from the registered OpenAI source with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic editorial hero scene of an older woman enjoying a serene landscaped garden beside a contemporary understated residence, warm late-afternoon daylight, dignified natural expression, quiet luxury palette, fictional person and location, no logo, no text, no clinical cues.",
+      "generatedAt": "2026-07-28",
+      "width": 1536,
+      "height": 1024,
+      "ratio": "3:2",
+      "focalPoint": {
+        "x": 0.58,
+        "y": 0.42
+      },
+      "alt": {
+        "de": "KI-Konzeptbild einer älteren Frau in einem ruhigen, begrünten Außenbereich.",
+        "fr": "Image conceptuelle générée par IA d’une femme âgée dans un jardin paisible et arboré."
+      },
+      "scene": "hero-garden",
+      "variantOf": "hero-garden-a",
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": false,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "hero-garden-a-portrait-480w",
+      "path": "assets/media/variants/hero-garden-a/hero-garden-a-portrait-480w.webp",
+      "provenance": "Responsive WebP derivative generated locally from the registered OpenAI source with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic editorial hero scene of an older woman enjoying a serene landscaped garden beside a contemporary understated residence, warm late-afternoon daylight, dignified natural expression, quiet luxury palette, fictional person and location, no logo, no text, no clinical cues.",
+      "generatedAt": "2026-07-28",
+      "width": 480,
+      "height": 640,
+      "ratio": "3:4",
+      "focalPoint": {
+        "x": 0.58,
+        "y": 0.42
+      },
+      "alt": {
+        "de": "KI-Konzeptbild einer älteren Frau in einem ruhigen, begrünten Außenbereich.",
+        "fr": "Image conceptuelle générée par IA d’une femme âgée dans un jardin paisible et arboré."
+      },
+      "scene": "hero-garden",
+      "variantOf": "hero-garden-a",
+      "format": "portrait",
+      "selected": true,
+      "previewOnly": false,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "hero-garden-a-portrait-768w",
+      "path": "assets/media/variants/hero-garden-a/hero-garden-a-portrait-768w.webp",
+      "provenance": "Responsive WebP derivative generated locally from the registered OpenAI source with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic editorial hero scene of an older woman enjoying a serene landscaped garden beside a contemporary understated residence, warm late-afternoon daylight, dignified natural expression, quiet luxury palette, fictional person and location, no logo, no text, no clinical cues.",
+      "generatedAt": "2026-07-28",
+      "width": 768,
+      "height": 1024,
+      "ratio": "3:4",
+      "focalPoint": {
+        "x": 0.58,
+        "y": 0.42
+      },
+      "alt": {
+        "de": "KI-Konzeptbild einer älteren Frau in einem ruhigen, begrünten Außenbereich.",
+        "fr": "Image conceptuelle générée par IA d’une femme âgée dans un jardin paisible et arboré."
+      },
+      "scene": "hero-garden",
+      "variantOf": "hero-garden-a",
+      "format": "portrait",
+      "selected": true,
+      "previewOnly": false,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "room-b-landscape-480w",
+      "path": "assets/media/variants/room-b/room-b-480w.webp",
+      "provenance": "Responsive WebP derivative generated locally from the registered OpenAI source with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic elegant private room for an older adult, homelike rather than hotel-like, bed, beloved objects, reading lamp and armchair, wide clear circulation, soft window light, deep green and warm neutral accents, no people, no text, no logos, no clinical equipment.",
+      "generatedAt": "2026-07-28",
+      "width": 480,
+      "height": 320,
+      "ratio": "3:2",
+      "focalPoint": {
+        "x": 0.57,
+        "y": 0.48
+      },
+      "alt": {
+        "de": "KI-Konzeptbild eines wohnlichen Zimmers mit Bett, Lesesessel und persönlichen Gegenständen.",
+        "fr": "Image conceptuelle générée par IA d’une chambre chaleureuse avec lit, fauteuil de lecture et objets personnels."
+      },
+      "scene": "room",
+      "variantOf": "room-b",
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": false,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "room-b-landscape-768w",
+      "path": "assets/media/variants/room-b/room-b-768w.webp",
+      "provenance": "Responsive WebP derivative generated locally from the registered OpenAI source with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic elegant private room for an older adult, homelike rather than hotel-like, bed, beloved objects, reading lamp and armchair, wide clear circulation, soft window light, deep green and warm neutral accents, no people, no text, no logos, no clinical equipment.",
+      "generatedAt": "2026-07-28",
+      "width": 768,
+      "height": 512,
+      "ratio": "3:2",
+      "focalPoint": {
+        "x": 0.57,
+        "y": 0.48
+      },
+      "alt": {
+        "de": "KI-Konzeptbild eines wohnlichen Zimmers mit Bett, Lesesessel und persönlichen Gegenständen.",
+        "fr": "Image conceptuelle générée par IA d’une chambre chaleureuse avec lit, fauteuil de lecture et objets personnels."
+      },
+      "scene": "room",
+      "variantOf": "room-b",
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": false,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "room-b-landscape-1024w",
+      "path": "assets/media/variants/room-b/room-b-1024w.webp",
+      "provenance": "Responsive WebP derivative generated locally from the registered OpenAI source with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic elegant private room for an older adult, homelike rather than hotel-like, bed, beloved objects, reading lamp and armchair, wide clear circulation, soft window light, deep green and warm neutral accents, no people, no text, no logos, no clinical equipment.",
+      "generatedAt": "2026-07-28",
+      "width": 1024,
+      "height": 682,
+      "ratio": "512:341",
+      "focalPoint": {
+        "x": 0.57,
+        "y": 0.48
+      },
+      "alt": {
+        "de": "KI-Konzeptbild eines wohnlichen Zimmers mit Bett, Lesesessel und persönlichen Gegenständen.",
+        "fr": "Image conceptuelle générée par IA d’une chambre chaleureuse avec lit, fauteuil de lecture et objets personnels."
+      },
+      "scene": "room",
+      "variantOf": "room-b",
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": false,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "room-b-landscape-1440w",
+      "path": "assets/media/variants/room-b/room-b-1440w.webp",
+      "provenance": "Responsive WebP derivative generated locally from the registered OpenAI source with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic elegant private room for an older adult, homelike rather than hotel-like, bed, beloved objects, reading lamp and armchair, wide clear circulation, soft window light, deep green and warm neutral accents, no people, no text, no logos, no clinical equipment.",
+      "generatedAt": "2026-07-28",
+      "width": 1440,
+      "height": 960,
+      "ratio": "3:2",
+      "focalPoint": {
+        "x": 0.57,
+        "y": 0.48
+      },
+      "alt": {
+        "de": "KI-Konzeptbild eines wohnlichen Zimmers mit Bett, Lesesessel und persönlichen Gegenständen.",
+        "fr": "Image conceptuelle générée par IA d’une chambre chaleureuse avec lit, fauteuil de lecture et objets personnels."
+      },
+      "scene": "room",
+      "variantOf": "room-b",
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": false,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "room-b-landscape-1536w",
+      "path": "assets/media/variants/room-b/room-b-1536w.webp",
+      "provenance": "Responsive WebP derivative generated locally from the registered OpenAI source with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic elegant private room for an older adult, homelike rather than hotel-like, bed, beloved objects, reading lamp and armchair, wide clear circulation, soft window light, deep green and warm neutral accents, no people, no text, no logos, no clinical equipment.",
+      "generatedAt": "2026-07-28",
+      "width": 1536,
+      "height": 1024,
+      "ratio": "3:2",
+      "focalPoint": {
+        "x": 0.57,
+        "y": 0.48
+      },
+      "alt": {
+        "de": "KI-Konzeptbild eines wohnlichen Zimmers mit Bett, Lesesessel und persönlichen Gegenständen.",
+        "fr": "Image conceptuelle générée par IA d’une chambre chaleureuse avec lit, fauteuil de lecture et objets personnels."
+      },
+      "scene": "room",
+      "variantOf": "room-b",
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": false,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "preview-activity-flowers-a-landscape-480w",
+      "path": "public/media/preview/activity-flowers-a/activity-flowers-a-480w.webp",
+      "provenance": "Responsive WebP derivative generated locally from the registered OpenAI source with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic editorial scene of older adults arranging flowers together at a light oak table, warm natural daylight, quiet luxury interior, dignified candid interaction, fictional people, no logos, no text, no clinical equipment.",
+      "generatedAt": "2026-07-28",
+      "width": 480,
+      "height": 320,
+      "ratio": "3:2",
+      "focalPoint": {
+        "x": 0.51,
+        "y": 0.46
+      },
+      "alt": {
+        "de": "KI-Konzeptbild älterer Menschen beim gemeinsamen Arrangieren von Blumen.",
+        "fr": "Image conceptuelle générée par IA de personnes âgées composant des bouquets ensemble."
+      },
+      "scene": "activity",
+      "variantOf": "activity-flowers-a",
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": true,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "preview-activity-flowers-a-landscape-768w",
+      "path": "public/media/preview/activity-flowers-a/activity-flowers-a-768w.webp",
+      "provenance": "Responsive WebP derivative generated locally from the registered OpenAI source with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic editorial scene of older adults arranging flowers together at a light oak table, warm natural daylight, quiet luxury interior, dignified candid interaction, fictional people, no logos, no text, no clinical equipment.",
+      "generatedAt": "2026-07-28",
+      "width": 768,
+      "height": 512,
+      "ratio": "3:2",
+      "focalPoint": {
+        "x": 0.51,
+        "y": 0.46
+      },
+      "alt": {
+        "de": "KI-Konzeptbild älterer Menschen beim gemeinsamen Arrangieren von Blumen.",
+        "fr": "Image conceptuelle générée par IA de personnes âgées composant des bouquets ensemble."
+      },
+      "scene": "activity",
+      "variantOf": "activity-flowers-a",
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": true,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "preview-activity-flowers-a-landscape-1024w",
+      "path": "public/media/preview/activity-flowers-a/activity-flowers-a-1024w.webp",
+      "provenance": "Responsive WebP derivative generated locally from the registered OpenAI source with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic editorial scene of older adults arranging flowers together at a light oak table, warm natural daylight, quiet luxury interior, dignified candid interaction, fictional people, no logos, no text, no clinical equipment.",
+      "generatedAt": "2026-07-28",
+      "width": 1024,
+      "height": 682,
+      "ratio": "512:341",
+      "focalPoint": {
+        "x": 0.51,
+        "y": 0.46
+      },
+      "alt": {
+        "de": "KI-Konzeptbild älterer Menschen beim gemeinsamen Arrangieren von Blumen.",
+        "fr": "Image conceptuelle générée par IA de personnes âgées composant des bouquets ensemble."
+      },
+      "scene": "activity",
+      "variantOf": "activity-flowers-a",
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": true,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "preview-activity-flowers-a-landscape-1440w",
+      "path": "public/media/preview/activity-flowers-a/activity-flowers-a-1440w.webp",
+      "provenance": "Responsive WebP derivative generated locally from the registered OpenAI source with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic editorial scene of older adults arranging flowers together at a light oak table, warm natural daylight, quiet luxury interior, dignified candid interaction, fictional people, no logos, no text, no clinical equipment.",
+      "generatedAt": "2026-07-28",
+      "width": 1440,
+      "height": 960,
+      "ratio": "3:2",
+      "focalPoint": {
+        "x": 0.51,
+        "y": 0.46
+      },
+      "alt": {
+        "de": "KI-Konzeptbild älterer Menschen beim gemeinsamen Arrangieren von Blumen.",
+        "fr": "Image conceptuelle générée par IA de personnes âgées composant des bouquets ensemble."
+      },
+      "scene": "activity",
+      "variantOf": "activity-flowers-a",
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": true,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "preview-activity-flowers-a-landscape-1536w",
+      "path": "public/media/preview/activity-flowers-a/activity-flowers-a-1536w.webp",
+      "provenance": "Responsive WebP derivative generated locally from the registered OpenAI source with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic editorial scene of older adults arranging flowers together at a light oak table, warm natural daylight, quiet luxury interior, dignified candid interaction, fictional people, no logos, no text, no clinical equipment.",
+      "generatedAt": "2026-07-28",
+      "width": 1536,
+      "height": 1024,
+      "ratio": "3:2",
+      "focalPoint": {
+        "x": 0.51,
+        "y": 0.46
+      },
+      "alt": {
+        "de": "KI-Konzeptbild älterer Menschen beim gemeinsamen Arrangieren von Blumen.",
+        "fr": "Image conceptuelle générée par IA de personnes âgées composant des bouquets ensemble."
+      },
+      "scene": "activity",
+      "variantOf": "activity-flowers-a",
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": true,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "preview-admission-a-landscape-480w",
+      "path": "public/media/preview/admission-a/admission-a-480w.webp",
+      "provenance": "Responsive WebP derivative generated locally from the registered OpenAI source with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic editorial consultation between an older woman, an adult relative and a welcoming advisor around a table, papers without readable text, calm private room, natural daylight, dignified fictional people, no logos, no medical imagery.",
+      "generatedAt": "2026-07-28",
+      "width": 480,
+      "height": 320,
+      "ratio": "3:2",
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.46
+      },
+      "alt": {
+        "de": "KI-Konzeptbild eines ruhigen Aufnahmegesprächs mit einer älteren Frau und einer Angehörigen.",
+        "fr": "Image conceptuelle générée par IA d’un entretien d’admission avec une femme âgée et une proche."
+      },
+      "scene": "admission",
+      "variantOf": "admission-a",
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": true,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "preview-admission-a-landscape-768w",
+      "path": "public/media/preview/admission-a/admission-a-768w.webp",
+      "provenance": "Responsive WebP derivative generated locally from the registered OpenAI source with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic editorial consultation between an older woman, an adult relative and a welcoming advisor around a table, papers without readable text, calm private room, natural daylight, dignified fictional people, no logos, no medical imagery.",
+      "generatedAt": "2026-07-28",
+      "width": 768,
+      "height": 512,
+      "ratio": "3:2",
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.46
+      },
+      "alt": {
+        "de": "KI-Konzeptbild eines ruhigen Aufnahmegesprächs mit einer älteren Frau und einer Angehörigen.",
+        "fr": "Image conceptuelle générée par IA d’un entretien d’admission avec une femme âgée et une proche."
+      },
+      "scene": "admission",
+      "variantOf": "admission-a",
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": true,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "preview-admission-a-landscape-1024w",
+      "path": "public/media/preview/admission-a/admission-a-1024w.webp",
+      "provenance": "Responsive WebP derivative generated locally from the registered OpenAI source with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic editorial consultation between an older woman, an adult relative and a welcoming advisor around a table, papers without readable text, calm private room, natural daylight, dignified fictional people, no logos, no medical imagery.",
+      "generatedAt": "2026-07-28",
+      "width": 1024,
+      "height": 682,
+      "ratio": "512:341",
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.46
+      },
+      "alt": {
+        "de": "KI-Konzeptbild eines ruhigen Aufnahmegesprächs mit einer älteren Frau und einer Angehörigen.",
+        "fr": "Image conceptuelle générée par IA d’un entretien d’admission avec une femme âgée et une proche."
+      },
+      "scene": "admission",
+      "variantOf": "admission-a",
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": true,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "preview-admission-a-landscape-1440w",
+      "path": "public/media/preview/admission-a/admission-a-1440w.webp",
+      "provenance": "Responsive WebP derivative generated locally from the registered OpenAI source with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic editorial consultation between an older woman, an adult relative and a welcoming advisor around a table, papers without readable text, calm private room, natural daylight, dignified fictional people, no logos, no medical imagery.",
+      "generatedAt": "2026-07-28",
+      "width": 1440,
+      "height": 960,
+      "ratio": "3:2",
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.46
+      },
+      "alt": {
+        "de": "KI-Konzeptbild eines ruhigen Aufnahmegesprächs mit einer älteren Frau und einer Angehörigen.",
+        "fr": "Image conceptuelle générée par IA d’un entretien d’admission avec une femme âgée et une proche."
+      },
+      "scene": "admission",
+      "variantOf": "admission-a",
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": true,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "preview-admission-a-landscape-1536w",
+      "path": "public/media/preview/admission-a/admission-a-1536w.webp",
+      "provenance": "Responsive WebP derivative generated locally from the registered OpenAI source with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic editorial consultation between an older woman, an adult relative and a welcoming advisor around a table, papers without readable text, calm private room, natural daylight, dignified fictional people, no logos, no medical imagery.",
+      "generatedAt": "2026-07-28",
+      "width": 1536,
+      "height": 1024,
+      "ratio": "3:2",
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.46
+      },
+      "alt": {
+        "de": "KI-Konzeptbild eines ruhigen Aufnahmegesprächs mit einer älteren Frau und einer Angehörigen.",
+        "fr": "Image conceptuelle générée par IA d’un entretien d’admission avec une femme âgée et une proche."
+      },
+      "scene": "admission",
+      "variantOf": "admission-a",
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": true,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "preview-care-conversation-a-landscape-480w",
+      "path": "public/media/preview/care-conversation-a/care-conversation-a-480w.webp",
+      "provenance": "Responsive WebP derivative generated locally from the registered OpenAI source with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic editorial scene of a warm conversation between an older resident and a support professional in a bright lounge, respectful eye-level body language, ordinary clothing, quiet luxury interior, fictional people, no uniforms, no medical equipment, no logos.",
+      "generatedAt": "2026-07-28",
+      "width": 480,
+      "height": 320,
+      "ratio": "3:2",
+      "focalPoint": {
+        "x": 0.49,
+        "y": 0.45
+      },
+      "alt": {
+        "de": "KI-Konzeptbild eines aufmerksamen Gesprächs zwischen einer älteren Person und einer Begleitperson.",
+        "fr": "Image conceptuelle générée par IA d’un échange attentif entre une personne âgée et une accompagnante."
+      },
+      "scene": "care-conversation",
+      "variantOf": "care-conversation-a",
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": true,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "preview-care-conversation-a-landscape-768w",
+      "path": "public/media/preview/care-conversation-a/care-conversation-a-768w.webp",
+      "provenance": "Responsive WebP derivative generated locally from the registered OpenAI source with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic editorial scene of a warm conversation between an older resident and a support professional in a bright lounge, respectful eye-level body language, ordinary clothing, quiet luxury interior, fictional people, no uniforms, no medical equipment, no logos.",
+      "generatedAt": "2026-07-28",
+      "width": 768,
+      "height": 512,
+      "ratio": "3:2",
+      "focalPoint": {
+        "x": 0.49,
+        "y": 0.45
+      },
+      "alt": {
+        "de": "KI-Konzeptbild eines aufmerksamen Gesprächs zwischen einer älteren Person und einer Begleitperson.",
+        "fr": "Image conceptuelle générée par IA d’un échange attentif entre une personne âgée et une accompagnante."
+      },
+      "scene": "care-conversation",
+      "variantOf": "care-conversation-a",
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": true,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "preview-care-conversation-a-landscape-1024w",
+      "path": "public/media/preview/care-conversation-a/care-conversation-a-1024w.webp",
+      "provenance": "Responsive WebP derivative generated locally from the registered OpenAI source with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic editorial scene of a warm conversation between an older resident and a support professional in a bright lounge, respectful eye-level body language, ordinary clothing, quiet luxury interior, fictional people, no uniforms, no medical equipment, no logos.",
+      "generatedAt": "2026-07-28",
+      "width": 1024,
+      "height": 682,
+      "ratio": "512:341",
+      "focalPoint": {
+        "x": 0.49,
+        "y": 0.45
+      },
+      "alt": {
+        "de": "KI-Konzeptbild eines aufmerksamen Gesprächs zwischen einer älteren Person und einer Begleitperson.",
+        "fr": "Image conceptuelle générée par IA d’un échange attentif entre une personne âgée et une accompagnante."
+      },
+      "scene": "care-conversation",
+      "variantOf": "care-conversation-a",
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": true,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "preview-care-conversation-a-landscape-1440w",
+      "path": "public/media/preview/care-conversation-a/care-conversation-a-1440w.webp",
+      "provenance": "Responsive WebP derivative generated locally from the registered OpenAI source with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic editorial scene of a warm conversation between an older resident and a support professional in a bright lounge, respectful eye-level body language, ordinary clothing, quiet luxury interior, fictional people, no uniforms, no medical equipment, no logos.",
+      "generatedAt": "2026-07-28",
+      "width": 1440,
+      "height": 960,
+      "ratio": "3:2",
+      "focalPoint": {
+        "x": 0.49,
+        "y": 0.45
+      },
+      "alt": {
+        "de": "KI-Konzeptbild eines aufmerksamen Gesprächs zwischen einer älteren Person und einer Begleitperson.",
+        "fr": "Image conceptuelle générée par IA d’un échange attentif entre une personne âgée et une accompagnante."
+      },
+      "scene": "care-conversation",
+      "variantOf": "care-conversation-a",
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": true,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "preview-care-conversation-a-landscape-1536w",
+      "path": "public/media/preview/care-conversation-a/care-conversation-a-1536w.webp",
+      "provenance": "Responsive WebP derivative generated locally from the registered OpenAI source with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic editorial scene of a warm conversation between an older resident and a support professional in a bright lounge, respectful eye-level body language, ordinary clothing, quiet luxury interior, fictional people, no uniforms, no medical equipment, no logos.",
+      "generatedAt": "2026-07-28",
+      "width": 1536,
+      "height": 1024,
+      "ratio": "3:2",
+      "focalPoint": {
+        "x": 0.49,
+        "y": 0.45
+      },
+      "alt": {
+        "de": "KI-Konzeptbild eines aufmerksamen Gesprächs zwischen einer älteren Person und einer Begleitperson.",
+        "fr": "Image conceptuelle générée par IA d’un échange attentif entre une personne âgée et une accompagnante."
+      },
+      "scene": "care-conversation",
+      "variantOf": "care-conversation-a",
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": true,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "preview-common-lounge-a-landscape-480w",
+      "path": "public/media/preview/common-lounge-a/common-lounge-a-480w.webp",
+      "provenance": "Responsive WebP derivative generated locally from the registered OpenAI source with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic architectural editorial view of an intimate senior living lounge, deep green accents, ivory walls, light oak, comfortable varied seating, books and plants, generous daylight, quiet luxury, no people, no logos, no signage, not a hotel.",
+      "generatedAt": "2026-07-28",
+      "width": 480,
+      "height": 320,
+      "ratio": "3:2",
+      "focalPoint": {
+        "x": 0.56,
+        "y": 0.46
+      },
+      "alt": {
+        "de": "KI-Konzeptbild eines hellen, ruhig gestalteten gemeinschaftlichen Salons.",
+        "fr": "Image conceptuelle générée par IA d’un salon commun lumineux aux matières naturelles."
+      },
+      "scene": "common-lounge",
+      "variantOf": "common-lounge-a",
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": true,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "preview-common-lounge-a-landscape-768w",
+      "path": "public/media/preview/common-lounge-a/common-lounge-a-768w.webp",
+      "provenance": "Responsive WebP derivative generated locally from the registered OpenAI source with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic architectural editorial view of an intimate senior living lounge, deep green accents, ivory walls, light oak, comfortable varied seating, books and plants, generous daylight, quiet luxury, no people, no logos, no signage, not a hotel.",
+      "generatedAt": "2026-07-28",
+      "width": 768,
+      "height": 512,
+      "ratio": "3:2",
+      "focalPoint": {
+        "x": 0.56,
+        "y": 0.46
+      },
+      "alt": {
+        "de": "KI-Konzeptbild eines hellen, ruhig gestalteten gemeinschaftlichen Salons.",
+        "fr": "Image conceptuelle générée par IA d’un salon commun lumineux aux matières naturelles."
+      },
+      "scene": "common-lounge",
+      "variantOf": "common-lounge-a",
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": true,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "preview-common-lounge-a-landscape-1024w",
+      "path": "public/media/preview/common-lounge-a/common-lounge-a-1024w.webp",
+      "provenance": "Responsive WebP derivative generated locally from the registered OpenAI source with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic architectural editorial view of an intimate senior living lounge, deep green accents, ivory walls, light oak, comfortable varied seating, books and plants, generous daylight, quiet luxury, no people, no logos, no signage, not a hotel.",
+      "generatedAt": "2026-07-28",
+      "width": 1024,
+      "height": 682,
+      "ratio": "512:341",
+      "focalPoint": {
+        "x": 0.56,
+        "y": 0.46
+      },
+      "alt": {
+        "de": "KI-Konzeptbild eines hellen, ruhig gestalteten gemeinschaftlichen Salons.",
+        "fr": "Image conceptuelle générée par IA d’un salon commun lumineux aux matières naturelles."
+      },
+      "scene": "common-lounge",
+      "variantOf": "common-lounge-a",
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": true,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "preview-common-lounge-a-landscape-1440w",
+      "path": "public/media/preview/common-lounge-a/common-lounge-a-1440w.webp",
+      "provenance": "Responsive WebP derivative generated locally from the registered OpenAI source with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic architectural editorial view of an intimate senior living lounge, deep green accents, ivory walls, light oak, comfortable varied seating, books and plants, generous daylight, quiet luxury, no people, no logos, no signage, not a hotel.",
+      "generatedAt": "2026-07-28",
+      "width": 1440,
+      "height": 960,
+      "ratio": "3:2",
+      "focalPoint": {
+        "x": 0.56,
+        "y": 0.46
+      },
+      "alt": {
+        "de": "KI-Konzeptbild eines hellen, ruhig gestalteten gemeinschaftlichen Salons.",
+        "fr": "Image conceptuelle générée par IA d’un salon commun lumineux aux matières naturelles."
+      },
+      "scene": "common-lounge",
+      "variantOf": "common-lounge-a",
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": true,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "preview-common-lounge-a-landscape-1536w",
+      "path": "public/media/preview/common-lounge-a/common-lounge-a-1536w.webp",
+      "provenance": "Responsive WebP derivative generated locally from the registered OpenAI source with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic architectural editorial view of an intimate senior living lounge, deep green accents, ivory walls, light oak, comfortable varied seating, books and plants, generous daylight, quiet luxury, no people, no logos, no signage, not a hotel.",
+      "generatedAt": "2026-07-28",
+      "width": 1536,
+      "height": 1024,
+      "ratio": "3:2",
+      "focalPoint": {
+        "x": 0.56,
+        "y": 0.46
+      },
+      "alt": {
+        "de": "KI-Konzeptbild eines hellen, ruhig gestalteten gemeinschaftlichen Salons.",
+        "fr": "Image conceptuelle générée par IA d’un salon commun lumineux aux matières naturelles."
+      },
+      "scene": "common-lounge",
+      "variantOf": "common-lounge-a",
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": true,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "preview-garden-a-landscape-480w",
+      "path": "public/media/preview/garden-a/garden-a-480w.webp",
+      "provenance": "Responsive WebP derivative generated locally from the registered OpenAI source with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic editorial garden for senior living, legible gently curving paths, lush restrained planting, shaded benches and mature trees, warm afternoon light, safe welcoming atmosphere, generic fictional location, no logos, no signage, no people.",
+      "generatedAt": "2026-07-28",
+      "width": 480,
+      "height": 320,
+      "ratio": "3:2",
+      "focalPoint": {
+        "x": 0.55,
+        "y": 0.43
+      },
+      "alt": {
+        "de": "KI-Konzeptbild eines geschützten Gartens mit gut erkennbaren Wegen und Sitzplätzen.",
+        "fr": "Image conceptuelle générée par IA d’un jardin protégé avec des cheminements lisibles et des bancs."
+      },
+      "scene": "garden",
+      "variantOf": "garden-a",
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": true,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "preview-garden-a-landscape-768w",
+      "path": "public/media/preview/garden-a/garden-a-768w.webp",
+      "provenance": "Responsive WebP derivative generated locally from the registered OpenAI source with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic editorial garden for senior living, legible gently curving paths, lush restrained planting, shaded benches and mature trees, warm afternoon light, safe welcoming atmosphere, generic fictional location, no logos, no signage, no people.",
+      "generatedAt": "2026-07-28",
+      "width": 768,
+      "height": 512,
+      "ratio": "3:2",
+      "focalPoint": {
+        "x": 0.55,
+        "y": 0.43
+      },
+      "alt": {
+        "de": "KI-Konzeptbild eines geschützten Gartens mit gut erkennbaren Wegen und Sitzplätzen.",
+        "fr": "Image conceptuelle générée par IA d’un jardin protégé avec des cheminements lisibles et des bancs."
+      },
+      "scene": "garden",
+      "variantOf": "garden-a",
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": true,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "preview-garden-a-landscape-1024w",
+      "path": "public/media/preview/garden-a/garden-a-1024w.webp",
+      "provenance": "Responsive WebP derivative generated locally from the registered OpenAI source with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic editorial garden for senior living, legible gently curving paths, lush restrained planting, shaded benches and mature trees, warm afternoon light, safe welcoming atmosphere, generic fictional location, no logos, no signage, no people.",
+      "generatedAt": "2026-07-28",
+      "width": 1024,
+      "height": 682,
+      "ratio": "512:341",
+      "focalPoint": {
+        "x": 0.55,
+        "y": 0.43
+      },
+      "alt": {
+        "de": "KI-Konzeptbild eines geschützten Gartens mit gut erkennbaren Wegen und Sitzplätzen.",
+        "fr": "Image conceptuelle générée par IA d’un jardin protégé avec des cheminements lisibles et des bancs."
+      },
+      "scene": "garden",
+      "variantOf": "garden-a",
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": true,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "preview-garden-a-landscape-1440w",
+      "path": "public/media/preview/garden-a/garden-a-1440w.webp",
+      "provenance": "Responsive WebP derivative generated locally from the registered OpenAI source with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic editorial garden for senior living, legible gently curving paths, lush restrained planting, shaded benches and mature trees, warm afternoon light, safe welcoming atmosphere, generic fictional location, no logos, no signage, no people.",
+      "generatedAt": "2026-07-28",
+      "width": 1440,
+      "height": 960,
+      "ratio": "3:2",
+      "focalPoint": {
+        "x": 0.55,
+        "y": 0.43
+      },
+      "alt": {
+        "de": "KI-Konzeptbild eines geschützten Gartens mit gut erkennbaren Wegen und Sitzplätzen.",
+        "fr": "Image conceptuelle générée par IA d’un jardin protégé avec des cheminements lisibles et des bancs."
+      },
+      "scene": "garden",
+      "variantOf": "garden-a",
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": true,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "preview-garden-a-landscape-1536w",
+      "path": "public/media/preview/garden-a/garden-a-1536w.webp",
+      "provenance": "Responsive WebP derivative generated locally from the registered OpenAI source with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic editorial garden for senior living, legible gently curving paths, lush restrained planting, shaded benches and mature trees, warm afternoon light, safe welcoming atmosphere, generic fictional location, no logos, no signage, no people.",
+      "generatedAt": "2026-07-28",
+      "width": 1536,
+      "height": 1024,
+      "ratio": "3:2",
+      "focalPoint": {
+        "x": 0.55,
+        "y": 0.43
+      },
+      "alt": {
+        "de": "KI-Konzeptbild eines geschützten Gartens mit gut erkennbaren Wegen und Sitzplätzen.",
+        "fr": "Image conceptuelle générée par IA d’un jardin protégé avec des cheminements lisibles et des bancs."
+      },
+      "scene": "garden",
+      "variantOf": "garden-a",
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": true,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "preview-hero-garden-a-landscape-480w",
+      "path": "public/media/preview/hero-garden-a/hero-garden-a-480w.webp",
+      "provenance": "Responsive WebP derivative generated locally from the registered OpenAI source with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic editorial hero scene of an older woman enjoying a serene landscaped garden beside a contemporary understated residence, warm late-afternoon daylight, dignified natural expression, quiet luxury palette, fictional person and location, no logo, no text, no clinical cues.",
+      "generatedAt": "2026-07-28",
+      "width": 480,
+      "height": 320,
+      "ratio": "3:2",
+      "focalPoint": {
+        "x": 0.58,
+        "y": 0.42
+      },
+      "alt": {
+        "de": "KI-Konzeptbild einer älteren Frau in einem ruhigen, begrünten Außenbereich.",
+        "fr": "Image conceptuelle générée par IA d’une femme âgée dans un jardin paisible et arboré."
+      },
+      "scene": "hero-garden",
+      "variantOf": "hero-garden-a",
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": true,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "preview-hero-garden-a-landscape-768w",
+      "path": "public/media/preview/hero-garden-a/hero-garden-a-768w.webp",
+      "provenance": "Responsive WebP derivative generated locally from the registered OpenAI source with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic editorial hero scene of an older woman enjoying a serene landscaped garden beside a contemporary understated residence, warm late-afternoon daylight, dignified natural expression, quiet luxury palette, fictional person and location, no logo, no text, no clinical cues.",
+      "generatedAt": "2026-07-28",
+      "width": 768,
+      "height": 512,
+      "ratio": "3:2",
+      "focalPoint": {
+        "x": 0.58,
+        "y": 0.42
+      },
+      "alt": {
+        "de": "KI-Konzeptbild einer älteren Frau in einem ruhigen, begrünten Außenbereich.",
+        "fr": "Image conceptuelle générée par IA d’une femme âgée dans un jardin paisible et arboré."
+      },
+      "scene": "hero-garden",
+      "variantOf": "hero-garden-a",
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": true,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "preview-hero-garden-a-landscape-1024w",
+      "path": "public/media/preview/hero-garden-a/hero-garden-a-1024w.webp",
+      "provenance": "Responsive WebP derivative generated locally from the registered OpenAI source with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic editorial hero scene of an older woman enjoying a serene landscaped garden beside a contemporary understated residence, warm late-afternoon daylight, dignified natural expression, quiet luxury palette, fictional person and location, no logo, no text, no clinical cues.",
+      "generatedAt": "2026-07-28",
+      "width": 1024,
+      "height": 682,
+      "ratio": "512:341",
+      "focalPoint": {
+        "x": 0.58,
+        "y": 0.42
+      },
+      "alt": {
+        "de": "KI-Konzeptbild einer älteren Frau in einem ruhigen, begrünten Außenbereich.",
+        "fr": "Image conceptuelle générée par IA d’une femme âgée dans un jardin paisible et arboré."
+      },
+      "scene": "hero-garden",
+      "variantOf": "hero-garden-a",
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": true,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "preview-hero-garden-a-landscape-1440w",
+      "path": "public/media/preview/hero-garden-a/hero-garden-a-1440w.webp",
+      "provenance": "Responsive WebP derivative generated locally from the registered OpenAI source with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic editorial hero scene of an older woman enjoying a serene landscaped garden beside a contemporary understated residence, warm late-afternoon daylight, dignified natural expression, quiet luxury palette, fictional person and location, no logo, no text, no clinical cues.",
+      "generatedAt": "2026-07-28",
+      "width": 1440,
+      "height": 960,
+      "ratio": "3:2",
+      "focalPoint": {
+        "x": 0.58,
+        "y": 0.42
+      },
+      "alt": {
+        "de": "KI-Konzeptbild einer älteren Frau in einem ruhigen, begrünten Außenbereich.",
+        "fr": "Image conceptuelle générée par IA d’une femme âgée dans un jardin paisible et arboré."
+      },
+      "scene": "hero-garden",
+      "variantOf": "hero-garden-a",
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": true,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "preview-hero-garden-a-landscape-1536w",
+      "path": "public/media/preview/hero-garden-a/hero-garden-a-1536w.webp",
+      "provenance": "Responsive WebP derivative generated locally from the registered OpenAI source with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic editorial hero scene of an older woman enjoying a serene landscaped garden beside a contemporary understated residence, warm late-afternoon daylight, dignified natural expression, quiet luxury palette, fictional person and location, no logo, no text, no clinical cues.",
+      "generatedAt": "2026-07-28",
+      "width": 1536,
+      "height": 1024,
+      "ratio": "3:2",
+      "focalPoint": {
+        "x": 0.58,
+        "y": 0.42
+      },
+      "alt": {
+        "de": "KI-Konzeptbild einer älteren Frau in einem ruhigen, begrünten Außenbereich.",
+        "fr": "Image conceptuelle générée par IA d’une femme âgée dans un jardin paisible et arboré."
+      },
+      "scene": "hero-garden",
+      "variantOf": "hero-garden-a",
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": true,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "preview-hero-garden-a-portrait-480w",
+      "path": "public/media/preview/hero-garden-a/hero-garden-a-portrait-480w.webp",
+      "provenance": "Responsive WebP derivative generated locally from the registered OpenAI source with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic editorial hero scene of an older woman enjoying a serene landscaped garden beside a contemporary understated residence, warm late-afternoon daylight, dignified natural expression, quiet luxury palette, fictional person and location, no logo, no text, no clinical cues.",
+      "generatedAt": "2026-07-28",
+      "width": 480,
+      "height": 640,
+      "ratio": "3:4",
+      "focalPoint": {
+        "x": 0.58,
+        "y": 0.42
+      },
+      "alt": {
+        "de": "KI-Konzeptbild einer älteren Frau in einem ruhigen, begrünten Außenbereich.",
+        "fr": "Image conceptuelle générée par IA d’une femme âgée dans un jardin paisible et arboré."
+      },
+      "scene": "hero-garden",
+      "variantOf": "hero-garden-a",
+      "format": "portrait",
+      "selected": true,
+      "previewOnly": true,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "preview-hero-garden-a-portrait-768w",
+      "path": "public/media/preview/hero-garden-a/hero-garden-a-portrait-768w.webp",
+      "provenance": "Responsive WebP derivative generated locally from the registered OpenAI source with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic editorial hero scene of an older woman enjoying a serene landscaped garden beside a contemporary understated residence, warm late-afternoon daylight, dignified natural expression, quiet luxury palette, fictional person and location, no logo, no text, no clinical cues.",
+      "generatedAt": "2026-07-28",
+      "width": 768,
+      "height": 1024,
+      "ratio": "3:4",
+      "focalPoint": {
+        "x": 0.58,
+        "y": 0.42
+      },
+      "alt": {
+        "de": "KI-Konzeptbild einer älteren Frau in einem ruhigen, begrünten Außenbereich.",
+        "fr": "Image conceptuelle générée par IA d’une femme âgée dans un jardin paisible et arboré."
+      },
+      "scene": "hero-garden",
+      "variantOf": "hero-garden-a",
+      "format": "portrait",
+      "selected": true,
+      "previewOnly": true,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "preview-room-b-landscape-480w",
+      "path": "public/media/preview/room-b/room-b-480w.webp",
+      "provenance": "Responsive WebP derivative generated locally from the registered OpenAI source with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic elegant private room for an older adult, homelike rather than hotel-like, bed, beloved objects, reading lamp and armchair, wide clear circulation, soft window light, deep green and warm neutral accents, no people, no text, no logos, no clinical equipment.",
+      "generatedAt": "2026-07-28",
+      "width": 480,
+      "height": 320,
+      "ratio": "3:2",
+      "focalPoint": {
+        "x": 0.57,
+        "y": 0.48
+      },
+      "alt": {
+        "de": "KI-Konzeptbild eines wohnlichen Zimmers mit Bett, Lesesessel und persönlichen Gegenständen.",
+        "fr": "Image conceptuelle générée par IA d’une chambre chaleureuse avec lit, fauteuil de lecture et objets personnels."
+      },
+      "scene": "room",
+      "variantOf": "room-b",
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": true,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "preview-room-b-landscape-768w",
+      "path": "public/media/preview/room-b/room-b-768w.webp",
+      "provenance": "Responsive WebP derivative generated locally from the registered OpenAI source with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic elegant private room for an older adult, homelike rather than hotel-like, bed, beloved objects, reading lamp and armchair, wide clear circulation, soft window light, deep green and warm neutral accents, no people, no text, no logos, no clinical equipment.",
+      "generatedAt": "2026-07-28",
+      "width": 768,
+      "height": 512,
+      "ratio": "3:2",
+      "focalPoint": {
+        "x": 0.57,
+        "y": 0.48
+      },
+      "alt": {
+        "de": "KI-Konzeptbild eines wohnlichen Zimmers mit Bett, Lesesessel und persönlichen Gegenständen.",
+        "fr": "Image conceptuelle générée par IA d’une chambre chaleureuse avec lit, fauteuil de lecture et objets personnels."
+      },
+      "scene": "room",
+      "variantOf": "room-b",
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": true,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "preview-room-b-landscape-1024w",
+      "path": "public/media/preview/room-b/room-b-1024w.webp",
+      "provenance": "Responsive WebP derivative generated locally from the registered OpenAI source with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic elegant private room for an older adult, homelike rather than hotel-like, bed, beloved objects, reading lamp and armchair, wide clear circulation, soft window light, deep green and warm neutral accents, no people, no text, no logos, no clinical equipment.",
+      "generatedAt": "2026-07-28",
+      "width": 1024,
+      "height": 682,
+      "ratio": "512:341",
+      "focalPoint": {
+        "x": 0.57,
+        "y": 0.48
+      },
+      "alt": {
+        "de": "KI-Konzeptbild eines wohnlichen Zimmers mit Bett, Lesesessel und persönlichen Gegenständen.",
+        "fr": "Image conceptuelle générée par IA d’une chambre chaleureuse avec lit, fauteuil de lecture et objets personnels."
+      },
+      "scene": "room",
+      "variantOf": "room-b",
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": true,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "preview-room-b-landscape-1440w",
+      "path": "public/media/preview/room-b/room-b-1440w.webp",
+      "provenance": "Responsive WebP derivative generated locally from the registered OpenAI source with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic elegant private room for an older adult, homelike rather than hotel-like, bed, beloved objects, reading lamp and armchair, wide clear circulation, soft window light, deep green and warm neutral accents, no people, no text, no logos, no clinical equipment.",
+      "generatedAt": "2026-07-28",
+      "width": 1440,
+      "height": 960,
+      "ratio": "3:2",
+      "focalPoint": {
+        "x": 0.57,
+        "y": 0.48
+      },
+      "alt": {
+        "de": "KI-Konzeptbild eines wohnlichen Zimmers mit Bett, Lesesessel und persönlichen Gegenständen.",
+        "fr": "Image conceptuelle générée par IA d’une chambre chaleureuse avec lit, fauteuil de lecture et objets personnels."
+      },
+      "scene": "room",
+      "variantOf": "room-b",
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": true,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "preview-room-b-landscape-1536w",
+      "path": "public/media/preview/room-b/room-b-1536w.webp",
+      "provenance": "Responsive WebP derivative generated locally from the registered OpenAI source with FFmpeg 8.1.1.",
+      "prompt": "Photorealistic elegant private room for an older adult, homelike rather than hotel-like, bed, beloved objects, reading lamp and armchair, wide clear circulation, soft window light, deep green and warm neutral accents, no people, no text, no logos, no clinical equipment.",
+      "generatedAt": "2026-07-28",
+      "width": 1536,
+      "height": 1024,
+      "ratio": "3:2",
+      "focalPoint": {
+        "x": 0.57,
+        "y": 0.48
+      },
+      "alt": {
+        "de": "KI-Konzeptbild eines wohnlichen Zimmers mit Bett, Lesesessel und persönlichen Gegenständen.",
+        "fr": "Image conceptuelle générée par IA d’une chambre chaleureuse avec lit, fauteuil de lecture et objets personnels."
+      },
+      "scene": "room",
+      "variantOf": "room-b",
+      "format": "landscape",
+      "selected": true,
+      "previewOnly": true,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    },
+    {
+      "id": "social-card-a",
+      "path": "assets/media/candidates/social-card-a.webp",
+      "provenance": "OpenAI image generation tool; source output resized and converted locally to WebP with FFmpeg 8.1.1.",
+      "prompt": "Complete quiet-luxury social card in an exact 1200:630 composition, with a warm ivory typography panel and a photorealistic generic garden scene of an older woman and her adult daughter; exact text only: RESIDENZ AUREUM and Ruhig leben. Persönlich begleitet.; no logos, certification marks, watermark, clinical equipment or representation of a real residence.",
+      "generatedAt": "2026-07-28",
+      "width": 1200,
+      "height": 630,
+      "ratio": "40:21",
+      "focalPoint": {
+        "x": 0.72,
+        "y": 0.5
+      },
+      "alt": {
+        "de": "KI-Konzeptkarte mit dem Namen Residenz Aureum und zwei Frauen in einem Garten.",
+        "fr": "Carte conceptuelle générée par IA avec le nom Residenz Aureum et deux femmes dans un jardin."
+      },
+      "scene": "social",
+      "variantOf": null,
+      "format": "landscape",
+      "selected": false,
+      "previewOnly": false,
+      "representsResidence": false,
+      "approvalStatus": "pending",
+      "approvalReference": null
+    }
+  ]
+}

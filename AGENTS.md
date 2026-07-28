@@ -175,7 +175,7 @@ Pour chaque image IA :
 - charger paresseusement les médias hors ligne de flottaison ;
 - viser au plus 250 Ko pour le hero mobile et 450 Ko pour le hero desktop.
 
-Une image IA ne peut être présentée comme représentation de la résidence, d’une chambre, d’un résident ou d’un membre de l’équipe qu’après approbation explicite du client pour cet asset. Une image en attente d’approbation reste hors production.
+Une image IA ne peut être présentée comme représentation de la résidence, d’une chambre, d’un résident ou d’un membre de l’équipe qu’après approbation explicite du client pour cet asset. Une image en attente d’approbation reste hors production. La preview privée peut servir un asset générique `pending` uniquement depuis `public/media/preview/`, avec un avertissement visible ; le build production doit refuser et exclure ce dossier.
 
 Aucun hotlink ni nouveau fichier raster de production `.png`, `.jpg`, `.jpeg`, `.gif` ou `.avif` n’est accepté. Si un outil génère un autre format, le convertir en WebP avant de l’ajouter au dépôt.
 

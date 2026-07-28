@@ -1,0 +1,157 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://residenz-aureum.com/schemas/media.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["$schema", "assets"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "assets": {
+      "type": "array",
+      "minItems": 14,
+      "items": { "$ref": "#/$defs/asset" }
+    }
+  },
+  "$defs": {
+    "identifier": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]*$"
+    },
+    "asset": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "path",
+        "provenance",
+        "prompt",
+        "generatedAt",
+        "width",
+        "height",
+        "ratio",
+        "focalPoint",
+        "alt",
+        "scene",
+        "variantOf",
+        "format",
+        "selected",
+        "previewOnly",
+        "representsResidence",
+        "approvalStatus",
+        "approvalReference"
+      ],
+      "properties": {
+        "id": { "$ref": "#/$defs/identifier" },
+        "path": {
+          "type": "string",
+          "pattern": "^(assets|public)/media/[a-z0-9/-]+\\.webp$"
+        },
+        "provenance": {
+          "type": "string",
+          "minLength": 20,
+          "maxLength": 500
+        },
+        "prompt": {
+          "type": "string",
+          "minLength": 40,
+          "maxLength": 2000
+        },
+        "generatedAt": { "type": "string", "format": "date" },
+        "width": { "type": "integer", "minimum": 1, "maximum": 4096 },
+        "height": { "type": "integer", "minimum": 1, "maximum": 4096 },
+        "ratio": {
+          "type": "string",
+          "pattern": "^[1-9][0-9]*:[1-9][0-9]*$"
+        },
+        "focalPoint": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["x", "y"],
+          "properties": {
+            "x": { "type": "number", "minimum": 0, "maximum": 1 },
+            "y": { "type": "number", "minimum": 0, "maximum": 1 }
+          }
+        },
+        "alt": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["de", "fr"],
+          "properties": {
+            "de": { "type": "string", "minLength": 10, "maxLength": 300 },
+            "fr": { "type": "string", "minLength": 10, "maxLength": 300 }
+          }
+        },
+        "scene": {
+          "enum": [
+            "hero-garden",
+            "room",
+            "common-lounge",
+            "care-conversation",
+            "activity",
+            "garden",
+            "admission",
+            "social"
+          ]
+        },
+        "variantOf": {
+          "oneOf": [{ "$ref": "#/$defs/identifier" }, { "type": "null" }]
+        },
+        "format": { "enum": ["landscape", "portrait"] },
+        "selected": { "type": "boolean" },
+        "previewOnly": { "type": "boolean" },
+        "representsResidence": { "type": "boolean" },
+        "approvalStatus": {
+          "enum": ["pending", "approved", "rejected"]
+        },
+        "approvalReference": {
+          "oneOf": [
+            { "type": "string", "minLength": 8, "maxLength": 500 },
+            { "type": "null" }
+          ]
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": { "approvalStatus": { "const": "approved" } },
+            "required": ["approvalStatus"]
+          },
+          "then": {
+            "properties": {
+              "approvalReference": { "type": "string", "minLength": 8 }
+            }
+          },
+          "else": {
+            "properties": { "approvalReference": { "type": "null" } }
+          }
+        },
+        {
+          "if": {
+            "properties": { "representsResidence": { "const": true } },
+            "required": ["representsResidence"]
+          },
+          "then": {
+            "properties": {
+              "approvalStatus": { "const": "approved" },
+              "approvalReference": { "type": "string", "minLength": 8 }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "path": {
+                "type": "string",
+                "pattern": "^public/media/preview/"
+              }
+            },
+            "required": ["path"]
+          },
+          "then": {
+            "properties": { "previewOnly": { "const": true } }
+          }
+        }
+      ]
+    }
+  }
+}

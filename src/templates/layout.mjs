@@ -2,6 +2,8 @@ const labels = {
   de: {
     address: "Adresse",
     alternate: "Français",
+    availability: "Persönlich erreichbar",
+    availabilityDetail: "Antwort nach persönlicher Rückmeldung",
     brandLabel: "Residenz Aureum – Startseite",
     checklist: "Checkliste",
     closeMenu: "Menü schließen",
@@ -12,6 +14,7 @@ const labels = {
     home: "Startseite",
     legal: "Impressum",
     menu: "Menü",
+    more: "Mehr",
     mock: "Vorläufiger Demo-Inhalt",
     navigation: "Hauptnavigation",
     openingHours: "Erreichbarkeit",
@@ -19,10 +22,18 @@ const labels = {
     privacyDetails: "Datenschutzerklärung lesen",
     required: "Pflichtfeld",
     skip: "Zum Hauptinhalt",
+    topTrust: [
+      "In Ruhe orientieren",
+      "Selbstbestimmt entscheiden",
+      "Deutsch · Français",
+    ],
+    visit: "Besichtigung anfragen",
   },
   fr: {
     address: "Adresse",
     alternate: "Deutsch",
+    availability: "Échange personnel",
+    availabilityDetail: "Réponse après confirmation individuelle",
     brandLabel: "Residenz Aureum – Accueil",
     checklist: "Liste de vérification",
     closeMenu: "Fermer le menu",
@@ -32,6 +43,7 @@ const labels = {
     home: "Accueil",
     legal: "Mentions légales",
     menu: "Menu",
+    more: "Plus",
     mock: "Contenu provisoire de démonstration",
     navigation: "Navigation principale",
     openingHours: "Disponibilité",
@@ -39,6 +51,12 @@ const labels = {
     privacyDetails: "Lire la politique de confidentialité",
     required: "Champ obligatoire",
     skip: "Aller au contenu principal",
+    topTrust: [
+      "S’informer sereinement",
+      "Décider librement",
+      "Deutsch · Français",
+    ],
+    visit: "Demander une visite",
   },
 };
 
@@ -72,24 +90,59 @@ function renderTrackedNotice(item, locale) {
   return item.status === "mock" ? renderMockNotice(locale) : "";
 }
 
-function renderNavigation({ locale, routes, localizedContent, activeRouteId }) {
+function renderNavigation({
+  activeRouteId,
+  alternateLocale,
+  locale,
+  localizedContent,
+  route,
+  routes,
+}) {
   const localeLabels = labels[locale];
-  const items = routes
+  const navigationRoutes = routes
     .filter(({ navigation }) => navigation !== null)
-    .sort((left, right) => left.navigation - right.navigation)
+    .sort((left, right) => left.navigation - right.navigation);
+  const renderItem = (navigationRoute, className = "") => {
+    const page = localizedContent[locale].pages[navigationRoute.id];
+    const current =
+      navigationRoute.id === activeRouteId ? ' aria-current="page"' : "";
+    return `<li${className ? ` class="${className}"` : ""}><a href="${escapeHtml(navigationRoute.paths[locale])}"${current}>${escapeHtml(page.title.split(" | ")[0])}</a></li>`;
+  };
+  const primaryItems = navigationRoutes
+    .slice(0, 6)
+    .map((navigationRoute) => renderItem(navigationRoute))
+    .join("");
+  const overflowItems = navigationRoutes
+    .slice(6)
     .map((route) => {
-      const page = localizedContent[locale].pages[route.id];
-      const current = route.id === activeRouteId ? ' aria-current="page"' : "";
-      return `<li><a href="${escapeHtml(route.paths[locale])}"${current}>${escapeHtml(page.title.split(" | ")[0])}</a></li>`;
+      return renderItem(route);
     })
     .join("");
 
   return `<button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" data-menu-toggle hidden>
           <span data-menu-open-label>${escapeHtml(localeLabels.menu)}</span>
-          <span class="u-visually-hidden" data-menu-close-label>${escapeHtml(localeLabels.closeMenu)}</span>
+          <span data-menu-close-label hidden>${escapeHtml(localeLabels.closeMenu)}</span>
+          <span class="menu-icon" aria-hidden="true"><span></span><span></span><span></span></span>
         </button>
         <nav id="primary-navigation" class="primary-navigation" aria-label="${escapeHtml(localeLabels.navigation)}" data-menu>
-          <ul>${items}</ul>
+          <ul class="navigation-list">
+            ${primaryItems}
+            ${
+              overflowItems
+                ? `<li class="navigation-more">
+                    <details>
+                      <summary>${escapeHtml(localeLabels.more)}</summary>
+                      <ul>${overflowItems}</ul>
+                    </details>
+                  </li>`
+                : ""
+            }
+            <li class="navigation-language">
+              <a href="${escapeHtml(route.paths[alternateLocale])}" lang="${alternateLocale}" hreflang="${alternateLocale}" data-language-choice>
+                ${escapeHtml(localeLabels.alternate)}
+              </a>
+            </li>
+          </ul>
         </nav>`;
 }
 
@@ -138,15 +191,50 @@ function renderOrganizationContact({
         </section>`;
 }
 
-function renderFooter({ copyrightYear, locale, organization, routes }) {
+function renderFooter({
+  copyrightYear,
+  locale,
+  localizedContent,
+  organization,
+  routes,
+}) {
   const localeLabels = labels[locale];
   const legal = routes.find(({ id }) => id === "legal");
   const privacy = routes.find(({ id }) => id === "privacy");
+  const footerRoutes = routes
+    .filter(({ navigation }) => navigation !== null)
+    .sort((left, right) => left.navigation - right.navigation)
+    .map((route) => {
+      const page = localizedContent[locale].pages[route.id];
+      return `<li><a href="${escapeHtml(route.paths[locale])}">${escapeHtml(page.title.split(" | ")[0])}</a></li>`;
+    })
+    .join("");
 
   return `<footer class="site-footer">
-      <div class="shell footer-content">
+      <div class="shell footer-top">
+        <div class="footer-brand">
+          <p class="brand brand-footer" aria-label="Residenz Aureum">
+            <span aria-hidden="true">A</span>
+            <strong>Residenz Aureum</strong>
+          </p>
+          <p>${escapeHtml(
+            locale === "fr"
+              ? "Un lieu de vie pensé avec calme, dignité et attention."
+              : "Ein Lebensort, gedacht mit Ruhe, Würde und Aufmerksamkeit.",
+          )}</p>
+        </div>
+        <nav class="footer-navigation" aria-label="${escapeHtml(
+          locale === "fr"
+            ? "Navigation de pied de page"
+            : "Navigation im Seitenfuß",
+        )}">
+          <h2>${escapeHtml(localeLabels.navigation)}</h2>
+          <ul>${footerRoutes}</ul>
+        </nav>
         ${renderOrganizationContact({ locale, organization })}
-        <div class="footer-inner">
+      </div>
+      <div class="footer-bottom">
+        <div class="shell footer-inner">
           <p>© ${copyrightYear} Residenz Aureum</p>
           <ul>
             <li><a href="${escapeHtml(legal.paths[locale])}">${escapeHtml(localeLabels.legal)}</a></li>
@@ -157,13 +245,15 @@ function renderFooter({ copyrightYear, locale, organization, routes }) {
     </footer>`;
 }
 
-function normalizedVariants(media) {
+function normalizedVariants(media, variantKey = "variants") {
   if (!media) {
     return [];
   }
 
-  if (Array.isArray(media.variants)) {
-    return media.variants
+  const selectedVariants = media[variantKey];
+
+  if (Array.isArray(selectedVariants)) {
+    return selectedVariants
       .map((variant) => ({
         height: variant.height,
         src: variant.publicPath || variant.src || variant.path,
@@ -172,8 +262,8 @@ function normalizedVariants(media) {
       .filter(({ src, width }) => src && Number.isFinite(width));
   }
 
-  if (media.variants && typeof media.variants === "object") {
-    return Object.entries(media.variants)
+  if (selectedVariants && typeof selectedVariants === "object") {
+    return Object.entries(selectedVariants)
       .map(([width, variant]) => ({
         height: typeof variant === "object" ? variant.height : undefined,
         src:
@@ -193,6 +283,41 @@ function localizedValue(value, locale) {
   return typeof value === "string" ? value : value?.[locale] || "";
 }
 
+function focalCoordinate(value) {
+  const numeric = Number(value);
+  if (!Number.isFinite(numeric)) {
+    return "50%";
+  }
+
+  const percentage =
+    Math.round(Math.min(1, Math.max(0, numeric)) * 10_000) / 100;
+  return `${percentage}%`;
+}
+
+function renderHeroImagePreload({ mediaId, siteData }) {
+  const media = siteData.mediaById?.[mediaId];
+  const variants = normalizedVariants(media)
+    .filter(({ src }) => src.startsWith("/"))
+    .sort((left, right) => left.width - right.width);
+  const portraitVariants = normalizedVariants(media, "portraitVariants")
+    .filter(({ src }) => src.startsWith("/"))
+    .sort((left, right) => left.width - right.width);
+  const candidates = portraitVariants.length > 0 ? portraitVariants : variants;
+
+  if (candidates.length === 0) {
+    return "";
+  }
+
+  const fallback = candidates.at(-1);
+  const srcset = candidates
+    .map(({ src, width }) => `${escapeHtml(src)} ${width}w`)
+    .join(", ");
+  const portraitMedia =
+    portraitVariants.length > 0 ? ' media="(max-width: 63.99rem)"' : "";
+
+  return `<link rel="preload" as="image" type="image/webp" href="${escapeHtml(fallback.src)}" imagesrcset="${srcset}" imagesizes="${portraitVariants.length > 0 ? "100vw" : "(min-width: 64rem) 58vw, 100vw"}" fetchpriority="high"${portraitMedia}>`;
+}
+
 function renderMedia({
   context = "content",
   locale,
@@ -208,16 +333,30 @@ function renderMedia({
   const variants = normalizedVariants(media).sort(
     (left, right) => left.width - right.width,
   );
+  const portraitVariants = normalizedVariants(media, "portraitVariants").sort(
+    (left, right) => left.width - right.width,
+  );
   const alt = localizedValue(media?.alt, locale) || title;
   const approved = media?.approvalStatus === "approved";
   const publicVariants = variants.filter(({ src }) => src.startsWith("/"));
+  const publicPortraitVariants = portraitVariants.filter(({ src }) =>
+    src.startsWith("/"),
+  );
+  const previewable =
+    siteData.mode === "preview" &&
+    publicVariants.some(({ src }) => src.startsWith("/media/preview/"));
 
-  if (!approved || publicVariants.length === 0) {
+  if ((!approved && !previewable) || publicVariants.length === 0) {
     const accessibility = alt
       ? ` role="img" aria-label="${escapeHtml(alt)}"`
       : ' aria-hidden="true"';
     return `<figure class="media-placeholder"${accessibility} data-media-id="${escapeHtml(mediaId)}" data-media-status="${escapeHtml(media?.approvalStatus || "unregistered")}">
-      <span aria-hidden="true">${escapeHtml(mediaId)}</span>
+      <span class="media-placeholder-mark" aria-hidden="true">A</span>
+      <figcaption>${escapeHtml(
+        locale === "fr"
+          ? "Visuel en attente d’approbation"
+          : "Bild wartet auf Freigabe",
+      )}</figcaption>
     </figure>`;
   }
 
@@ -225,6 +364,12 @@ function renderMedia({
   const srcset = publicVariants
     .map(({ src, width }) => `${escapeHtml(src)} ${width}w`)
     .join(", ");
+  const portraitSource =
+    context === "hero" && publicPortraitVariants.length > 0
+      ? `<source media="(max-width: 63.99rem)" srcset="${publicPortraitVariants
+          .map(({ src, width }) => `${escapeHtml(src)} ${width}w`)
+          .join(", ")}" sizes="100vw">`
+      : "";
   const priorityAttributes =
     context === "hero"
       ? ' loading="eager" fetchpriority="high"'
@@ -237,13 +382,27 @@ function renderMedia({
     ? ` style="object-position:${escapeHtml(
         typeof media.focalPoint === "string"
           ? media.focalPoint
-          : `${media.focalPoint.x}% ${media.focalPoint.y}%`,
+          : `${focalCoordinate(media.focalPoint.x)} ${focalCoordinate(media.focalPoint.y)}`,
       )}"`
     : "";
 
-  return `<picture class="media media-${escapeHtml(context)}" data-media-id="${escapeHtml(mediaId)}">
+  const picture = `<picture class="media media-${escapeHtml(context)}" data-media-id="${escapeHtml(mediaId)}">
+      ${portraitSource}
       <img src="${escapeHtml(fallback.src)}" srcset="${srcset}" sizes="${context === "hero" ? "(min-width: 64rem) 58vw, 100vw" : "(min-width: 64rem) 40vw, 100vw"}" alt="${escapeHtml(alt)}"${dimensions}${priorityAttributes} decoding="async"${focalPoint}>
     </picture>`;
+
+  if (approved) {
+    return picture;
+  }
+
+  return `<div class="media-preview" data-media-status="${escapeHtml(media.approvalStatus || "pending")}">
+      ${picture}
+      <p>${escapeHtml(
+        locale === "fr"
+          ? "Aperçu IA — ne représente pas la résidence réelle"
+          : "KI-Vorschau — zeigt nicht die tatsächliche Residenz",
+      )}</p>
+    </div>`;
 }
 
 function renderSectionHeader(section) {
@@ -469,10 +628,10 @@ function renderFormField(field, sectionId, locale) {
     : "";
 
   if (field.type === "checkbox") {
-    return `<div class="form-field form-field-checkbox">
+    return `<div class="form-field form-field-checkbox" data-field-name="${escapeHtml(field.name)}">
       <input id="${escapeHtml(id)}" name="${escapeHtml(field.name)}" type="checkbox" value="true" ${attributes} aria-describedby="${escapeHtml(id)}-error">
       <label for="${escapeHtml(id)}">${escapeHtml(field.label)} ${requiredText}</label>
-      <p class="field-error" id="${escapeHtml(id)}-error" data-field-error="${escapeHtml(field.name)}"></p>
+      <p class="field-error" id="${escapeHtml(id)}-error" data-field-error="${escapeHtml(field.name)}" aria-live="polite"></p>
     </div>`;
   }
 
@@ -494,10 +653,10 @@ function renderFormField(field, sectionId, locale) {
     control = `<input id="${escapeHtml(id)}" name="${escapeHtml(field.name)}" type="${escapeHtml(field.type)}" ${attributes} aria-describedby="${escapeHtml(id)}-error">`;
   }
 
-  return `<div class="form-field">
+  return `<div class="form-field" data-field-name="${escapeHtml(field.name)}">
       ${label}
       ${control}
-      <p class="field-error" id="${escapeHtml(id)}-error" data-field-error="${escapeHtml(field.name)}"></p>
+      <p class="field-error" id="${escapeHtml(id)}-error" data-field-error="${escapeHtml(field.name)}" aria-live="polite"></p>
     </div>`;
 }
 
@@ -515,7 +674,7 @@ function renderContactForm(section, context) {
             organization: siteData.organization,
           })}
         </div>
-        <form method="post" action="/api/contact" accept-charset="utf-8" data-contact-form>
+        <form method="post" action="/api/contact" accept-charset="utf-8" data-contact-form data-form-locale="${escapeHtml(locale)}">
           <div class="form-error-summary" role="alert" tabindex="-1" hidden data-form-errors>
             <h3>${escapeHtml(labels[locale].errors)}</h3>
             <ul></ul>
@@ -523,7 +682,7 @@ function renderContactForm(section, context) {
           <input type="hidden" name="locale" value="${escapeHtml(locale)}">
           <input type="hidden" name="submissionId" value="" data-submission-id>
           <input type="hidden" name="formStartedAt" value="" data-form-started-at>
-          <div class="honeypot" aria-hidden="true">
+          <div class="honeypot" aria-hidden="true" inert hidden>
             <label for="${escapeHtml(section.id)}-company">Company</label>
             <input id="${escapeHtml(section.id)}-company" name="company" type="text" tabindex="-1" autocomplete="off">
           </div>
@@ -541,13 +700,13 @@ function renderContactForm(section, context) {
           ${section.fields
             .map((field) => renderFormField(field, section.id, locale))
             .join("")}
+          <p class="form-health-warning">${escapeHtml(section.healthWarning)}</p>
           <p class="form-privacy">
             ${escapeHtml(section.privacyLabel)}
             <a href="${escapeHtml(privacyRoute.paths[locale])}">${escapeHtml(labels[locale].privacyDetails)}</a>
           </p>
-          <p class="form-health-warning">${escapeHtml(section.healthWarning)}</p>
-          <button class="button" type="submit">${escapeHtml(section.submitLabel)}</button>
-          <p role="status" aria-live="polite" hidden data-form-success>${escapeHtml(section.successMessage)}</p>
+          <button class="button form-submit" type="submit" data-submit-label="${escapeHtml(section.submitLabel)}">${escapeHtml(section.submitLabel)}</button>
+          <p class="form-success" role="status" aria-live="polite" hidden data-form-success>${escapeHtml(section.successMessage)}</p>
         </form>
       </div>
     </section>`;
@@ -657,6 +816,31 @@ function structuredDataForPage({ locale, page, route, siteData }) {
   })}</script>`;
 }
 
+function renderTrustBar(locale) {
+  return `<div class="trust-bar" aria-label="${escapeHtml(
+    locale === "fr" ? "Nos principes" : "Unsere Grundsätze",
+  )}">
+      <div class="shell">
+        ${labels[locale].topTrust
+          .map((item) => `<span>${escapeHtml(item)}</span>`)
+          .join("")}
+      </div>
+    </div>`;
+}
+
+function renderAvailabilityCard(locale) {
+  return `<aside class="availability-card" data-status="mock" aria-label="${escapeHtml(
+    labels[locale].availability,
+  )}">
+      <span class="availability-mark" aria-hidden="true">A</span>
+      <div>
+        <strong>${escapeHtml(labels[locale].availability)}</strong>
+        <span>${escapeHtml(labels[locale].availabilityDetail)}</span>
+        ${renderMockNotice(locale)}
+      </div>
+    </aside>`;
+}
+
 export function renderLocalizedPage({ assets, locale, page, route, siteData }) {
   const localeLabels = labels[locale];
   const alternateLocale = locale === "de" ? "fr" : "de";
@@ -677,6 +861,7 @@ export function renderLocalizedPage({ assets, locale, page, route, siteData }) {
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#173d32">
     <title>${escapeHtml(page.title)}</title>
     <meta name="description" content="${escapeHtml(page.metaDescription)}">
     <meta name="robots" content="${robots}">
@@ -692,24 +877,37 @@ export function renderLocalizedPage({ assets, locale, page, route, siteData }) {
     <meta property="og:locale" content="${locale === "de" ? "de_DE" : "fr_FR"}">
     <meta property="og:locale:alternate" content="${locale === "de" ? "fr_FR" : "de_DE"}">
     <meta name="twitter:card" content="summary">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="manifest" href="/manifest.webmanifest">
+    <link rel="preload" href="/fonts/dm-serif-display-latin-400.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/manrope-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+    ${renderHeroImagePreload({ mediaId: page.heroMediaId, siteData })}
     ${renderAssetLinks(assets)}
     ${structuredDataForPage({ locale, page, route, siteData })}
   </head>
-  <body data-locale="${locale}">
+  <body data-locale="${locale}" data-route="${escapeHtml(route.id)}">
     <a class="skip-link" href="#main-content">${escapeHtml(localeLabels.skip)}</a>
+    ${renderTrustBar(locale)}
     <header class="site-header">
-      <div class="shell header-inner">
-        <a class="brand" href="${escapeHtml(siteData.routes.find(({ id }) => id === "home").paths[locale])}" aria-label="${escapeHtml(localeLabels.brandLabel)}">
-          <span aria-hidden="true">A</span>
-          <strong>Residenz Aureum</strong>
-        </a>
-        ${renderNavigation({
-          activeRouteId: route.id,
-          locale,
-          localizedContent: siteData.localizedContent,
-          routes: siteData.routes,
-        })}
-        <a class="language-link" href="${escapeHtml(route.paths[alternateLocale])}" lang="${alternateLocale}" hreflang="${alternateLocale}" data-language-choice>${escapeHtml(localeLabels.alternate)}</a>
+      <div class="header-main">
+        <div class="shell header-inner">
+          <a class="brand" href="${escapeHtml(siteData.routes.find(({ id }) => id === "home").paths[locale])}" aria-label="${escapeHtml(localeLabels.brandLabel)}">
+            <span aria-hidden="true">A</span>
+            <strong>Residenz Aureum</strong>
+          </a>
+          ${renderNavigation({
+            activeRouteId: route.id,
+            alternateLocale,
+            locale,
+            localizedContent: siteData.localizedContent,
+            route,
+            routes: siteData.routes,
+          })}
+          <div class="header-actions">
+            <a class="language-link" href="${escapeHtml(route.paths[alternateLocale])}" lang="${alternateLocale}" hreflang="${alternateLocale}" data-language-choice>${escapeHtml(localeLabels.alternate)}</a>
+            <a class="button button-header" href="${escapeHtml(siteData.routes.find(({ id }) => id === "contact").paths[locale])}">${escapeHtml(localeLabels.visit)}</a>
+          </div>
+        </div>
       </div>
     </header>
     ${renderBreadcrumbs({ locale, page, route, siteData })}
@@ -719,9 +917,9 @@ export function renderLocalizedPage({ assets, locale, page, route, siteData }) {
           ? `<p class="draft-notice" role="status">${escapeHtml(localeLabels.draft)}</p>`
           : ""
       }
-      <section class="page-hero">
+      <section class="page-hero${route.id === "home" ? " page-hero-home" : ""}">
         <div class="shell hero-layout">
-          <div class="measure">
+          <div class="hero-copy">
             <p class="eyebrow">${escapeHtml(page.eyebrow)}</p>
             <h1>${escapeHtml(page.heading)}</h1>
             <p class="lead">${escapeHtml(page.intro)}</p>
@@ -731,13 +929,16 @@ export function renderLocalizedPage({ assets, locale, page, route, siteData }) {
                 : ""
             }
           </div>
-          ${renderMedia({
-            context: "hero",
-            locale,
-            mediaId: page.heroMediaId,
-            siteData,
-            title: page.heading,
-          })}
+          <div class="hero-visual">
+            ${renderMedia({
+              context: "hero",
+              locale,
+              mediaId: page.heroMediaId,
+              siteData,
+              title: page.heading,
+            })}
+            ${route.id === "home" ? renderAvailabilityCard(locale) : ""}
+          </div>
         </div>
       </section>
       ${sections}
@@ -745,6 +946,7 @@ export function renderLocalizedPage({ assets, locale, page, route, siteData }) {
     ${renderFooter({
       copyrightYear: siteData.copyrightYear,
       locale,
+      localizedContent: siteData.localizedContent,
       organization: siteData.organization,
       routes: siteData.routes,
     })}
@@ -780,6 +982,8 @@ export function renderRootPage({ assets, siteData }) {
     <meta property="og:locale" content="de_DE">
     <meta property="og:locale:alternate" content="fr_FR">
     <meta name="twitter:card" content="summary">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="manifest" href="/manifest.webmanifest">
     ${renderAssetLinks(assets)}
   </head>
   <body data-root-locale-selector>
@@ -821,9 +1025,11 @@ export function renderNotFoundPage({ assets, locale, siteData }) {
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#173d32">
     <title>${escapeHtml(copy.title)}</title>
     <meta name="description" content="${escapeHtml(copy.description)}">
     <meta name="robots" content="noindex, follow">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     ${renderAssetLinks(assets)}
   </head>
   <body>

@@ -406,8 +406,8 @@ Les valeurs de départ doivent être relevées avant migration.
 - [ ] La proposition de valeur et le CTA principal sont visibles rapidement sur mobile.
 - [ ] La page d’accueil reprend fidèlement le langage Quiet Luxury V1 : barre de confiance desktop, header principal clair, hero texte/image scindé, encart `24/7 erreichbar` et bande de trois bénéfices.
 - [ ] La version mobile conserve l’ordre et la personnalité de la V1 : message, CTA, photographie, encart de disponibilité puis bénéfices, sans masquer les visages ni gêner la lecture.
-- [ ] Les photographies et affirmations ont été validées par le client.
-- [ ] Aucun contenu fictif ou placeholder ne reste en production.
+- [ ] Chaque image présentée comme représentation de la résidence et chaque affirmation `validated` possède une approbation client traçable.
+- [ ] Les mocks publiés portent leur signalement visible et restent exclus des surfaces SEO structurées.
 
 ### SEO
 

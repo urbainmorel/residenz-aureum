@@ -1,0 +1,42 @@
+{
+  "name": "residenz-aureum",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Site statique bilingue de Residenz Aureum.",
+  "type": "module",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "dev": "node --env-file-if-exists=.env.local ./node_modules/vite/bin/vite.js --host 0.0.0.0",
+    "build": "node --env-file-if-exists=.env.local scripts/build.mjs --mode production",
+    "build:preview": "node --env-file-if-exists=.env.local scripts/build.mjs --mode preview",
+    "build:production": "node --env-file-if-exists=.env.local scripts/build.mjs --mode production",
+    "preview": "node --env-file-if-exists=.env.local ./node_modules/vite/bin/vite.js preview --host 0.0.0.0 --outDir dist/client",
+    "preview:worker": "node --env-file-if-exists=.env.local ./node_modules/wrangler/bin/wrangler.js dev --config wrangler.jsonc",
+    "validate": "node --env-file-if-exists=.env.local scripts/validate-content.mjs --mode preview && node --env-file-if-exists=.env.local scripts/validate-foundation.mjs --source",
+    "validate:production": "node --env-file-if-exists=.env.local scripts/validate-content.mjs --mode production",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "node --env-file-if-exists=.env.local --test tests/unit/*.test.mjs",
+    "audit:a11y": "node scripts/audit-accessibility.mjs",
+    "audit:seo": "node scripts/audit-seo.mjs",
+    "audit:performance": "node scripts/audit-budgets.mjs",
+    "audit:security": "npm audit --audit-level=high",
+    "audit": "npm run audit:a11y && npm run audit:seo && npm run audit:performance",
+    "check": "npm run format:check && npm run lint && npm run test && npm run build:preview && npm run audit && npm run audit:security",
+    "check:production": "npm run format:check && npm run lint && npm run test && npm run build:production && npm run audit && npm run audit:security"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "ajv": "8.20.0",
+    "ajv-formats": "3.0.1",
+    "esbuild": "0.28.1",
+    "eslint": "10.8.0",
+    "globals": "17.8.0",
+    "prettier": "3.9.6",
+    "vite": "8.1.5",
+    "wrangler": "4.114.0"
+  }
+}

@@ -6,7 +6,7 @@
 
 | Élément | Décision |
 | --- | --- |
-| Statut | Planifié — aucun code du nouveau site n’existe encore dans ce projet |
+| Statut | En construction — la gouvernance et les spécifications précèdent l’intégration applicative |
 | Direction visuelle | Quiet Luxury V1 — référence officielle |
 | Marché principal | Mülheim an der Ruhr, Allemagne |
 | Langues | Allemand (`de`) et français (`fr`) |
@@ -251,12 +251,13 @@ Google recommande des URL distinctes pour chaque langue et avertit que des redir
 
 ### Règles de crédibilité
 
-- Utiliser uniquement des témoignages signés et autorisés.
-- Ne pas inventer d’années d’expérience, taux de satisfaction ou certifications.
+- Les témoignages validés doivent être signés et autorisés ; les témoignages fictifs restent explicitement classés et signalés comme contenus de démonstration.
+- Les années d’expérience, taux de satisfaction, chiffres et certifications non validés ne peuvent apparaître que comme mocks visiblement signalés, sans marque ni organisme réel.
 - Identifier les contenus relus par un professionnel de l’accompagnement.
 - Afficher la date de dernière mise à jour sur les guides.
-- Remplacer les photographies génériques ou géographiquement trompeuses par des images réelles.
+- Ne jamais présenter une image IA comme photographie réelle de la résidence sans approbation client traçable pour cet asset.
 - Ne pas demander de données médicales dans le formulaire public.
+
 
 ## 10. Exigences SEO
 
@@ -282,7 +283,7 @@ Google recommande des URL distinctes pour chaque langue et avertit que des redir
 - Horaires à jour.
 - Contenus spécifiques à Mülheim an der Ruhr et à la zone réellement desservie.
 - Données structurées JSON-LD `LocalBusiness` et, seulement si le statut le justifie, `MedicalOrganization`.
-- Ne jamais ajouter de notes ou avis structurés non collectés et affichés légitimement.
+- Ne jamais ajouter de note, avis, certification ou autre mock aux données structurées.
 
 ### Clusters éditoriaux proposés
 

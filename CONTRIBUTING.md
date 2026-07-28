@@ -4,7 +4,7 @@ Ce dépôt porte la refonte bilingue du site Residenz Aureum selon la direction 
 
 ## État actuel
 
-Le projet est en phase de gouvernance initiale. Aucun code applicatif ni script npm n’existe encore. Ne documentez et n’exécutez que des commandes réellement présentes dans le dépôt.
+Le projet est en construction active. Utilisez uniquement les commandes réellement déclarées dans `package.json` et gardez la documentation alignée sur le comportement exécutable.
 
 ## Workflow d’équipe
 

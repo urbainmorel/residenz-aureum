@@ -1,0 +1,15 @@
+.codex/
+.git/
+.github/
+dist/
+node_modules/
+coverage/
+playwright-report/
+test-results/
+
+# Documents de gouvernance et spécifications déjà versionnés.
+AGENTS.md
+CONTRIBUTING.md
+DESIGN.md
+PRD.md
+STI.md

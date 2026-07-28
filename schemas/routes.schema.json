@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://residenz-aureum.com/schemas/routes.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "$schema",
+    "baseUrl",
+    "copyrightYear",
+    "defaultLocale",
+    "locales",
+    "routes"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "baseUrl": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https://"
+    },
+    "copyrightYear": {
+      "type": "integer",
+      "minimum": 2026,
+      "maximum": 2100
+    },
+    "defaultLocale": {
+      "enum": ["de", "fr"]
+    },
+    "locales": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "prefixItems": [
+        {
+          "const": "de"
+        },
+        {
+          "const": "fr"
+        }
+      ],
+      "items": false
+    },
+    "routes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "indexable", "navigation", "paths"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9-]*$"
+          },
+          "indexable": {
+            "type": "boolean"
+          },
+          "navigation": {
+            "type": ["integer", "null"],
+            "minimum": 0
+          },
+          "regulated": {
+            "type": "boolean"
+          },
+          "paths": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["de", "fr"],
+            "properties": {
+              "de": {
+                "type": "string",
+                "pattern": "^/de/(?:[a-z0-9-]+/)?$"
+              },
+              "fr": {
+                "type": "string",
+                "pattern": "^/fr/(?:[a-z0-9-]+/)?$"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

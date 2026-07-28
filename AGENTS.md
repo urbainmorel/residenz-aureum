@@ -8,8 +8,8 @@ Residenz Aureum est une refonte bilingue allemand/français d’un site de rési
 
 État actuel :
 
-- le projet est greenfield ;
-- aucun code applicatif, manifeste npm ou pipeline de déploiement n’existe encore ;
+- le projet est en construction active à partir d’une base greenfield ;
+- le code applicatif, le manifeste npm et les pipelines exécutables deviennent les sources de vérité à mesure de leur intégration ;
 - `PRD.md`, `DESIGN.md`, `STI.md` et les deux maquettes Quiet Luxury V1 décrivent la cible planifiée ;
 - le site public existant sert uniquement à inventorier les anciennes routes et les contenus à migrer.
 
@@ -195,7 +195,7 @@ En cas de secret exposé, arrêter le travail concerné, prévenir le lead, rév
 
 ## 9. Git et GitHub
 
-Le dépôt privé canonique est `urbainmorel/residenz-aureum`. La branche de référence est `main`.
+Le dépôt public canonique est `urbainmorel/residenz-aureum`. La branche de référence est `main`.
 
 L’unique commit direct autorisé sur `main` est le bootstrap initial de la gouvernance, réalisé avant l’activation des protections. Ensuite :
 

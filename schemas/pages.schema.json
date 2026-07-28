@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://residenz-aureum.com/schemas/pages.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["$schema", "locale", "pages"],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "locale": {
+      "enum": ["de", "fr"]
+    },
+    "pages": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "$ref": "#/$defs/page"
+      }
+    }
+  },
+  "$defs": {
+    "page": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "state",
+        "title",
+        "metaDescription",
+        "eyebrow",
+        "heading",
+        "intro",
+        "sections"
+      ],
+      "properties": {
+        "state": {
+          "enum": ["draft", "ready"]
+        },
+        "title": {
+          "type": "string",
+          "minLength": 8,
+          "maxLength": 70
+        },
+        "metaDescription": {
+          "type": "string",
+          "minLength": 30,
+          "maxLength": 170
+        },
+        "eyebrow": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80
+        },
+        "heading": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 120
+        },
+        "intro": {
+          "type": "string",
+          "minLength": 20,
+          "maxLength": 400
+        },
+        "sections": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["id", "heading", "body"],
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9-]*$"
+              },
+              "heading": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 120
+              },
+              "body": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 1200
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

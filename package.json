@@ -25,26 +25,42 @@
     "format:check": "prettier --check .",
     "test": "node --env-file-if-exists=.env.local --test tests/unit/*.test.mjs tests/integration/*.test.mjs",
     "test:contact": "node --env-file-if-exists=.env.local --test tests/unit/contact-*.test.mjs tests/integration/contact-*.test.mjs",
+    "test:e2e": "playwright test",
     "audit:a11y": "node scripts/audit-accessibility.mjs",
+    "audit:html": "html-validate \"dist/client/**/*.html\"",
+    "audit:lighthouse": "node scripts/run-lighthouse.mjs",
     "audit:seo": "node scripts/audit-seo.mjs",
     "audit:performance": "node scripts/audit-budgets.mjs",
     "audit:security": "npm audit --audit-level=high",
     "audit": "npm run audit:a11y && npm run audit:seo && npm run audit:performance",
+    "validate:worker": "wrangler deploy --dry-run --outdir .wrangler/dry-run",
+    "quality": "npm run format:check && npm run lint && npm run test && npm run build:preview && npm run audit:html && npm run audit && npm run test:e2e && npm run audit:lighthouse && npm run validate:worker && npm run audit:security",
     "check": "npm run format:check && npm run lint && npm run test && npm run build:preview && npm run audit && npm run audit:security",
     "check:production": "npm run format:check && npm run lint && npm run test && npm run build:production && npm run audit && npm run audit:security"
   },
   "devDependencies": {
+    "@axe-core/playwright": "4.12.1",
     "@eslint/js": "10.0.1",
+    "@lhci/cli": "0.15.1",
+    "@playwright/test": "1.62.0",
     "ajv": "8.20.0",
     "ajv-formats": "3.0.1",
     "esbuild": "0.28.1",
     "eslint": "10.8.0",
     "globals": "17.8.0",
+    "html-validate": "10.9.0",
+    "lighthouse": "13.4.1",
     "prettier": "3.9.6",
     "vite": "8.1.5",
     "wrangler": "4.114.0"
   },
   "dependencies": {
     "resend": "6.18.1"
+  },
+  "overrides": {
+    "chrome-launcher": "1.2.1",
+    "lighthouse": "13.4.1",
+    "tmp": "0.2.7",
+    "uuid": "11.1.1"
   }
 }

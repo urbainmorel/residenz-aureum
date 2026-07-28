@@ -153,6 +153,7 @@ function renderNavigation({
 }
 
 function renderOrganizationContact({
+  asGroup = false,
   id = "footer-contact",
   locale,
   organization,
@@ -168,8 +169,10 @@ function renderOrganizationContact({
     status === "mock" ? ' data-status="mock"' : ' data-status="validated"';
 
   const headingId = `${id}-${locale}`;
+  const element = asGroup ? "div" : "section";
+  const role = asGroup ? ' role="group"' : "";
 
-  return `<section class="footer-contact"${statusAttribute} aria-labelledby="${escapeHtml(headingId)}">
+  return `<${element} class="footer-contact"${statusAttribute}${role} aria-labelledby="${escapeHtml(headingId)}">
           <h2 id="${escapeHtml(headingId)}">${escapeHtml(localeLabels.contact)}</h2>
           ${status === "mock" ? renderMockNotice(locale) : ""}
           <address>
@@ -194,7 +197,7 @@ function renderOrganizationContact({
                 .join("")}
             </dl>
           </div>
-        </section>`;
+        </${element}>`;
 }
 
 function renderFooter({
@@ -219,7 +222,7 @@ function renderFooter({
   return `<footer class="site-footer">
       <div class="shell footer-top">
         <div class="footer-brand">
-          <p class="brand brand-footer" aria-label="Residenz Aureum">
+          <p class="brand brand-footer">
             <span aria-hidden="true">A</span>
             <strong>Residenz Aureum</strong>
           </p>
@@ -469,8 +472,12 @@ function renderStats(section, context) {
               (item) => `<div data-status="${escapeHtml(item.status)}">
                 <dt>${escapeHtml(item.label)}</dt>
                 <dd>${escapeHtml(item.value)}</dd>
-                ${item.note ? `<p>${escapeHtml(item.note)}</p>` : ""}
-                ${renderTrackedNotice(item, locale)}
+                ${item.note ? `<dd class="stat-note">${escapeHtml(item.note)}</dd>` : ""}
+                ${
+                  item.status === "mock"
+                    ? `<dd class="stat-disclosure">${renderTrackedNotice(item, locale)}</dd>`
+                    : ""
+                }
               </div>`,
             )
             .join("")}
@@ -686,6 +693,7 @@ function renderContactForm(section, context) {
         <div>
           ${renderSectionHeader(section)}
           ${renderOrganizationContact({
+            asGroup: true,
             id: `${section.id}-contact`,
             locale,
             organization: siteData.organization,
@@ -836,7 +844,7 @@ function structuredDataForPage({ locale, page, route, siteData }) {
 }
 
 function renderTrustBar(locale) {
-  return `<div class="trust-bar" aria-label="${escapeHtml(
+  return `<div class="trust-bar" role="group" aria-label="${escapeHtml(
     locale === "fr" ? "Nos principes" : "Unsere Grundsätze",
   )}">
       <div class="shell">

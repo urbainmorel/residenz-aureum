@@ -1,0 +1,101 @@
+name: quality
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: quality-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  quality:
+    name: quality
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+
+    steps:
+      - name: Récupérer le dépôt
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+
+      - name: Configurer Node.js
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          cache: npm
+          node-version: 22.22.0
+
+      - name: Installer les dépendances verrouillées
+        run: npm ci
+
+      - name: Vérifier formatage, lint et tests unitaires
+        run: |
+          npm run format:check
+          npm run lint
+          npm run test
+
+      - name: Construire la preview statique et le Worker
+        run: npm run build:preview
+
+      - name: Auditer HTML, accessibilité statique, SEO et budgets
+        run: |
+          npm run audit:html
+          npm run audit
+          npm run audit:security
+
+      - name: Installer Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Tester le navigateur et axe
+        run: npm run test:e2e
+
+      - name: Auditer Lighthouse mobile
+        run: npm run audit:lighthouse
+
+      - name: Valider le bundle Cloudflare
+        run: npm run validate:worker
+
+      - name: Vérifier l’artefact Sites et ses migrations
+        shell: bash
+        run: |
+          test -f dist/client/index.html
+          test -f dist/server/index.js
+          test -f dist/.openai/hosting.json
+          test -f dist/.openai/drizzle/0000_contact.sql
+          (
+            cd dist
+            find . -type f -print0 | sort -z | xargs -0 sha256sum > "$RUNNER_TEMP/SHA256SUMS"
+          )
+          mv "$RUNNER_TEMP/SHA256SUMS" dist/SHA256SUMS
+
+      - name: Publier les diagnostics QA
+        if: ${{ always() }}
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          compression-level: 6
+          if-no-files-found: warn
+          name: qa-${{ github.sha }}-${{ github.run_attempt }}
+          path: |
+            lighthouse-reports/
+            playwright-report/
+            test-results/
+          retention-days: 14
+
+      - name: Publier l’artefact immuable de preview
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          compression-level: 6
+          if-no-files-found: error
+          include-hidden-files: true
+          name: site-${{ github.sha }}
+          path: dist/
+          retention-days: 30

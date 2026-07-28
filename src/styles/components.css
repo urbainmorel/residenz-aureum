@@ -611,7 +611,7 @@ body.menu-open {
   overflow: hidden;
 }
 
-@media (max-width: 79.99rem) and (min-width: 64rem) {
+@media (max-width: 84rem) and (min-width: 64rem) {
   .brand > strong {
     letter-spacing: 0.13em;
   }

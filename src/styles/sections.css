@@ -126,8 +126,16 @@
   line-height: 1;
 }
 
-.stats-list > div > p:not(.mock-notice) {
+.stats-list .stat-note {
+  margin: 0;
   color: var(--color-ink-soft);
+  font-family: var(--font-body);
+  font-size: var(--step-0);
+  line-height: 1.6;
+}
+
+.stats-list .stat-disclosure {
+  margin: 0;
 }
 
 .steps-list {

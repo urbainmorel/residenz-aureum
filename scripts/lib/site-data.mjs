@@ -8,6 +8,17 @@ const CONTENT_FILES = {
   fr: "src/content/fr/pages.json",
 };
 
+const EXPECTED_CONTACT_FIELDS = [
+  "email",
+  "firstName",
+  "lastName",
+  "message",
+  "phone",
+  "preferredContact",
+  "preferredDate",
+  "privacyAccepted",
+];
+
 async function readJson(path) {
   try {
     return JSON.parse(await readFile(path, "utf8"));
@@ -58,7 +69,151 @@ function assertPageCoverage(routes, localizedContent) {
       pageIds.map((id) => content.pages[id].metaDescription),
       `Meta descriptions ${locale}`,
     );
+
+    for (const [pageId, page] of Object.entries(content.pages)) {
+      assertUnique(
+        page.sections.map(({ id }) => id),
+        `Identifiants de sections ${locale}:${pageId}`,
+      );
+
+      const localizedHrefs = [
+        page.primaryCta.href,
+        ...page.sections
+          .filter(({ type }) => type === "cta")
+          .map(({ href }) => href),
+      ];
+      const foreignHrefs = localizedHrefs.filter(
+        (href) => !href.startsWith(`/${locale}/`),
+      );
+      if (foreignHrefs.length > 0) {
+        throw new Error(
+          `CTA ${locale}:${pageId}: liens hors locale (${foreignHrefs.join(", ")}).`,
+        );
+      }
+
+      for (const href of localizedHrefs) {
+        const url = new URL(href, "https://validation.invalid");
+        const targetRoute = routes.find(
+          (candidate) => candidate.paths[locale] === url.pathname,
+        );
+
+        if (!targetRoute) {
+          throw new Error(
+            `CTA ${locale}:${pageId}: route interne introuvable (${href}).`,
+          );
+        }
+
+        if (url.hash) {
+          const fragment = decodeURIComponent(url.hash.slice(1));
+          const targetIds = localizedContent[locale].pages[
+            targetRoute.id
+          ].sections.map(({ id }) => id);
+
+          if (!targetIds.includes(fragment)) {
+            throw new Error(
+              `CTA ${locale}:${pageId}: fragment interne introuvable (${href}).`,
+            );
+          }
+        }
+      }
+
+      for (const section of page.sections) {
+        if (section.type === "guides") {
+          assertUnique(
+            section.items.map(({ slug }) => slug),
+            `Slugs de guides ${locale}:${pageId}:${section.id}`,
+          );
+        }
+
+        if (section.type === "contactForm") {
+          const fieldNames = section.fields
+            .map(({ name }) => name)
+            .sort((left, right) => left.localeCompare(right));
+          assertUnique(
+            fieldNames,
+            `Champs de formulaire ${locale}:${pageId}:${section.id}`,
+          );
+          if (
+            JSON.stringify(fieldNames) !==
+            JSON.stringify(EXPECTED_CONTACT_FIELDS)
+          ) {
+            throw new Error(
+              `Formulaire ${locale}:${pageId}:${section.id}: les huit champs STI sont obligatoires.`,
+            );
+          }
+
+          const intents = section.intentOptions
+            .map(({ value }) => value)
+            .sort((left, right) => left.localeCompare(right));
+          if (
+            JSON.stringify(intents) !== JSON.stringify(["general", "visit"])
+          ) {
+            throw new Error(
+              `Formulaire ${locale}:${pageId}:${section.id}: intents attendus general et visit.`,
+            );
+          }
+
+          const preferredContact = section.fields.find(
+            ({ name }) => name === "preferredContact",
+          );
+          const preferredValues = preferredContact.options
+            .map(({ value }) => value)
+            .sort((left, right) => left.localeCompare(right));
+          if (
+            JSON.stringify(preferredValues) !==
+            JSON.stringify(["email", "none", "phone"])
+          ) {
+            throw new Error(
+              `Formulaire ${locale}:${pageId}:${section.id}: preferredContact doit proposer email, phone et none.`,
+            );
+          }
+        }
+      }
+    }
   }
+
+  for (const route of routes) {
+    const deTypes = localizedContent.de.pages[route.id].sections.map(
+      ({ type }) => type,
+    );
+    const frTypes = localizedContent.fr.pages[route.id].sections.map(
+      ({ type }) => type,
+    );
+    if (JSON.stringify(deTypes) !== JSON.stringify(frTypes)) {
+      throw new Error(
+        `Structure bilingue incohérente pour ${route.id}: ${deTypes.join(",")} / ${frTypes.join(",")}.`,
+      );
+    }
+  }
+}
+
+export function collectMockInventory(value, path = []) {
+  if (Array.isArray(value)) {
+    return value.flatMap((item, index) =>
+      collectMockInventory(item, [...path, String(index)]),
+    );
+  }
+
+  if (!value || typeof value !== "object") {
+    return [];
+  }
+
+  const own =
+    value.status === "mock"
+      ? [
+          {
+            path: path.join("."),
+            type: value.type || "tracked-content",
+          },
+        ]
+      : [];
+
+  return [
+    ...own,
+    ...Object.entries(value)
+      .filter(([key]) => key !== "status")
+      .flatMap(([key, child]) => collectMockInventory(child, [...path, key])),
+  ];
 }
 
 export async function loadSiteData({
@@ -75,7 +230,13 @@ export async function loadSiteData({
   const pageSchema = await readJson(
     resolve(projectRoot, "schemas/pages.schema.json"),
   );
+  const organizationSchema = await readJson(
+    resolve(projectRoot, "schemas/organization.schema.json"),
+  );
   const routes = await readJson(resolve(projectRoot, "src/data/routes.json"));
+  const organization = await readJson(
+    resolve(projectRoot, "src/data/organization.json"),
+  );
   const localizedContent = Object.fromEntries(
     await Promise.all(
       Object.entries(CONTENT_FILES).map(async ([locale, path]) => [
@@ -107,6 +268,13 @@ export async function loadSiteData({
         `Le fichier ${locale} déclare la locale ${content.locale}.`,
       );
     }
+  }
+
+  const validateOrganization = ajv.compile(organizationSchema);
+  if (!validateOrganization(organization)) {
+    throw new Error(
+      `Données d’organisation invalides: ${formatAjvErrors(validateOrganization.errors)}`,
+    );
   }
 
   assertUnique(
@@ -149,6 +317,29 @@ export async function loadSiteData({
         `Build production bloqué: contenus non finalisés (${drafts.join(", ")}).`,
       );
     }
+
+    const regulatedMocks = routes.routes.flatMap((route) => {
+      if (!route.regulated) {
+        return [];
+      }
+
+      return Object.entries(localizedContent).flatMap(([locale, content]) =>
+        collectMockInventory(content.pages[route.id], [locale, route.id]).map(
+          ({ path }) => path,
+        ),
+      );
+    });
+    if (regulatedMocks.length > 0) {
+      throw new Error(
+        `Build production bloqué: données réglementées mock (${regulatedMocks.join(", ")}).`,
+      );
+    }
+
+    if (organization.contact.status !== "validated") {
+      throw new Error(
+        "Build production bloqué: les coordonnées opérationnelles sont encore mock.",
+      );
+    }
   }
 
   const configuredBaseUrl =
@@ -170,7 +361,9 @@ export async function loadSiteData({
     defaultLocale: routes.defaultLocale,
     locales: routes.locales,
     localizedContent,
+    mediaById: {},
     mode,
+    organization,
     routes: routes.routes,
   };
 }

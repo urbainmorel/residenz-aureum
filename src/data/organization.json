@@ -1,0 +1,22 @@
+{
+  "$schema": "../../schemas/organization.schema.json",
+  "name": "Residenz Aureum",
+  "contact": {
+    "status": "mock",
+    "phoneDisplay": "+49 000 000000",
+    "phoneHref": "+490000000",
+    "email": "kontakt-demo@example.invalid",
+    "address": {
+      "street": "Musterstraße 00",
+      "postalCode": "00000",
+      "city": "Mülheim an der Ruhr",
+      "country": "Deutschland"
+    },
+    "openingHours": [
+      {
+        "days": "Montag bis Freitag",
+        "hours": "09:00–17:00 Uhr"
+      }
+    ]
+  }
+}

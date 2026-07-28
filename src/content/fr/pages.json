@@ -3,188 +3,949 @@
   "locale": "fr",
   "pages": {
     "home": {
-      "state": "draft",
-      "title": "Residenz Aureum | Vivre sereinement, entouré",
-      "metaDescription": "Aperçu de la future page d’accueil de Residenz Aureum et de ses parcours vers l’hébergement, l’accompagnement et la visite.",
-      "eyebrow": "Residenz Aureum",
+      "state": "ready",
+      "title": "Residenz Aureum | Vivre sereinement, bien entouré",
+      "metaDescription": "Découvrez un projet d’habitat serein et personnalisé pour seniors, puis demandez un premier échange ou une visite sans engagement.",
+      "eyebrow": "Bienvenue à Residenz Aureum",
       "heading": "Un lieu de vie serein, attentif et personnel",
-      "intro": "Cet aperçu matérialise la structure technique. Les contenus complets et validés seront ajoutés lors de la prochaine étape éditoriale.",
+      "intro": "Un nouveau lieu de vie doit rassurer sans imposer son rythme. Découvrez tranquillement notre projet d’hébergement et posez toutes les questions importantes pour vous et votre famille.",
+      "heroMediaId": "hero-garden-a",
+      "primaryCta": {
+        "label": "Demander une visite",
+        "href": "/fr/contact-visite/#formulaire"
+      },
       "sections": [
         {
-          "id": "apercu",
-          "heading": "Contenu en préparation",
-          "body": [
-            "Cette page est un aperçu de travail clairement signalé et n’est pas encore destinée à la publication."
+          "id": "benefits",
+          "type": "features",
+          "heading": "Ce qui devrait faire la différence au quotidien",
+          "intro": "Ces exemples présentent l’orientation envisagée. Ils devront être confirmés par le client avant de devenir des engagements.",
+          "items": [
+            {
+              "title": "Un espace privé et personnel",
+              "body": "Chaque personne devrait pouvoir aménager son espace avec des objets familiers et préserver autant que possible son propre rythme.",
+              "status": "mock"
+            },
+            {
+              "title": "Un interlocuteur accessible",
+              "body": "Un contact identifié devrait aider les familles à s’orienter et à suivre les décisions prises ensemble.",
+              "status": "mock"
+            },
+            {
+              "title": "Une vie sociale sans contrainte",
+              "body": "Repas partagés, petites activités et lieux de rencontre devraient rester des invitations, jamais des obligations.",
+              "status": "mock"
+            }
           ]
+        },
+        {
+          "id": "key-facts",
+          "type": "stats",
+          "heading": "Quelques chiffres pour visualiser le projet",
+          "intro": "Ces valeurs servent uniquement à la démonstration graphique et ne décrivent aucune capacité ni prestation confirmée.",
+          "items": [
+            {
+              "value": "18",
+              "label": "espaces privés dans le concept de démonstration",
+              "status": "mock"
+            },
+            {
+              "value": "7",
+              "label": "activités hebdomadaires données en exemple",
+              "status": "mock"
+            },
+            {
+              "value": "1",
+              "label": "interlocuteur référent dans le parcours d’admission",
+              "status": "mock"
+            }
+          ]
+        },
+        {
+          "id": "voices",
+          "type": "testimonials",
+          "heading": "Ce que la confiance pourrait inspirer",
+          "intro": "Les témoignages ci-dessous sont entièrement fictifs. Ils ne proviennent ni de résidents ni de proches réels.",
+          "items": [
+            {
+              "quote": "Lors du premier échange, nos questions ont été reprises calmement, une par une. Nous avons pu envisager la suite sans nous sentir pressés.",
+              "name": "Famille Exemple",
+              "context": "témoignage fictif de proches",
+              "status": "mock"
+            },
+            {
+              "quote": "J’aime l’idée de commencer ma journée comme je le souhaite tout en sachant à qui parler si j’ai besoin d’un peu d’aide.",
+              "name": "Jeanne Démonstration",
+              "context": "témoignage fictif de résidente",
+              "status": "mock"
+            }
+          ]
+        },
+        {
+          "id": "visit-cta",
+          "type": "cta",
+          "heading": "Ce lieu correspond-il à vos attentes ?",
+          "body": "Un échange personnel apporte souvent plus de clarté qu’une brochure. Envoyez vos premières questions ou proposez une date de visite.",
+          "label": "Demander une rencontre",
+          "href": "/fr/contact-visite/#formulaire"
         }
       ]
     },
     "about": {
-      "state": "draft",
-      "title": "À propos | Residenz Aureum",
-      "metaDescription": "Aperçu de la page consacrée à la mission, aux valeurs et à l’accompagnement personnel proposé par Residenz Aureum.",
+      "state": "ready",
+      "title": "À propos | La vision de Residenz Aureum",
+      "metaDescription": "Découvrez les principes qui devraient guider le lieu : dignité, autonomie, fiabilité et communication claire avec les familles.",
       "eyebrow": "À propos",
-      "heading": "Une attention qui se ressent au quotidien",
-      "intro": "Les informations définitives sur la structure, l’équipe et les méthodes seront publiées après validation par le client.",
+      "heading": "Une attention qui devrait se ressentir chaque jour",
+      "intro": "Residenz Aureum porte l’idée d’un lieu élégant et profondément humain. Les informations sur l’exploitant, l’équipe et les responsabilités ne seront publiées qu’après validation documentée.",
+      "heroMediaId": "common-lounge-a",
+      "primaryCta": {
+        "label": "Demander un échange",
+        "href": "/fr/contact-visite/#formulaire"
+      },
       "sections": [
         {
-          "id": "engagement",
-          "heading": "Contenu en préparation",
+          "id": "principles",
+          "type": "prose",
+          "heading": "La personne reste la voix la plus importante",
           "body": [
-            "La rédaction complète de cette page sera fondée sur des informations vérifiées."
+            "Un déménagement à un âge avancé touche aux habitudes, aux relations et au sentiment de sécurité. Une bonne orientation commence donc par l’écoute : que faut-il préserver, que peut-on simplifier et quelle aide est réellement souhaitée ?",
+            "Notre ligne éditoriale associe intimité et soutien accessible. Les proches doivent pouvoir comprendre qui contacter et comment les décisions sont préparées ensemble."
           ]
+        },
+        {
+          "id": "promises",
+          "type": "trustProofs",
+          "heading": "Exemples de preuves qualité",
+          "intro": "Ces preuves génériques ne simulent aucune certification réelle. Elles devront être remplacées par des éléments vérifiables ou supprimées.",
+          "items": [
+            {
+              "title": "Preuve démo : des accords traçables",
+              "body": "Exemple d’un passage de relais documenté entre le premier contact, l’admission et la vie quotidienne.",
+              "status": "mock"
+            },
+            {
+              "title": "Preuve démo : des réponses compréhensibles",
+              "body": "Exemple de délais annoncés et de responsabilités clairement identifiées pour les familles.",
+              "status": "mock"
+            },
+            {
+              "title": "Preuve démo : une amélioration continue",
+              "body": "Exemple de temps d’équipe réguliers consacrés aux observations, aux souhaits et aux améliorations.",
+              "status": "mock"
+            }
+          ]
+        },
+        {
+          "id": "approach",
+          "type": "features",
+          "heading": "Des valeurs traduites en gestes concrets",
+          "intro": "Ces exemples décrivent la manière de travailler recherchée, mais ne constituent pas encore des engagements opérationnels.",
+          "items": [
+            {
+              "title": "Dignité",
+              "body": "Respecter les choix, l’histoire de vie et les limites de chaque personne sans décider à sa place.",
+              "status": "mock"
+            },
+            {
+              "title": "Fiabilité",
+              "body": "Expliquer les responsabilités et les accords pour que résidents et proches sachent clairement à quoi s’attendre.",
+              "status": "mock"
+            },
+            {
+              "title": "Présence respectueuse",
+              "body": "Rendre l’aide accessible sans restreindre inutilement l’espace privé ni l’autonomie.",
+              "status": "mock"
+            }
+          ]
+        },
+        {
+          "id": "contact-cta",
+          "type": "cta",
+          "heading": "Découvrez notre approche lors d’un échange",
+          "body": "Venez avec vos attentes, mais aussi vos hésitations. Un premier entretien doit avant tout vous aider à y voir plus clair.",
+          "label": "Demander un échange",
+          "href": "/fr/contact-visite/#formulaire"
         }
       ]
     },
     "rooms": {
-      "state": "draft",
-      "title": "Chambres et suites | Residenz Aureum",
-      "metaDescription": "Aperçu des futures informations relatives aux chambres, suites, équipements et à l’atmosphère des espaces privés.",
-      "eyebrow": "Hébergement",
+      "state": "ready",
+      "title": "Chambres et suites | Habiter à Residenz Aureum",
+      "metaDescription": "Découvrez l’ambiance recherchée, les questions essentielles sur l’équipement et des inspirations pour un espace privé familier.",
+      "eyebrow": "Chambres et suites",
       "heading": "Un espace personnel, élégant et apaisant",
-      "intro": "Les équipements, surfaces et disponibilités resteront signalés comme non publiables jusqu’à leur confirmation explicite.",
+      "intro": "Ce sont les souvenirs et les habitudes qui transforment une chambre en chez-soi. Les espaces et équipements présentés sont des exemples de conception, pas des offres confirmées ni des photos de la résidence réelle.",
+      "heroMediaId": "room-b",
+      "primaryCta": {
+        "label": "Demander une visite",
+        "href": "/fr/contact-visite/#formulaire"
+      },
       "sections": [
         {
-          "id": "hebergement",
-          "heading": "Contenu en préparation",
+          "id": "room-concept",
+          "type": "prose",
+          "heading": "Les objets familiers ont toute leur place",
           "body": [
-            "Les caractéristiques des espaces seront ajoutées à partir des données validées par le client."
+            "Un fauteuil préféré, des photos, des livres et de petits rituels peuvent faciliter l’arrivée. Il est utile de penser aux meubles, mais aussi à tout ce qui rend un matin ordinaire immédiatement reconnaissable.",
+            "Avant toute décision, vérifiez sur place les espaces de circulation, les rangements, la lumière, la salle d’eau et l’accessibilité. Les dimensions et équipements définitifs ne seront publiés qu’après validation."
+          ],
+          "mediaId": "room-b"
+        },
+        {
+          "id": "room-options",
+          "type": "features",
+          "heading": "Exemples d’aménagements possibles",
+          "intro": "Ces caractéristiques sont provisoires et ne permettent de conclure ni à leur présence réelle ni à la disponibilité d’une chambre.",
+          "items": [
+            {
+              "title": "Salle d’eau privée pensée pour l’accessibilité",
+              "body": "Exemple de circulation courte, de points d’appui et de rangements facilement accessibles.",
+              "status": "mock"
+            },
+            {
+              "title": "Place pour des meubles personnels",
+              "body": "Exemple d’aménagement flexible permettant d’intégrer quelques objets et meubles familiers.",
+              "status": "mock"
+            },
+            {
+              "title": "Éclairage doux et lisible",
+              "body": "Exemple de lumière générale non éblouissante complétée près des espaces de lecture et de repos.",
+              "status": "mock"
+            }
           ]
+        },
+        {
+          "id": "room-gallery",
+          "type": "gallery",
+          "heading": "Des idées d’ambiance générées par IA",
+          "intro": "Ces images expriment uniquement une intention esthétique. Elles ne documentent ni le bâtiment ni le mobilier réel de Residenz Aureum.",
+          "items": [
+            {
+              "mediaId": "room-b",
+              "title": "Inspiration pour un espace privé",
+              "caption": "Visualisation IA aux couleurs calmes avec un aménagement personnel et chaleureux.",
+              "status": "mock"
+            },
+            {
+              "mediaId": "common-lounge-a",
+              "title": "Inspiration pour un salon partagé",
+              "caption": "Visualisation IA d’un espace lumineux permettant les échanges comme les moments de retrait.",
+              "status": "mock"
+            }
+          ]
+        },
+        {
+          "id": "room-cta",
+          "type": "cta",
+          "heading": "Rien ne remplace une vérification sur place",
+          "body": "Notez les dimensions et les habitudes qui comptent pour vous. Vous pourrez ainsi poser des questions précises lors de la visite.",
+          "label": "Demander une visite",
+          "href": "/fr/contact-visite/#formulaire"
         }
       ]
     },
     "care": {
-      "state": "draft",
-      "title": "Soins et accompagnement | Residenz Aureum",
-      "metaDescription": "Aperçu de la future page consacrée à l’accompagnement, à la sécurité et au respect de l’autonomie au quotidien.",
-      "eyebrow": "Accompagnement",
-      "heading": "Être accompagné tout en restant soi-même",
-      "intro": "Toute affirmation concernant les soins ou les prestations sera vérifiée par une personne compétente avant publication.",
+      "state": "ready",
+      "title": "Soins et accompagnement | Rester soi-même",
+      "metaDescription": "Comprenez comment autonomie et soutien accessible peuvent se compléter, et préparez les questions essentielles à poser en famille.",
+      "eyebrow": "Soins et accompagnement",
+      "heading": "L’aide doit rassurer, jamais décider à votre place",
+      "intro": "Les besoins, les responsabilités et les limites professionnelles doivent être étudiés individuellement avant toute admission. Cette page informe sans donner de conseil médical ni promettre de prestation.",
+      "heroMediaId": "care-conversation-a",
+      "primaryCta": {
+        "label": "Envoyer une demande générale",
+        "href": "/fr/contact-visite/#formulaire"
+      },
       "sections": [
         {
-          "id": "accompagnement",
-          "heading": "Contenu en préparation",
+          "id": "care-principle",
+          "type": "prose",
+          "heading": "Partir de la vie quotidienne de la personne",
           "body": [
-            "Cette version de travail ne contient aucune promesse médicale ou relative aux soins."
+            "Un accompagnement respectueux ne commence pas par une liste de difficultés. Il cherche ce que la personne souhaite continuer à faire, l’aide qui la soulage et les habitudes qui lui donnent des repères.",
+            "Les décisions médicales ou liées aux soins doivent être discutées de manière confidentielle avec des professionnels qualifiés. N’envoyez aucun diagnostic, traitement ou document de santé par le formulaire public."
+          ],
+          "mediaId": "care-conversation-a"
+        },
+        {
+          "id": "support",
+          "type": "features",
+          "heading": "Exemples d’un accompagnement coordonné",
+          "intro": "Ces exemples sont provisoires. Disponibilité, qualifications et périmètre réel devront être confirmés par l’exploitant.",
+          "items": [
+            {
+              "title": "Un entretien personnalisé",
+              "body": "Exemple d’échange sur les habitudes, les attentes, les besoins d’aide et les personnes à contacter.",
+              "status": "mock"
+            },
+            {
+              "title": "Une journée adaptée",
+              "body": "Exemple de soutien à des moments convenus, sans transformer toute la journée en programme imposé.",
+              "status": "mock"
+            },
+            {
+              "title": "Des nouvelles données aux proches",
+              "body": "Exemple de moyens de contact convenus dans le respect du consentement de la personne concernée.",
+              "status": "mock"
+            }
           ]
+        },
+        {
+          "id": "coordination",
+          "type": "steps",
+          "heading": "Un parcours possible pour coordonner l’aide",
+          "intro": "Le processus réel reste à valider et ne remplace ni une évaluation professionnelle ni un conseil médical.",
+          "items": [
+            {
+              "title": "Recueillir les souhaits",
+              "body": "La personne et ses proches décrivent ce qui fonctionne bien et les situations où une aide serait utile.",
+              "status": "mock"
+            },
+            {
+              "title": "Vérifier avec un professionnel",
+              "body": "Des interlocuteurs qualifiés déterminent quel soutien peut être proposé de manière responsable.",
+              "status": "mock"
+            },
+            {
+              "title": "Comprendre l’accord",
+              "body": "Prestations, limites, coûts et responsabilités sont expliqués par écrit avant toute décision.",
+              "status": "mock"
+            },
+            {
+              "title": "Faire régulièrement le point",
+              "body": "Les changements sont réexaminés ensemble avec le consentement de la personne concernée.",
+              "status": "mock"
+            }
+          ]
+        },
+        {
+          "id": "care-cta",
+          "type": "cta",
+          "heading": "Quel soutien compte le plus pour vous ?",
+          "body": "Indiquez seulement votre souhait général d’échanger. Les informations de santé devront ensuite passer par un canal sécurisé adapté.",
+          "label": "Envoyer une demande générale",
+          "href": "/fr/contact-visite/#formulaire"
         }
       ]
     },
     "services": {
-      "state": "draft",
-      "title": "Services | Residenz Aureum",
-      "metaDescription": "Aperçu de la future présentation des aides quotidiennes, de la restauration, des activités et des autres services.",
+      "state": "ready",
+      "title": "Services | Un quotidien plus simple",
+      "metaDescription": "Découvrez des exemples de services quotidiens, de repas, d’aide ménagère et d’activités, tous clairement indiqués comme provisoires.",
       "eyebrow": "Services",
-      "heading": "Des attentions qui simplifient le quotidien",
-      "intro": "La liste des services sera composée exclusivement à partir d’informations confirmées par le client.",
+      "heading": "Des attentions qui peuvent alléger le quotidien",
+      "intro": "Avant toute signature, il faut distinguer ce qui est inclus, optionnel ou confié à un prestataire extérieur. Les exemples suivants n’ont pas encore été confirmés par le client.",
+      "heroMediaId": "activity-flowers-a",
+      "primaryCta": {
+        "label": "Parler des services",
+        "href": "/fr/contact-visite/#formulaire"
+      },
       "sections": [
         {
-          "id": "quotidien",
-          "heading": "Contenu en préparation",
-          "body": [
-            "La présentation complète des services sera ajoutée après validation professionnelle."
+          "id": "daily-support",
+          "type": "features",
+          "heading": "Exemples de services envisagés",
+          "intro": "Tous ces services sont présentés à titre de démonstration et ne constituent aucune promesse de disponibilité, de prix ou de prestation.",
+          "items": [
+            {
+              "title": "Repas dans un espace commun",
+              "body": "Exemple de repas réguliers servis dans une atmosphère calme et conviviale.",
+              "status": "mock"
+            },
+            {
+              "title": "Aide pour l’entretien quotidien",
+              "body": "Exemple de ménage convenu, d’organisation du linge et de petites aides pratiques.",
+              "status": "mock"
+            },
+            {
+              "title": "Activités accompagnées",
+              "body": "Exemple de propositions créatives, culturelles ou physiques adaptées à de petits groupes.",
+              "status": "mock"
+            },
+            {
+              "title": "Aide à l’organisation de rendez-vous",
+              "body": "Exemple de soutien pour fixer un rendez-vous ou rechercher un moyen de transport adapté.",
+              "status": "mock"
+            }
           ]
+        },
+        {
+          "id": "dining",
+          "type": "prose",
+          "heading": "Le repas est aussi un moment de vie",
+          "body": [
+            "Partager un repas peut donner des repères, du plaisir et l’occasion d’échanger. Il est tout aussi important de pouvoir manger au calme ou de préserver son intimité.",
+            "Avant de choisir, renseignez-vous sur les menus, les options, les besoins particuliers, les suppléments et la responsabilité professionnelle. Toutes ces informations doivent être confirmées par écrit."
+          ],
+          "mediaId": "activity-flowers-a"
+        },
+        {
+          "id": "service-proof",
+          "type": "trustProofs",
+          "heading": "Comment la transparence devrait se manifester",
+          "intro": "Ces critères qualité sont des exemples génériques de démonstration, et non des certifications réelles.",
+          "items": [
+            {
+              "title": "Fiche démo : services inclus",
+              "body": "Exemple de distinction claire entre offre de base, option payante et prestation extérieure.",
+              "status": "mock"
+            },
+            {
+              "title": "Fiche démo : responsabilités identifiées",
+              "body": "Exemple de contacts précis pour les questions concernant le ménage, les repas et les activités.",
+              "status": "mock"
+            },
+            {
+              "title": "Fiche démo : possibilité de retour",
+              "body": "Exemple d’un moyen simple et confidentiel d’exprimer une demande ou une insatisfaction.",
+              "status": "mock"
+            }
+          ]
+        },
+        {
+          "id": "services-cta",
+          "type": "cta",
+          "heading": "Clarifiez les services avant de comparer",
+          "body": "Indiquez-nous ce qui compte dans votre quotidien. Une réponse engageante ne pourra être donnée qu’après vérification.",
+          "label": "Poser une question sur les services",
+          "href": "/fr/contact-visite/#formulaire"
         }
       ]
     },
     "life": {
-      "state": "draft",
-      "title": "Vivre à Aureum | Residenz Aureum",
-      "metaDescription": "Aperçu de la vie quotidienne, des moments partagés, des activités et des espaces propices au calme.",
-      "eyebrow": "Vie quotidienne",
+      "state": "ready",
+      "title": "Vivre à Aureum | Ensemble, à son propre rythme",
+      "metaDescription": "Découvrez comment rencontres, temps calme, petits rituels et activités facultatives peuvent enrichir un quotidien autonome.",
+      "eyebrow": "Vivre à Aureum",
       "heading": "Partager ou se retrouver, à son propre rythme",
-      "intro": "Les futurs exemples de vie quotidienne seront distingués clairement des prestations réellement confirmées.",
+      "intro": "Une belle journée n’a pas besoin d’être remplie. Elle peut laisser de la place aux habitudes, aux rencontres imprévues, aux centres d’intérêt et au silence.",
+      "heroMediaId": "garden-a",
+      "primaryCta": {
+        "label": "Demander une rencontre",
+        "href": "/fr/contact-visite/#formulaire"
+      },
       "sections": [
         {
-          "id": "communaute",
-          "heading": "Contenu en préparation",
+          "id": "daily-rhythm",
+          "type": "prose",
+          "heading": "Un quotidien fait de choix",
           "body": [
-            "Les exemples d’activités et de moments de vie seront ajoutés pendant la phase éditoriale."
+            "Certaines personnes aiment se lever tôt, d’autres prennent leur temps. Certaines recherchent la compagnie, d’autres commencent par un moment de calme. Un cadre respectueux offre des repères sans programmer chaque heure.",
+            "Les activités doivent être accessibles, facultatives et adaptables à des envies variées. Le programme réel de Residenz Aureum n’est pas encore confirmé."
+          ],
+          "mediaId": "garden-a"
+        },
+        {
+          "id": "activities",
+          "type": "features",
+          "heading": "Quelques moments imaginés dans la semaine",
+          "intro": "Ces activités sont fictives et servent uniquement de démonstration. Elles ne constituent pas un programme publié.",
+          "items": [
+            {
+              "title": "Petite promenade au jardin",
+              "body": "Exemple de sortie facultative avec un rythme tranquille et des pauses possibles.",
+              "status": "mock"
+            },
+            {
+              "title": "Table créative",
+              "body": "Exemple d’atelier autour des fleurs, des couleurs ou du travail manuel en petit groupe.",
+              "status": "mock"
+            },
+            {
+              "title": "Musique et souvenirs",
+              "body": "Exemple d’écoute partagée à partir des choix musicaux de chacun, sans obligation de participer.",
+              "status": "mock"
+            },
+            {
+              "title": "Café et conversation",
+              "body": "Exemple de rencontre ouverte où chacun peut rester quelques minutes ou davantage.",
+              "status": "mock"
+            }
           ]
+        },
+        {
+          "id": "life-gallery",
+          "type": "gallery",
+          "heading": "Une atmosphère illustrée par des concepts",
+          "intro": "Ces images générées par IA ne montrent ni la résidence réelle ni des résidents identifiables.",
+          "items": [
+            {
+              "mediaId": "garden-a",
+              "title": "Inspiration pour un jardin protégé",
+              "caption": "Visualisation IA d’un espace extérieur paisible avec des assises et des cheminements lisibles.",
+              "status": "mock"
+            },
+            {
+              "mediaId": "activity-flowers-a",
+              "title": "Inspiration pour une activité partagée",
+              "caption": "Visualisation IA d’un petit atelier créatif sans représentation de résidents réels.",
+              "status": "mock"
+            }
+          ]
+        },
+        {
+          "id": "life-cta",
+          "type": "cta",
+          "heading": "Quelles habitudes souhaitez-vous préserver ?",
+          "body": "Lors d’une rencontre, racontez-nous ce qui rend une journée agréable pour vous ou votre proche.",
+          "label": "Préparer une rencontre",
+          "href": "/fr/contact-visite/#formulaire"
         }
       ]
     },
     "admission": {
-      "state": "draft",
-      "title": "Admission et inscription | Residenz Aureum",
-      "metaDescription": "Aperçu d’un parcours clair pour la prise de contact, la visite, les documents et les prochaines étapes.",
-      "eyebrow": "Admission",
-      "heading": "Des étapes simples, expliquées avec clarté",
-      "intro": "Le processus officiel d’admission et les documents requis devront être confirmés avant publication.",
+      "state": "ready",
+      "title": "Admission et inscription | Les étapes essentielles",
+      "metaDescription": "Préparez contact, visite et décision de façon structurée. Le parcours d’admission proposé reste clairement signalé comme provisoire.",
+      "eyebrow": "Admission et inscription",
+      "heading": "Une décision importante mérite des étapes claires",
+      "intro": "Le parcours réel, les documents requis, les coûts et les disponibilités restent à confirmer. Utilisez cette page comme support neutre pour préparer votre entretien.",
+      "heroMediaId": "admission-a",
+      "primaryCta": {
+        "label": "Demander un premier échange",
+        "href": "/fr/contact-visite/#formulaire"
+      },
       "sections": [
         {
-          "id": "demarche",
-          "heading": "Contenu en préparation",
-          "body": [
-            "Les étapes seront détaillées à partir des informations organisationnelles vérifiées."
+          "id": "first-steps",
+          "type": "steps",
+          "heading": "Exemple d’un parcours d’admission transparent",
+          "intro": "Chaque étape est provisoire. Seuls les documents validés et les accords individuels auront une valeur engageante.",
+          "items": [
+            {
+              "title": "Prendre contact sans engagement",
+              "body": "Transmettez uniquement vos coordonnées et le sujet général de votre demande, sans information de santé.",
+              "status": "mock"
+            },
+            {
+              "title": "Organiser une rencontre",
+              "body": "Échangez sur vos attentes, votre calendrier et les questions à éclaircir avant une visite.",
+              "status": "mock"
+            },
+            {
+              "title": "Vérifier sur place",
+              "body": "Observez les espaces et demandez une explication écrite des coûts, des services et des responsabilités.",
+              "status": "mock"
+            },
+            {
+              "title": "Décider sans précipitation",
+              "body": "Comparez les documents, réglez les points ouverts et ne signez que lorsque tout est compris.",
+              "status": "mock"
+            }
           ]
+        },
+        {
+          "id": "preparation",
+          "type": "prose",
+          "heading": "Préparer le premier échange",
+          "body": [
+            "Notez les souhaits liés au logement, au rythme de vie, aux relations sociales et au soutien. Ajoutez les questions qui doivent absolument recevoir une réponse avant toute décision.",
+            "N’envoyez aucun document médical par le formulaire public. Demandez d’abord quel canal sécurisé peut être utilisé et sur quelle base les informations nécessaires seront traitées.",
+            "Exigez une vue complète des coûts ainsi que des explications claires sur la résiliation, les options, les interlocuteurs et les voies de réclamation."
+          ],
+          "mediaId": "admission-a"
+        },
+        {
+          "id": "admission-faq",
+          "type": "faq",
+          "heading": "Questions avant de poursuivre",
+          "intro": "Ces réponses illustrent un parcours possible et doivent encore être confirmées par l’exploitant.",
+          "items": [
+            {
+              "question": "Une première demande est-elle engageante ?",
+              "answer": "Dans le parcours de démonstration, le premier contact reste sans engagement. La portée juridique des documents suivants devra être expliquée avant signature.",
+              "status": "mock"
+            },
+            {
+              "question": "Quels documents faut-il préparer ?",
+              "answer": "Aucune liste définitive n’est disponible. Ne transmettez les documents sensibles qu’après vérification d’un canal sécurisé.",
+              "status": "mock"
+            },
+            {
+              "question": "Dans quel délai une entrée est-elle possible ?",
+              "answer": "Aucune place ni aucun délai n’est confirmé. Un calendrier réaliste ne pourra être proposé qu’après examen individuel.",
+              "status": "mock"
+            }
+          ]
+        },
+        {
+          "id": "admission-cta",
+          "type": "cta",
+          "heading": "Commencez par un échange sans engagement",
+          "body": "Vous n’avez pas besoin d’avoir déjà toutes les réponses. Un court message suffit pour organiser les prochaines questions.",
+          "label": "Demander un entretien",
+          "href": "/fr/contact-visite/#formulaire"
         }
       ]
     },
     "faq": {
-      "state": "draft",
+      "state": "ready",
       "title": "Questions fréquentes | Residenz Aureum",
-      "metaDescription": "Aperçu de réponses claires sur l’hébergement, les visites, l’inscription, la vie quotidienne et l’accompagnement.",
-      "eyebrow": "Repères",
-      "heading": "Des réponses aux questions fréquentes",
-      "intro": "Les réponses ayant une portée juridique, médicale ou contractuelle seront contrôlées avant publication.",
+      "metaDescription": "Repères clairs sur la visite, l’hébergement, les services, les coûts et le contact. Toute réponse provisoire est signalée comme telle.",
+      "eyebrow": "Questions fréquentes",
+      "heading": "Des réponses pour préparer votre décision",
+      "intro": "Cette page vous aide à repérer les sujets importants. Les réponses qui dépendent encore de l’exploitant sont explicitement présentées comme des démonstrations.",
+      "primaryCta": {
+        "label": "Poser une question",
+        "href": "/fr/contact-visite/#formulaire"
+      },
       "sections": [
         {
-          "id": "questions",
-          "heading": "Contenu en préparation",
-          "body": [
-            "Les questions et réponses complètes seront ajoutées après validation des informations."
+          "id": "main-faq",
+          "type": "faq",
+          "heading": "Les questions souvent posées par les familles",
+          "intro": "Les prestations, prix, disponibilités et conditions contractuelles ne deviendront définitifs qu’après validation du client.",
+          "items": [
+            {
+              "question": "Puis-je visiter avant de prendre une décision ?",
+              "answer": "Une visite est prévue dans le parcours envisagé. La date et son déroulement devront être convenus par un moyen de contact validé.",
+              "status": "mock"
+            },
+            {
+              "question": "Peut-on apporter ses propres meubles ?",
+              "answer": "Le concept encourage les objets personnels. Les possibilités réelles dépendront des dimensions confirmées et des exigences de sécurité.",
+              "status": "mock"
+            },
+            {
+              "question": "Quel accompagnement est proposé ?",
+              "answer": "Le périmètre des prestations n’est pas validé. Besoins, limites professionnelles, responsabilités et coûts devront être étudiés séparément.",
+              "status": "mock"
+            },
+            {
+              "question": "Quel est le coût d’un hébergement ?",
+              "answer": "Aucun tarif confirmé n’est disponible. Demandez une présentation écrite de tous les coûts de base et suppléments avant toute décision.",
+              "status": "mock"
+            },
+            {
+              "question": "Y a-t-il actuellement des places disponibles ?",
+              "answer": "Aucune disponibilité publiable n’est connue. Le statut devra être demandé via le futur contact officiel.",
+              "status": "mock"
+            },
+            {
+              "question": "Est-il possible d’échanger en français ?",
+              "answer": "Le site est disponible en allemand et en français. Les langues réellement pratiquées au quotidien restent à confirmer.",
+              "status": "mock"
+            },
+            {
+              "question": "Puis-je envoyer des informations de santé dans le formulaire ?",
+              "answer": "Non. Le formulaire public sert uniquement aux demandes générales et de visite. Toute donnée de santé nécessite un canal sécurisé explicitement prévu.",
+              "status": "mock"
+            },
+            {
+              "question": "Comment signaler une difficulté ou une réclamation ?",
+              "answer": "La procédure officielle n’est pas encore publiée. Avant de signer, demandez qui contacter, comment la demande est suivie et à qui faire appel ensuite.",
+              "status": "mock"
+            }
           ]
+        },
+        {
+          "id": "safe-contact",
+          "type": "prose",
+          "heading": "Aborder les sujets sensibles en toute sécurité",
+          "body": [
+            "Dans le formulaire, indiquez uniquement le sujet sur lequel vous souhaitez échanger. Diagnostics, ordonnances, évaluations de dépendance et traitements n’y ont pas leur place.",
+            "Lorsqu’une réponse peut avoir des conséquences financières, juridiques, médicales ou liées aux soins, demandez une information écrite et assumée par un professionnel compétent."
+          ]
+        },
+        {
+          "id": "faq-cta",
+          "type": "cta",
+          "heading": "Votre question n’apparaît pas ici ?",
+          "body": "Envoyez un court message général. Vos questions pourront ensuite être reprises lors d’un échange personnel.",
+          "label": "Poser ma question",
+          "href": "/fr/contact-visite/#formulaire"
         }
       ]
     },
     "contact": {
-      "state": "draft",
+      "state": "ready",
       "title": "Contact et visite | Residenz Aureum",
-      "metaDescription": "Aperçu du futur contact sécurisé et de la demande sans engagement pour organiser une visite personnelle.",
-      "eyebrow": "Contact",
+      "metaDescription": "Envoyez une demande générale ou proposez une visite, sans donnée de santé. Les coordonnées provisoires sont clairement signalées.",
+      "eyebrow": "Contact et visite",
       "heading": "Prenons le temps de faire connaissance",
-      "intro": "Les coordonnées, l’adresse et les horaires resteront hors publication jusqu’à leur confirmation par le client.",
+      "intro": "Utilisez ce formulaire pour une question générale ou une demande de visite sans engagement. Les coordonnées et horaires affichés ne sont pas encore confirmés.",
+      "heroMediaId": "admission-a",
+      "primaryCta": {
+        "label": "Accéder au formulaire",
+        "href": "/fr/contact-visite/#formulaire"
+      },
       "sections": [
         {
-          "id": "contact",
-          "heading": "Formulaire en préparation",
+          "id": "contact-intro",
+          "type": "prose",
+          "heading": "Ce que vous pouvez nous indiquer",
           "body": [
-            "Merci de ne transmettre aucune donnée personnelle ou médicale dans cet aperçu de travail."
+            "Quelques mots sur votre demande et le moyen de réponse préféré suffisent. Nous ne demandons volontairement aucun diagnostic, degré de dépendance, traitement ni autre donnée de santé.",
+            "La date proposée ne vaut pas confirmation de rendez-vous. Attendez une réponse personnelle transmise par un moyen de contact qui aura été validé."
           ]
+        },
+        {
+          "id": "contact-details",
+          "type": "trustProofs",
+          "heading": "Coordonnées provisoires",
+          "intro": "Téléphone, e-mail, adresse et horaires sont des données de démonstration qui ne doivent pas être utilisés pour un contact réel.",
+          "items": [
+            {
+              "title": "Téléphone démo : +49 000 000000",
+              "body": "Numéro non validé et non destiné aux appels.",
+              "status": "mock"
+            },
+            {
+              "title": "E-mail démo : kontakt-demo@example.invalid",
+              "body": "Adresse technique d’exemple ne recevant aucun message.",
+              "status": "mock"
+            },
+            {
+              "title": "Horaires démo : du lundi au vendredi, 9 h à 17 h",
+              "body": "Plage de disponibilité non confirmée.",
+              "status": "mock"
+            },
+            {
+              "title": "Adresse démo : Musterstraße 00, 00000 Mülheim an der Ruhr",
+              "body": "Adresse fictive sans itinéraire ; l’adresse réelle doit encore être validée.",
+              "status": "mock"
+            }
+          ]
+        },
+        {
+          "id": "formulaire",
+          "type": "contactForm",
+          "heading": "Votre demande",
+          "intro": "Les champs obligatoires sont indiqués. Vos informations servent uniquement à traiter cette demande.",
+          "intentOptions": [
+            { "value": "general", "label": "Question générale" },
+            { "value": "visit", "label": "Demande de visite" }
+          ],
+          "fields": [
+            {
+              "name": "firstName",
+              "label": "Prénom",
+              "type": "text",
+              "required": true,
+              "autocomplete": "given-name"
+            },
+            {
+              "name": "lastName",
+              "label": "Nom",
+              "type": "text",
+              "required": true,
+              "autocomplete": "family-name"
+            },
+            {
+              "name": "email",
+              "label": "Adresse e-mail",
+              "type": "email",
+              "required": true,
+              "autocomplete": "email"
+            },
+            {
+              "name": "phone",
+              "label": "Téléphone (facultatif)",
+              "type": "tel",
+              "required": false,
+              "autocomplete": "tel"
+            },
+            {
+              "name": "preferredDate",
+              "label": "Date de visite souhaitée (facultatif)",
+              "type": "date",
+              "required": false
+            },
+            {
+              "name": "preferredContact",
+              "label": "Moyen de réponse préféré",
+              "type": "select",
+              "required": true,
+              "options": [
+                { "value": "email", "label": "E-mail" },
+                { "value": "phone", "label": "Téléphone" },
+                { "value": "none", "label": "Aucune préférence" }
+              ]
+            },
+            {
+              "name": "message",
+              "label": "Votre message",
+              "type": "textarea",
+              "required": true
+            },
+            {
+              "name": "privacyAccepted",
+              "label": "Accepter l’information de confidentialité",
+              "type": "checkbox",
+              "required": true
+            }
+          ],
+          "privacyLabel": "J’ai lu l’information de confidentialité et j’accepte que mes données soient utilisées pour répondre à cette demande.",
+          "healthWarning": "N’indiquez aucun diagnostic, traitement, document d’évaluation ou autre renseignement relatif à la santé dans ce formulaire.",
+          "submitLabel": "Envoyer ma demande en toute sécurité",
+          "successMessage": "Merci. Votre demande a bien été prise en compte. Conservez le numéro de référence affiché pour tout suivi."
         }
       ]
     },
     "advice": {
-      "state": "draft",
+      "state": "ready",
       "title": "Conseils pour les familles | Residenz Aureum",
-      "metaDescription": "Aperçu de mini-guides utiles pour choisir une résidence, préparer une visite et accompagner un déménagement.",
+      "metaDescription": "Cinq mini-guides complets pour choisir une résidence, préparer une visite, comprendre les coûts, organiser un déménagement et dialoguer.",
       "eyebrow": "Conseils",
       "heading": "Des repères pour une décision importante",
-      "intro": "Les cinq mini-guides prévus seront rédigés et vérifiés avant leur publication.",
+      "intro": "Une décision solide se construit rarement en un seul entretien. Ces cinq guides courts vous aident à organiser vos observations, préparer vos questions et préserver le dialogue familial.",
+      "heroMediaId": "garden-a",
+      "primaryCta": {
+        "label": "Lire les guides",
+        "href": "/fr/conseils/#guide-library"
+      },
       "sections": [
         {
-          "id": "guides",
-          "heading": "Contenu en préparation",
-          "body": [
-            "Les guides proposeront des repères accessibles et utiles, sans constituer un conseil médical."
+          "id": "guide-library",
+          "type": "guides",
+          "heading": "Cinq mini-guides pratiques",
+          "intro": "Ces repères sont généraux et ne remplacent aucun conseil médical, soignant, juridique ou financier.",
+          "items": [
+            {
+              "slug": "choisir-residence",
+              "title": "Choisir une résidence adaptée",
+              "summary": "Commencez par les besoins et les limites avant de comparer l’apparence, les équipements ou les promesses.",
+              "body": [
+                "Partez du quotidien de la personne concernée. Quelles habitudes la rassurent, quels gestes restent faciles et quelle aide serait vraiment utile ? Notez aussi ce qui doit absolument être préservé.",
+                "Séparez les critères indispensables des préférences. La proximité des proches, un soutien adapté, des coûts lisibles et une relation respectueuse peuvent compter davantage qu’une longue liste d’équipements.",
+                "Comparez uniquement des informations confirmées. Demandez des explications écrites sur les services, suppléments, responsabilités, conditions de résiliation et procédures de réclamation.",
+                "Écoutez votre ressenti sans décider uniquement sur une première impression. Une seconde visite à un autre moment peut révéler si l’ambiance reste cohérente."
+              ],
+              "checklist": [
+                "Noter trois besoins indispensables",
+                "Vérifier l’accès et les possibilités de visite",
+                "Comparer services et suppléments par écrit",
+                "Identifier les interlocuteurs et la procédure de réclamation",
+                "Associer la personne concernée à la décision"
+              ],
+              "updatedAt": "2026-07-28"
+            },
+            {
+              "slug": "preparer-visite",
+              "title": "Bien préparer une visite",
+              "summary": "Quelques questions ciblées permettent de mieux comprendre les espaces, l’organisation et les relations quotidiennes.",
+              "body": [
+                "Choisissez si possible un horaire auquel la future résidente ou le futur résident peut participer. Demandez quels espaces seront accessibles et qui pourra répondre aux questions professionnelles.",
+                "Observez les repères, le bruit, la lumière, les odeurs, les sièges et les cheminements. Examinez salle d’eau, ascenseur, extérieur et lieux calmes en fonction des besoins concrets.",
+                "Ne vous limitez pas aux événements exceptionnels. Demandez comment se déroulent habituellement un matin ordinaire, un après-midi calme et la nuit.",
+                "Notez les questions restantes juste après la visite. Pour les prix, les services et le contrat, demandez des documents plutôt que de vous fier uniquement à vos souvenirs."
+              ],
+              "checklist": [
+                "Lister les meubles et dimensions importants",
+                "Questionner la journée type et la nuit",
+                "Vérifier intimité et visites",
+                "Repartir avec les documents tarifaires",
+                "Prévoir une seconde visite en cas de doute"
+              ],
+              "updatedAt": "2026-07-28"
+            },
+            {
+              "slug": "comprendre-couts",
+              "title": "Comprendre les coûts et le contrat",
+              "summary": "Une vue complète évite de confondre prix de base, prestations optionnelles et futures augmentations.",
+              "body": [
+                "Demandez le détail de toutes les sommes récurrentes. Les frais de base, forfaits obligatoires, options et prestations extérieures doivent apparaître séparément.",
+                "Vérifiez ce qui est inclus, comment activer ou arrêter une option et dans quelles conditions les prix évoluent. Les explications orales devraient se retrouver dans le contrat ou ses annexes.",
+                "Examinez les délais de paiement, le dépôt éventuel, la résiliation et les conséquences d’une absence prolongée. Une association de consommateurs ou un juriste indépendant peut aider en cas de doute.",
+                "Ne comparez pas seulement le montant mensuel affiché. Un prix de base attractif peut augmenter fortement avec des services nécessaires facturés à part."
+              ],
+              "checklist": [
+                "Séparer prix de base et options",
+                "Repérer les clauses d’augmentation",
+                "Comprendre résiliation et absence",
+                "Faire confirmer les promesses par écrit",
+                "Demander un avis indépendant si nécessaire"
+              ],
+              "updatedAt": "2026-07-28"
+            },
+            {
+              "slug": "preparer-demenagement",
+              "title": "Préparer le déménagement avec douceur",
+              "summary": "Des objets familiers, un calendrier réaliste et des rôles clairs peuvent rendre la transition plus sereine.",
+              "body": [
+                "Planifiez à rebours depuis la date envisagée et découpez les tâches. Déterminez ensemble qui gère les documents, les mesures, le transport et la disponibilité du premier jour.",
+                "Choisissez des meubles, photos, textiles et objets quotidiens qui donneront immédiatement une impression de familiarité. Photographier l’ancienne disposition peut aider à retrouver certains repères.",
+                "Évitez de trier toute une vie en une seule journée. Les objets chargés de souvenirs demandent du temps ; certains peuvent être conservés provisoirement ailleurs.",
+                "Préparez un sac facile à identifier avec vêtements, nécessaire de toilette, chargeurs et objets personnels. Les documents médicaux devront être transmis par le canal sécurisé prévu."
+              ],
+              "checklist": [
+                "Confirmer les mesures et le plan du logement",
+                "Choisir d’abord les objets familiers",
+                "Répartir les tâches et contacts",
+                "Préparer un sac pour la première nuit",
+                "Vérifier le canal sécurisé pour les documents nécessaires"
+              ],
+              "updatedAt": "2026-07-28"
+            },
+            {
+              "slug": "dialoguer-famille",
+              "title": "Préserver un dialogue respectueux en famille",
+              "summary": "Une décision partagée demande du temps, des faits honnêtes et une place centrale donnée à la personne concernée.",
+              "body": [
+                "Choisissez un moment calme et n’arrivez pas avec une décision déjà prise. Demandez ce qui inquiète la personne, ce qu’elle souhaite et les aides qu’elle considère déjà comme positives.",
+                "Parlez d’observations précises plutôt que de porter un jugement. Dire « l’escalier semble plus difficile depuis quelques semaines » ouvre davantage le dialogue que « tu ne peux plus vivre seul ».",
+                "Acceptez que chacun évalue les risques différemment. Rassemblez les questions et vérifiez les faits avec des professionnels adaptés au lieu de remplacer l’incertitude par la pression.",
+                "Convenez d’une étape intermédiaire : conseil, visite ou solution temporaire. Chaque conversation ne doit pas nécessairement aboutir immédiatement à une décision définitive."
+              ],
+              "checklist": [
+                "Choisir un moment calme",
+                "Poser des questions ouvertes",
+                "Décrire les observations avec respect",
+                "Noter les souhaits de la personne concernée",
+                "Convenir d’une prochaine étape limitée"
+              ],
+              "updatedAt": "2026-07-28"
+            }
           ]
+        },
+        {
+          "id": "guide-note",
+          "type": "prose",
+          "heading": "Quand demander un avis professionnel",
+          "body": [
+            "Pour toute question liée aux soins, à une maladie, à un traitement ou à un changement soudain, adressez-vous à des professionnels de santé ou du soin qualifiés. Pour le contrat ou le financement, un avis juridique ou associatif indépendant peut être utile.",
+            "Ces guides servent à organiser les questions. Ils n’évaluent ni un établissement précis ni l’adéquation d’une solution à une situation individuelle."
+          ]
+        },
+        {
+          "id": "advice-cta",
+          "type": "cta",
+          "heading": "Apportez votre liste lors de l’échange",
+          "body": "Indiquez-nous les thèmes généraux que vous souhaitez aborder lors d’une première rencontre.",
+          "label": "Préparer mon échange",
+          "href": "/fr/contact-visite/#formulaire"
         }
       ]
     },
     "legal": {
       "state": "draft",
       "title": "Mentions légales | Residenz Aureum",
-      "metaDescription": "Aperçu non publiable des mentions légales; l’identité et les coordonnées officielles doivent encore être validées.",
+      "metaDescription": "Version de travail non publiable des mentions légales ; toutes les informations obligatoires de l’éditeur restent à fournir.",
       "eyebrow": "Informations légales",
       "heading": "Mentions légales",
-      "intro": "Cette page n’est pas publiable. L’ensemble des informations obligatoires doit être vérifié juridiquement et confirmé.",
+      "intro": "Cette version n’est pas destinée à la publication. Elle ne contient volontairement aucune identité, immatriculation ni autorité de contrôle fictive.",
+      "primaryCta": {
+        "label": "Retour à l’accueil",
+        "href": "/fr/"
+      },
       "sections": [
         {
-          "id": "editeur",
-          "heading": "Informations officielles manquantes",
+          "id": "legal-notice",
+          "type": "prose",
+          "heading": "Validation juridique obligatoire",
           "body": [
-            "Les informations obligatoires de l’éditeur doivent être renseignées avant tout build de production."
+            "Avant tout build de production, il faudra renseigner la dénomination complète, la forme juridique, les représentants, l’adresse officielle et les coordonnées confirmées du responsable du service.",
+            "Selon le cadre applicable, les registres, numéros officiels, informations fiscales, autorités compétentes, règles professionnelles et responsabilité éditoriale devront être contrôlés."
+          ]
+        },
+        {
+          "id": "required-info",
+          "type": "prose",
+          "heading": "Informations obligatoires encore absentes",
+          "body": [
+            "L’identité du fournisseur du service, son point de contact responsable et l’ensemble des informations légales vérifiables ne sont pas encore disponibles.",
+            "Le statut ne pourra passer à « ready » qu’après une vérification documentée par le client et, si nécessaire, par un conseil juridique qualifié."
           ]
         }
       ]
@@ -192,16 +953,40 @@
     "privacy": {
       "state": "draft",
       "title": "Confidentialité | Residenz Aureum",
-      "metaDescription": "Aperçu non publiable de la politique de confidentialité; sa version finale fera l’objet d’une validation juridique.",
+      "metaDescription": "Version de travail non publiable de la confidentialité ; responsable, hébergement et traitements du formulaire restent à confirmer.",
       "eyebrow": "Confidentialité",
       "heading": "Politique de confidentialité",
-      "intro": "Cette page n’est pas publiable. Elle sera adaptée à l’hébergement, au formulaire et à l’identité réelle du responsable.",
+      "intro": "Cette version n’est pas destinée à la publication. Elle n’invente ni responsable du traitement, ni base juridique, ni destinataire, ni durée de conservation.",
+      "primaryCta": {
+        "label": "Retour à l’accueil",
+        "href": "/fr/"
+      },
       "sections": [
         {
-          "id": "donnees-personnelles",
-          "heading": "Validation juridique requise",
+          "id": "privacy-status",
+          "type": "prose",
+          "heading": "Configuration et contrôle juridique en attente",
           "body": [
-            "Une politique complète et approuvée doit être fournie avant tout build de production."
+            "Avant publication, il faudra documenter le responsable, le contact de confidentialité, l’hébergeur, les emplacements serveurs, les journaux techniques, les sous-traitants et les durées réelles de conservation.",
+            "Le texte final dépendra de la configuration de production du formulaire, de Resend, des protections anti-abus et des éventuels journaux techniques."
+          ]
+        },
+        {
+          "id": "planned-processing",
+          "type": "prose",
+          "heading": "Périmètre prévu pour le formulaire",
+          "body": [
+            "Le formulaire public devrait traiter nom, prénom, e-mail, téléphone et date souhaitée facultatifs, préférence de contact, message, langue et consentement. Les données de santé en sont expressément exclues.",
+            "Base juridique, destinataires, transferts éventuels, délais d’effacement et information des personnes devront être contrôlés à partir de la configuration réellement déployée."
+          ]
+        },
+        {
+          "id": "rights",
+          "type": "prose",
+          "heading": "Droits des personnes et contact",
+          "body": [
+            "La version finale devra expliquer clairement les droits d’accès, de rectification, d’effacement, de limitation, d’opposition, de portabilité, de retrait du consentement et de réclamation lorsqu’ils s’appliquent.",
+            "Un contact de confidentialité réel et joignable ainsi que l’autorité compétente ne pourront être publiés qu’après confirmation documentée."
           ]
         }
       ]

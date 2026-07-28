@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://residenz-aureum.com/schemas/organization.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["$schema", "name", "contact"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "name": { "type": "string", "const": "Residenz Aureum" },
+    "contact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "phoneDisplay",
+        "phoneHref",
+        "email",
+        "address",
+        "openingHours"
+      ],
+      "properties": {
+        "status": { "enum": ["mock", "validated"] },
+        "approvalRef": { "type": "string", "minLength": 8, "maxLength": 300 },
+        "phoneDisplay": { "type": "string", "minLength": 5, "maxLength": 40 },
+        "phoneHref": { "type": "string", "pattern": "^\\+[1-9][0-9]{6,14}$" },
+        "email": { "type": "string", "format": "email" },
+        "address": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["street", "postalCode", "city", "country"],
+          "properties": {
+            "street": { "type": "string", "minLength": 2, "maxLength": 120 },
+            "postalCode": { "type": "string", "minLength": 3, "maxLength": 20 },
+            "city": { "type": "string", "minLength": 2, "maxLength": 100 },
+            "country": { "type": "string", "minLength": 2, "maxLength": 100 }
+          }
+        },
+        "openingHours": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 7,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["days", "hours"],
+            "properties": {
+              "days": { "type": "string", "minLength": 2, "maxLength": 80 },
+              "hours": { "type": "string", "minLength": 2, "maxLength": 80 }
+            }
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "type": "object",
+            "properties": { "status": { "const": "validated" } },
+            "required": ["status"]
+          },
+          "then": {
+            "type": "object",
+            "required": ["approvalRef"],
+            "properties": {
+              "approvalRef": {
+                "type": "string",
+                "minLength": 8,
+                "maxLength": 300
+              }
+            }
+          },
+          "else": {
+            "type": "object",
+            "properties": { "approvalRef": false }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,210 @@
+{
+  "$schema": "../../../schemas/pages.schema.json",
+  "locale": "fr",
+  "pages": {
+    "home": {
+      "state": "draft",
+      "title": "Residenz Aureum | Vivre sereinement, entouré",
+      "metaDescription": "Aperçu de la future page d’accueil de Residenz Aureum et de ses parcours vers l’hébergement, l’accompagnement et la visite.",
+      "eyebrow": "Residenz Aureum",
+      "heading": "Un lieu de vie serein, attentif et personnel",
+      "intro": "Cet aperçu matérialise la structure technique. Les contenus complets et validés seront ajoutés lors de la prochaine étape éditoriale.",
+      "sections": [
+        {
+          "id": "apercu",
+          "heading": "Contenu en préparation",
+          "body": [
+            "Cette page est un aperçu de travail clairement signalé et n’est pas encore destinée à la publication."
+          ]
+        }
+      ]
+    },
+    "about": {
+      "state": "draft",
+      "title": "À propos | Residenz Aureum",
+      "metaDescription": "Aperçu de la page consacrée à la mission, aux valeurs et à l’accompagnement personnel proposé par Residenz Aureum.",
+      "eyebrow": "À propos",
+      "heading": "Une attention qui se ressent au quotidien",
+      "intro": "Les informations définitives sur la structure, l’équipe et les méthodes seront publiées après validation par le client.",
+      "sections": [
+        {
+          "id": "engagement",
+          "heading": "Contenu en préparation",
+          "body": [
+            "La rédaction complète de cette page sera fondée sur des informations vérifiées."
+          ]
+        }
+      ]
+    },
+    "rooms": {
+      "state": "draft",
+      "title": "Chambres et suites | Residenz Aureum",
+      "metaDescription": "Aperçu des futures informations relatives aux chambres, suites, équipements et à l’atmosphère des espaces privés.",
+      "eyebrow": "Hébergement",
+      "heading": "Un espace personnel, élégant et apaisant",
+      "intro": "Les équipements, surfaces et disponibilités resteront signalés comme non publiables jusqu’à leur confirmation explicite.",
+      "sections": [
+        {
+          "id": "hebergement",
+          "heading": "Contenu en préparation",
+          "body": [
+            "Les caractéristiques des espaces seront ajoutées à partir des données validées par le client."
+          ]
+        }
+      ]
+    },
+    "care": {
+      "state": "draft",
+      "title": "Soins et accompagnement | Residenz Aureum",
+      "metaDescription": "Aperçu de la future page consacrée à l’accompagnement, à la sécurité et au respect de l’autonomie au quotidien.",
+      "eyebrow": "Accompagnement",
+      "heading": "Être accompagné tout en restant soi-même",
+      "intro": "Toute affirmation concernant les soins ou les prestations sera vérifiée par une personne compétente avant publication.",
+      "sections": [
+        {
+          "id": "accompagnement",
+          "heading": "Contenu en préparation",
+          "body": [
+            "Cette version de travail ne contient aucune promesse médicale ou relative aux soins."
+          ]
+        }
+      ]
+    },
+    "services": {
+      "state": "draft",
+      "title": "Services | Residenz Aureum",
+      "metaDescription": "Aperçu de la future présentation des aides quotidiennes, de la restauration, des activités et des autres services.",
+      "eyebrow": "Services",
+      "heading": "Des attentions qui simplifient le quotidien",
+      "intro": "La liste des services sera composée exclusivement à partir d’informations confirmées par le client.",
+      "sections": [
+        {
+          "id": "quotidien",
+          "heading": "Contenu en préparation",
+          "body": [
+            "La présentation complète des services sera ajoutée après validation professionnelle."
+          ]
+        }
+      ]
+    },
+    "life": {
+      "state": "draft",
+      "title": "Vivre à Aureum | Residenz Aureum",
+      "metaDescription": "Aperçu de la vie quotidienne, des moments partagés, des activités et des espaces propices au calme.",
+      "eyebrow": "Vie quotidienne",
+      "heading": "Partager ou se retrouver, à son propre rythme",
+      "intro": "Les futurs exemples de vie quotidienne seront distingués clairement des prestations réellement confirmées.",
+      "sections": [
+        {
+          "id": "communaute",
+          "heading": "Contenu en préparation",
+          "body": [
+            "Les exemples d’activités et de moments de vie seront ajoutés pendant la phase éditoriale."
+          ]
+        }
+      ]
+    },
+    "admission": {
+      "state": "draft",
+      "title": "Admission et inscription | Residenz Aureum",
+      "metaDescription": "Aperçu d’un parcours clair pour la prise de contact, la visite, les documents et les prochaines étapes.",
+      "eyebrow": "Admission",
+      "heading": "Des étapes simples, expliquées avec clarté",
+      "intro": "Le processus officiel d’admission et les documents requis devront être confirmés avant publication.",
+      "sections": [
+        {
+          "id": "demarche",
+          "heading": "Contenu en préparation",
+          "body": [
+            "Les étapes seront détaillées à partir des informations organisationnelles vérifiées."
+          ]
+        }
+      ]
+    },
+    "faq": {
+      "state": "draft",
+      "title": "Questions fréquentes | Residenz Aureum",
+      "metaDescription": "Aperçu de réponses claires sur l’hébergement, les visites, l’inscription, la vie quotidienne et l’accompagnement.",
+      "eyebrow": "Repères",
+      "heading": "Des réponses aux questions fréquentes",
+      "intro": "Les réponses ayant une portée juridique, médicale ou contractuelle seront contrôlées avant publication.",
+      "sections": [
+        {
+          "id": "questions",
+          "heading": "Contenu en préparation",
+          "body": [
+            "Les questions et réponses complètes seront ajoutées après validation des informations."
+          ]
+        }
+      ]
+    },
+    "contact": {
+      "state": "draft",
+      "title": "Contact et visite | Residenz Aureum",
+      "metaDescription": "Aperçu du futur contact sécurisé et de la demande sans engagement pour organiser une visite personnelle.",
+      "eyebrow": "Contact",
+      "heading": "Prenons le temps de faire connaissance",
+      "intro": "Les coordonnées, l’adresse et les horaires resteront hors publication jusqu’à leur confirmation par le client.",
+      "sections": [
+        {
+          "id": "contact",
+          "heading": "Formulaire en préparation",
+          "body": [
+            "Merci de ne transmettre aucune donnée personnelle ou médicale dans cet aperçu de travail."
+          ]
+        }
+      ]
+    },
+    "advice": {
+      "state": "draft",
+      "title": "Conseils pour les familles | Residenz Aureum",
+      "metaDescription": "Aperçu de mini-guides utiles pour choisir une résidence, préparer une visite et accompagner un déménagement.",
+      "eyebrow": "Conseils",
+      "heading": "Des repères pour une décision importante",
+      "intro": "Les cinq mini-guides prévus seront rédigés et vérifiés avant leur publication.",
+      "sections": [
+        {
+          "id": "guides",
+          "heading": "Contenu en préparation",
+          "body": [
+            "Les guides proposeront des repères accessibles et utiles, sans constituer un conseil médical."
+          ]
+        }
+      ]
+    },
+    "legal": {
+      "state": "draft",
+      "title": "Mentions légales | Residenz Aureum",
+      "metaDescription": "Aperçu non publiable des mentions légales; l’identité et les coordonnées officielles doivent encore être validées.",
+      "eyebrow": "Informations légales",
+      "heading": "Mentions légales",
+      "intro": "Cette page n’est pas publiable. L’ensemble des informations obligatoires doit être vérifié juridiquement et confirmé.",
+      "sections": [
+        {
+          "id": "editeur",
+          "heading": "Informations officielles manquantes",
+          "body": [
+            "Les informations obligatoires de l’éditeur doivent être renseignées avant tout build de production."
+          ]
+        }
+      ]
+    },
+    "privacy": {
+      "state": "draft",
+      "title": "Confidentialité | Residenz Aureum",
+      "metaDescription": "Aperçu non publiable de la politique de confidentialité; sa version finale fera l’objet d’une validation juridique.",
+      "eyebrow": "Confidentialité",
+      "heading": "Politique de confidentialité",
+      "intro": "Cette page n’est pas publiable. Elle sera adaptée à l’hébergement, au formulaire et à l’identité réelle du responsable.",
+      "sections": [
+        {
+          "id": "donnees-personnelles",
+          "heading": "Validation juridique requise",
+          "body": [
+            "Une politique complète et approuvée doit être fournie avant tout build de production."
+          ]
+        }
+      ]
+    }
+  }
+}

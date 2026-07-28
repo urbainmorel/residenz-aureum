@@ -1,0 +1,119 @@
+{
+  "$schema": "../../schemas/routes.schema.json",
+  "baseUrl": "https://residenz-aureum.com",
+  "copyrightYear": 2026,
+  "defaultLocale": "de",
+  "locales": ["de", "fr"],
+  "routes": [
+    {
+      "id": "home",
+      "indexable": true,
+      "navigation": 0,
+      "paths": {
+        "de": "/de/",
+        "fr": "/fr/"
+      }
+    },
+    {
+      "id": "about",
+      "indexable": true,
+      "navigation": 10,
+      "paths": {
+        "de": "/de/ueber-uns/",
+        "fr": "/fr/a-propos/"
+      }
+    },
+    {
+      "id": "rooms",
+      "indexable": true,
+      "navigation": 20,
+      "paths": {
+        "de": "/de/zimmer-suiten/",
+        "fr": "/fr/chambres-suites/"
+      }
+    },
+    {
+      "id": "care",
+      "indexable": true,
+      "navigation": 30,
+      "paths": {
+        "de": "/de/pflege-betreuung/",
+        "fr": "/fr/soins-accompagnement/"
+      }
+    },
+    {
+      "id": "services",
+      "indexable": true,
+      "navigation": 40,
+      "paths": {
+        "de": "/de/leistungen/",
+        "fr": "/fr/services/"
+      }
+    },
+    {
+      "id": "life",
+      "indexable": true,
+      "navigation": 50,
+      "paths": {
+        "de": "/de/leben-im-aureum/",
+        "fr": "/fr/vivre-a-aureum/"
+      }
+    },
+    {
+      "id": "admission",
+      "indexable": true,
+      "navigation": 60,
+      "paths": {
+        "de": "/de/aufnahme-anmeldung/",
+        "fr": "/fr/admission-inscription/"
+      }
+    },
+    {
+      "id": "faq",
+      "indexable": true,
+      "navigation": 70,
+      "paths": {
+        "de": "/de/faq/",
+        "fr": "/fr/faq/"
+      }
+    },
+    {
+      "id": "contact",
+      "indexable": true,
+      "navigation": 80,
+      "paths": {
+        "de": "/de/kontakt-besichtigung/",
+        "fr": "/fr/contact-visite/"
+      }
+    },
+    {
+      "id": "advice",
+      "indexable": true,
+      "navigation": 90,
+      "paths": {
+        "de": "/de/ratgeber/",
+        "fr": "/fr/conseils/"
+      }
+    },
+    {
+      "id": "legal",
+      "indexable": true,
+      "navigation": null,
+      "regulated": true,
+      "paths": {
+        "de": "/de/impressum/",
+        "fr": "/fr/mentions-legales/"
+      }
+    },
+    {
+      "id": "privacy",
+      "indexable": true,
+      "navigation": null,
+      "regulated": true,
+      "paths": {
+        "de": "/de/datenschutz/",
+        "fr": "/fr/confidentialite/"
+      }
+    }
+  ]
+}
